@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Lato", sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Inter", sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 /* body {
@@ -22,7 +22,7 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: radial-gradient(circle at 70% 30%, #2e6fb7 0%, #0c2e57 40%, #041a35 100%);
+  background: radial-gradient(circle at 70% 10%, #2e6fb7 0%, #031b39 40%, #041a35 100%);
 }
 
 /* Fade in animation */
@@ -47,7 +47,7 @@
 
 .hero h1 {
   font-size: 72px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.1;
 }
 
@@ -87,8 +87,8 @@
   width: auto;
 } */
 
-.cta-btn {
-  background: #ff9f2d;
+.cta-btn-hero {
+  background: #FFA033;
   padding: 14px 28px;
   border-radius: 50px;
   text-decoration: none;
@@ -97,7 +97,7 @@
   transition: 0.3s ease;
 }
 
-.cta-btn:hover {
+.cta-btn-hero:hover {
   transform: scale(1.05);
   background: #ffb347;
 }
@@ -200,11 +200,8 @@
 .logo-strip-wrapper {
   background: #ffffff;
   overflow: hidden;
-
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
-
 
 
 .logo-track {
@@ -249,12 +246,12 @@
 /* Header */
 .section-header h2 {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
+  font-weight: 900;
   /* color: #1b3a6b; */
   line-height: 1.2;
   margin-bottom: 16px;
 
-  background: linear-gradient(135deg, #265BA9, #1C68AA, #0F2443);
+  background: linear-gradient(135deg, #0F2443, #1C68AA,  #265BA9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -519,7 +516,7 @@
 
 /* ── Heading ── */
 .dms-heading__title {
-  font-weight: 800;
+  font-weight: 900;
 
   font-size: clamp(2rem, 4vw, 2.8rem);
 
