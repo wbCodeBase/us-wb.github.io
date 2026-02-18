@@ -1,0 +1,379 @@
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px 100px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .logo-strip {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 0;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .sec-section {
+    padding: 1.2rem;
+    padding-bottom: 60px;
+  }
+
+  .logo-strip h3{
+    font-size: 1.6rem;
+  }
+
+}
+
+
+
+
+/* 2nd section  */
+
+/* Responsive */
+@media (max-width: 700px) {
+  .tab-panel.active {
+    grid-template-columns: 1fr;
+  }
+
+
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+
+  .video-box-cover {
+    padding: 0.6rem;
+    border: 10px solid #E2EDFD80;
+
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .tab-panel.active {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .dms-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dms-card {
+    padding: 20px 16px;
+  }
+
+  .dms-heading__title {
+    font-size: 1.8rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* First logo */
+  .badge:nth-child(1) {
+    order: 1;
+    width: 45%;
+    text-align: center;
+  }
+
+  /* Second logo */
+  .badge:nth-child(3) {
+    order: 2;
+    width: 45%;
+    text-align: center;
+  }
+
+  /* Button comes below */
+  .cta-btn {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .dms-card__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dms-card__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .left-content h1 {
+    font-size: 30px;
+  }
+
+  .carousel-arrow.left {
+    left: 10px;
+  }
+
+  .carousel-arrow.right {
+    right: 10px;
+  }
+
+  .right-card {
+    width: 100%;
+    position: relative;
+
+    padding: 1rem;
+  }
+
+  /* Left Content */
+  .left-content {
+    width: 100%;
+    padding: 1.6rem;
+  }
+
+  .card-slider {
+    padding: 2rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .ai-visibility-section {
+    padding: 60px 16px;
+  }
+
+  .left-content h1 {
+    font-size: 26px;
+  }
+
+  .nav-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-icon i {
+    font-size: 18px;
+  }
+
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .carousel-arrow i {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    clip-path: none;
+    border-radius: 20px;
+    padding: 40px;
+  }
+
+  .footer-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-left h2 {
+    font-size: 28px;
+  }
+
+  .footer-left h3 {
+    font-size: 22px;
+  }
+
+  .footer-left {
+    padding: 30px;
+  }
+
+  .footer-form {
+    padding: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-col {
+    flex: 45%;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    flex: 100%;
+  }
+
+  .shape-top-right,
+  .shape-bottom-left {
+    width: 160px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+
+  .year-topbar h2 {
+    font-size: 22px;
+  }
+
+  .year-image img {
+    width: 95%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .year-section {
+    margin: -50px 0;
+    padding: 90px 15px 60px;
+  }
+
+  .year-topbar {
+    padding: 25px 15px 70px;
+  }
+
+  .year-image {
+    margin-top: -70px;
+  }
+
+  .year-content p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .year-topbar h2 {
+    font-size: 18px;
+  }
+
+  .year-image img {
+    width: 100%;
+  }
+
+  .year-content p {
+    font-size: 15px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
