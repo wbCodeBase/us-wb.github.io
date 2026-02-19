@@ -126,7 +126,8 @@
 
 .video-box {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
+  max-height: 400px;
   border-radius: 12px;
   overflow: hidden;
   /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); */
@@ -139,7 +140,6 @@
 .video-box img {
   width: 100%;
   display: block;
-  /* border-radius: 16px; */
 
 }
 
@@ -180,7 +180,7 @@
   bottom: -140px;
   left: 50%;
   transform: translateX(-50%);
-  width: 75%;
+  width: 80%;
   background: #2e5fa3;
   border-radius: 20px;
   padding: 110px 0px 30px 0px;
@@ -326,7 +326,7 @@
 .tab-panel {
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 34px;
   animation: fadeUp 0.35s ease forwards;
 }
 
@@ -380,6 +380,11 @@
   position: relative;
   height: 250px;
   overflow: hidden;
+}
+
+.card-image img{
+  width: 100%;
+
 }
 
 .card-image .placeholder {
@@ -461,14 +466,9 @@
 }
 
 .swicth-cards {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
 }
-
-
-
-
-
 
 
 
