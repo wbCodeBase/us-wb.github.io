@@ -648,7 +648,7 @@
   width: 55%;
   background: #265BA9;
   color: white;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem 0rem 8rem; 
 }
 
 
@@ -684,7 +684,9 @@
   width: 45%;
   position: relative;
   background: #E2EDFD;
-  padding: 2rem 4rem;
+  /* padding: 2rem 4rem; */
+  
+  padding: 3rem 8rem 0rem 3rem; 
 }
 
 .right-card h3 {
