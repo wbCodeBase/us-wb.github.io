@@ -383,7 +383,7 @@
 
 .card-image {
   position: relative;
-  /* height: 250px; */
+  height: 250px;
   overflow: hidden;
 }
 
@@ -504,7 +504,6 @@
   background-position: center top;
   background-repeat: no-repeat;
   z-index: 0;
-  /* opacity: 0.2; */
 }
 
 
@@ -1538,10 +1537,15 @@ section#tms-client p {
   justify-content: space-between;
   gap: 60px;
   position: relative;
+  
+
 }
 
-/* LEFT BLUE PANEL */
-.cta-content {
+
+
+
+
+ .cta-content {
   flex: 1;
   color: #fff;
   padding: 70px;
@@ -1552,7 +1556,6 @@ section#tms-client p {
   overflow: hidden;
 }
 
-/* Background Layered U Effect */
 .cta-content::before {
   content: "";
   position: absolute;
@@ -1573,25 +1576,29 @@ section#tms-client p {
   border: 60px solid rgba(255, 255, 255, 0.06);
   bottom: -150px;
   right: 50px;
-}
+} 
+
+
 
 /* TEXT */
 .small-text {
-  font-size: 18px;
+  font-size: 1.4rem;
   opacity: 0.9;
+  font-weight: 500;
 }
 
 .cta-content h2 {
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 900;
   margin: 15px 0;
   line-height: 1.2;
 }
 
 .cta-content h3 {
-  font-size: 28px;
-  color: #FF9F2D;
+  font-size: 40px;
+  color: #ffb355;
   margin-bottom: 30px;
+  font-weight: 800;
 }
 
 .cta-points {
@@ -1601,8 +1608,9 @@ section#tms-client p {
 
 .cta-points li {
   margin-bottom: 12px;
-  font-size: 17px;
+  font-size: 1.5rem;
   position: relative;
+  font-weight: 600;
   padding-left: 25px;
 }
 
@@ -1622,6 +1630,8 @@ section#tms-client p {
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   transition: 0.4s ease;
+  /* position: absolute;
+  right: 0; */
 }
 
 .cta-form:hover {
@@ -1632,8 +1642,8 @@ section#tms-client p {
   text-align: center;
   color: #1F4FA5;
   margin-bottom: 25px;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 
 /* INPUTS */
@@ -1670,12 +1680,14 @@ section#tms-client p {
   padding: 14px;
   border-radius: 8px;
   border: none;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   background: linear-gradient(135deg, #1F4FA5, #2F67D3);
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease;
+
+  width: 12rem;
 }
 
 .cta-form button:hover {

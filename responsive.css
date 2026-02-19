@@ -84,7 +84,15 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+.card-image {
+  position: relative;
+  height: 200px;
+}
 
+.cta-footer {
+    background: #E2EDFD;
+    padding: 60px 20px 60px 20px;
+}
 
   .dms-services-grid {
     grid-template-columns: 1fr;
