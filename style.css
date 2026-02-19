@@ -249,7 +249,7 @@
 
 /* Header */
 .section-header h2 {
-  font-size: clamp(3.8rem, 4vw, 4rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 900;
   /* color: #1b3a6b; */
   line-height: 1.2;
@@ -383,7 +383,7 @@
 
 .card-image {
   position: relative;
-  height: 250px;
+  /* height: 250px; */
   overflow: hidden;
 }
 
@@ -427,19 +427,23 @@
 }
 
 .stat+.stat {
-  border-left: 1px solid #e8eef7;
+  border-left: 1px solid #454545;
 }
 
 .stat-value {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  
+  font-size: clamp(2rem, 4vw, 2.2rem);
   font-weight: 800;
-  color: #2e5fa3;
+  color: black;
   display: block;
 }
 
 .stat-label {
-  font-size: 0.75rem;
-  color: #2d333e;
+  /* font-size: 1rem; */
+  
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  color: #000000df;
   margin-top: 4px;
   display: block;
 }
@@ -494,7 +498,7 @@
 .dms-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('./images/grpbg.png');
+  background-image: url('./images/grpBg.png');
   /* background-image: url('./images/grp.jpg'); */
   background-size: cover;
   background-position: center top;
@@ -626,7 +630,7 @@
 /* ── Card Body ── */
 .dms-card__title {
   font-weight: 800;
-  font-size: clamp(1.6rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.4rem, 1.5vw, 1.2rem);
   color: #ffffff;
   margin-bottom: 8px;
   line-height: 1.3;
