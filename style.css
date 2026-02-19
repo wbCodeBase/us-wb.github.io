@@ -355,6 +355,7 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(27, 58, 107, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 20px;
 }
 
 .card:hover {
@@ -1346,15 +1347,15 @@ section#tms-client p {
 }
 
 .shape-top-right {
-  top: -40px;
-  right: -60px;
-  width: 250px;
+  top: -260px;
+  right: 0px;
+  width: 150px;
 }
 
 .shape-bottom-left {
-  bottom: -60px;
-  left: -60px;
-  width: 250px;
+  bottom: -0px;
+  left: -0px;
+  width: 150px;
 }
 
 .footer-container {
@@ -1470,7 +1471,7 @@ section#tms-client p {
 }
 
 .region-list img {
-  width: 18px;
+  width: 22px;
   margin-right: 6px;
   vertical-align: middle;
 }
