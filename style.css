@@ -264,7 +264,7 @@
 }
 
 .section-header p {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 40px;
   font-size: 1rem;
   color: #5a6a85;
@@ -686,7 +686,7 @@
   background: #E2EDFD;
   /* padding: 2rem 4rem; */
   
-  padding: 3rem 8rem 0rem 3rem; 
+  padding: 3rem 8rem 2rem 3rem; 
 }
 
 .right-card h3 {
