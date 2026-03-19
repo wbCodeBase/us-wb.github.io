@@ -34,7 +34,7 @@
     --spacing-3xl: 100px;
 
 
-    --sidebar-w: 320px;
+    --sidebar-w: 380px;
     --sidebar-gap: 40px;
 
 
@@ -220,9 +220,9 @@ body {
 
 
 .page-wrap {
-    max-width: 1260px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 24px 100px;
+    padding: 0px 24px;
     display: flex;
     gap: var(--sidebar-gap);
     align-items: flex-start;
@@ -281,7 +281,7 @@ body {
 }
 
 .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .form-group label {
