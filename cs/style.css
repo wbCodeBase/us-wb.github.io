@@ -4,6 +4,7 @@
    Colors: #1a1a1a, #ff4500 (orange-red), #ffffff
    Style: Clean, professional, conversion-first
 ══════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 :root {
@@ -56,7 +57,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Lato", sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: var(--wb-white);
     color: var(--wb-black);
     line-height: 1.7;
@@ -434,10 +435,10 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 4vw, 62px);
+    font-size: clamp(42px, 4vw, 58px);
     font-weight: 800;
     color: var(--wb-white);
-    line-height: 1.5;
+    line-height: 1.2;
     /* letter-spacing: -1.5px; */
     margin-bottom: 20px;
 }
@@ -446,7 +447,7 @@ body {
 .hero h1 .hero-stat {
     color: var(--wb-orange);
     display: block;
-    font-size: clamp(52px, 6vw, 80px);
+    font-size: clamp(52px, 6vw, 70px);
     /* letter-spacing: -3px; */
     line-height: 1;
 }
@@ -761,7 +762,7 @@ body {
 
 h2.sh2 {
     font-size: clamp(36px, 3vw, 48px);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--wb-black);
     text-wrap: balance;
     /* letter-spacing: -1px; */
@@ -1442,6 +1443,7 @@ table.ba tbody tr:last-child td {
     align-items: flex-start;
     cursor: pointer;
     gap: 20px;
+    font-family: Lato, sans-serif;
 }
 
 .faq-q-text {
