@@ -12,7 +12,8 @@
     --wb-dark: #111111;
     --wb-surface: #f7f7f7;
     --wb-white: #ffffff;
-    --wb-orange: #ff4500;
+    --wb-orange: #5478d1;
+    /* --wb-orange: #ff4500; */
     --wb-orange-light: rgba(255, 69, 0, 0.08);
     --wb-orange-mid: rgba(255, 69, 0, 0.18);
     --wb-orange-glow: rgba(255, 69, 0, 0.28);
@@ -41,6 +42,11 @@
 
     --muted: #8a7a65;
 
+    --primary-blue: #42b0ff;
+    --deep-blue: #29a5e8;
+
+    --blue: #5478d1;
+
 }
 
 *,
@@ -63,82 +69,6 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
 }
-
-/* ── STICKY NAV ── */
-/* nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--wb-border);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.nav-brand-name {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--wb-black);
-    letter-spacing: -0.5px;
-}
-
-.nav-brand-name em {
-    color: var(--wb-orange);
-    font-style: normal;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.nav-link {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--wb-gray);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.nav-link:hover {
-    color: var(--wb-orange);
-}
-
-.nav-cta {
-    background: var(--wb-orange);
-    color: white;
-    padding: 10px 22px;
-    border-radius: 6px;
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 0.2px;
-    transition: all 0.2s;
-    box-shadow: 0 4px 14px var(--wb-orange-mid);
-}
-
-.nav-cta:hover {
-    background: #e03d00;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px var(--wb-orange-glow);
-} */
 
 /* ── BREADCRUMB ── */
 .breadcrumb-bar {
@@ -172,29 +102,6 @@ body {
     font-size: 10px;
 }
 
-/* ── HERO ── */
-/* .hero {
-      background: var(--wb-black);
-      padding: 0;
-      display: grid;
-      grid-template-columns: 1fr 400px; 
-      min-height: calc(100vh - 100px);
-      position: relative;
-      overflow: hidden;
-    } */
-
-
-/* .hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: var(--spacing-xl) var(--spacing-3xl);
-    width: 100%;
-    background-color: #00131b;
-    background-image: url("../images/herobg.png");
-} */
-
 
 .hero {
     position: relative;
@@ -204,7 +111,7 @@ body {
     padding: var(--spacing-xl) var(--spacing-3xl);
     width: 100%;
     background-color: #00131b;
-    background-image: url("../images/herobg.png");
+    /* background-image: url("../images/herobg.png"); */
 }
 
 .hero-container {
@@ -258,7 +165,9 @@ body {
 }
 
 .sidebar-form-header {
-    background: linear-gradient(135deg, #e76f34, var(--wb-orange));
+    /* background: linear-gradient(135deg, #e76f34, var(--wb-orange)); */
+
+    background: linear-gradient(90deg, #6189ef, #4a88ec);
     padding: 12px;
     /* text-align: center; */
     color: #fff;
@@ -278,7 +187,7 @@ body {
 
 .sidebar-form-body {
     padding: 18px 22px 22px;
-    background: #FFE9D0;
+    background: #d0daff;
 }
 
 .form-group {
@@ -289,7 +198,8 @@ body {
     display: block;
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--muted);
+    color: rgb(59, 59, 59);
+    /* color: var(--muted); */
     margin-bottom: 4px;
     letter-spacing: 0.04em;
 }
@@ -331,7 +241,9 @@ body {
 
 .form-checkbox label {
     font-size: 0.73rem;
-    color: var(--muted);
+    /* color: var(--muted); */
+
+    color: rgb(59, 59, 59);
     line-height: 1.4;
 }
 
@@ -343,6 +255,8 @@ body {
     width: 100%;
     padding: 10px;
     /* background: linear-gradient(135deg, var(--orange-light), var(--orange)); */
+
+    background: linear-gradient(90deg, #6189ef, #4a88ec);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -353,7 +267,7 @@ body {
     letter-spacing: 0.02em;
     transition: opacity 0.2s, transform 0.15s;
 
-    background: linear-gradient(135deg, #e76f34, var(--wb-orange));
+    /* background: linear-gradient(135deg, #e76f34, var(--wb-orange)); */
 }
 
 .btn-submit:hover {
@@ -435,21 +349,32 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 4vw, 58px);
+    font-size: clamp(42px, 4vw, 46px);
     font-weight: 800;
     color: var(--wb-white);
     line-height: 1.2;
     /* letter-spacing: -1.5px; */
     margin-bottom: 20px;
+
 }
 
 /* The big orange number in the headline */
 .hero h1 .hero-stat {
-    color: var(--wb-orange);
-    display: block;
+    /* color: var(--wb-orange);
+    line-height: 1; */
+    /* display: block; */
+
+
     font-size: clamp(52px, 6vw, 70px);
-    /* letter-spacing: -3px; */
-    line-height: 1;
+    background: linear-gradient(135deg, var(--primary-blue), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    margin-bottom: 10px;
+
+
+
 }
 
 /* H2 for SEO: keyword-rich subheading visible on page */
@@ -457,9 +382,9 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 36px;
+    margin-bottom: 26px;
     line-height: 1.7;
-    max-width: 560px;
+    max-width: 600px;
 }
 
 .hero-h2 strong {
@@ -487,7 +412,7 @@ body {
 }
 
 .kpi-num {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     color: var(--wb-white);
     display: block;
@@ -496,21 +421,29 @@ body {
 }
 
 .kpi-num em {
-    color: var(--wb-orange);
-    font-style: normal;
+    /* color: var(--wb-orange);
+    font-style: normal; */
+
+    background: linear-gradient(135deg, var(--primary-blue), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    display: inline-block;
+
 }
 
 .kpi-label {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.45);
+    font-size: 18px;
+    color: rgba(246, 246, 246, 0.668);
     margin-top: 4px;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
 
 .kpi-detail {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.641);
     margin-top: 2px;
 }
 
@@ -593,7 +526,7 @@ body {
     padding: 11px 14px;
     border: 1.5px solid var(--wb-border);
     border-radius: 6px;
-    font-family: "Poppins", sans-serif;
+
     font-size: 13px;
     color: var(--wb-black);
     background: var(--wb-white);
@@ -624,7 +557,7 @@ body {
     background: var(--wb-orange);
     color: white;
     border: none;
-    font-family: "Poppins", sans-serif;
+
     font-size: 16px;
     font-weight: 800;
     border-radius: 6px;
@@ -762,7 +695,7 @@ body {
 
 h2.sh2 {
     font-size: clamp(36px, 3vw, 48px);
-    font-weight: 600;
+    font-weight: 800;
     color: var(--wb-black);
     text-wrap: balance;
     /* letter-spacing: -1px; */
@@ -773,6 +706,12 @@ h2.sh2 {
 h2.sh2 em {
     color: var(--wb-orange);
     font-style: normal;
+
+    /* background: linear-gradient(135deg, var(--primary-blue), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block; */
 }
 
 .section-lead {
@@ -1028,8 +967,8 @@ table.ba tbody tr:last-child td {
     display: inline-block;
     margin-top: 14px;
     padding: 4px 12px;
-    background: var(--wb-orange-light);
-    border: 1px solid rgba(255, 69, 0, 0.2);
+    background: rgb(226, 231, 243);
+    border: 1px solid rgba(0, 89, 255, 0.2);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1113,17 +1052,17 @@ table.ba tbody tr:last-child td {
     align-items: center;
 }
 
-.ai-band .section-eyebrow {
+/* .ai-band .section-eyebrow {
     color: #ff7043;
-}
+} */
 
 .ai-band .sh2 {
     color: var(--wb-white);
 }
 
-.ai-band .sh2 em {
+/* .ai-band .sh2 em {
     color: #ff7043;
-}
+} */
 
 .ai-band .section-lead {
     color: rgba(255, 255, 255, 0.55);
@@ -1240,7 +1179,6 @@ table.ba tbody tr:last-child td {
     font-size: 28px;
     font-weight: 800;
     color: #60a5fa;
-    font-family: "Poppins";
 }
 
 .ai-chip-txt {
@@ -1387,8 +1325,8 @@ table.ba tbody tr:last-child td {
 .learn-num {
     min-width: 36px;
     height: 36px;
-    background: var(--wb-orange-light);
-    border: 1px solid rgba(255, 69, 0, 0.25);
+    background: #e9eeff;
+    border: 1px solid rgba(0, 110, 255, 0.25);
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -1458,8 +1396,12 @@ table.ba tbody tr:last-child td {
     min-width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: var(--wb-orange-light);
-    border: 1px solid rgba(255, 69, 0, 0.25);
+
+    
+    background: rgb(226, 231, 243);
+    border: 1px solid rgba(0, 89, 255, 0.2);
+
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1535,7 +1477,7 @@ table.ba tbody tr:last-child td {
     font-size: clamp(32px, 4.5vw, 56px);
     font-weight: 900;
     color: var(--wb-white);
-    letter-spacing: -1.5px;
+    /* letter-spacing: -0.2px; */
     line-height: 1.1;
     margin-bottom: 16px;
 }
@@ -1558,9 +1500,9 @@ table.ba tbody tr:last-child td {
     background: var(--wb-black);
     color: white;
     padding: 16px 40px;
-    font-family: "Poppins";
+
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
     border-radius: 6px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -1578,7 +1520,7 @@ table.ba tbody tr:last-child td {
     color: white;
     padding: 16px 40px;
     border: 2px solid rgba(255, 255, 255, 0.6);
-    font-family: "Poppins";
+
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -1787,9 +1729,15 @@ footer {
     width: 100%;
     /* max-width: 1200px; */
     /* border-radius: 16px; */
-    background: linear-gradient(120deg, #F5A623 0%, #E8820C 55%, #F0A020 100%);
+    /* background: linear-gradient(120deg, #3e6dd1 0%, #416fe3 55%, #207af0 100%); */
 
-    /* background: var(--wb-black); */
+
+    /* background: linear-gradient(135deg, #5d69ed 0%, #6d78f2 100%); */
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue) 50%, #1D5AFF 100%);
+
+
+
+    /* background: #2e5fa3; */
 
     overflow: hidden;
     display: flex;
