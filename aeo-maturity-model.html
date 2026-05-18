@@ -1246,6 +1246,196 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 
 .score-cta-wrap p strong { color: #94a3b8; }
 
+/* ── Check Score Button ── */
+.check-score-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 44px;
+}
+
+.check-score-hint {
+  font-size: 13px;
+  color: var(--ink-40);
+  letter-spacing: .01em;
+}
+
+.btn-check-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 36px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 60%, var(--cyan) 100%);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity .25s, transform .2s, box-shadow .25s;
+  box-shadow: 0 4px 20px rgba(47,95,167,.35);
+}
+
+.btn-check-score:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(47,95,167,.45);
+}
+
+.btn-check-score:not(:disabled):active { transform: translateY(0); }
+
+.btn-check-score:disabled {
+  opacity: .42;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ── Score Popup Overlay ── */
+.score-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,14,26,.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.score-popup-overlay.open { display: flex; }
+
+.score-popup {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: 0 24px 64px rgba(0,0,0,.18);
+  animation: popupIn .3s cubic-bezier(.34,1.56,.64,1) both;
+  position: relative;
+}
+
+@keyframes popupIn {
+  from { opacity: 0; transform: scale(.88) translateY(16px); }
+  to   { opacity: 1; transform: scale(1)  translateY(0);     }
+}
+
+.score-popup-close {
+  position: absolute;
+  top: 16px; right: 18px;
+  width: 32px; height: 32px;
+  background: var(--surface);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-40);
+  font-size: 16px;
+  transition: background .2s;
+}
+.score-popup-close:hover { background: var(--border); color: var(--ink); }
+
+.score-popup-head {
+  margin-bottom: 24px;
+}
+.score-popup-icon {
+  width: 48px; height: 48px;
+  background: var(--blue-lt);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+.score-popup-icon svg { width: 24px; height: 24px; }
+
+.score-popup-head h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -.02em;
+  margin-bottom: 6px;
+}
+.score-popup-head p {
+  font-size: 14px;
+  color: var(--ink-40);
+  line-height: 1.55;
+}
+
+.score-popup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.sp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sp-field label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-60);
+}
+
+.sp-field input {
+  padding: 11px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.sp-field input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(47,95,167,.12);
+  background: var(--white);
+}
+
+.sp-field input.invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239,68,68,.1);
+}
+
+.sp-field .optional-tag {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink-40);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+
+.btn-popup-submit {
+  width: 100%;
+  padding: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity .2s, transform .2s;
+  box-shadow: 0 4px 16px rgba(47,95,167,.3);
+}
+.btn-popup-submit:hover { opacity: .9; transform: translateY(-1px); }
+.btn-popup-submit:active { transform: translateY(0); }
+
+.score-hidden { display: none !important; }
+
 /* ═══════════════════════════════════
    FAQ
 ═══════════════════════════════════ */
@@ -2209,8 +2399,17 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 
     </div>
 
+    <!-- Check Score Button -->
+    <div class="check-score-wrap">
+      <button class="btn-check-score" id="check-score-btn" disabled onclick="openScorePopup()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Check My Score
+      </button>
+      <span class="check-score-hint" id="check-score-hint">Tick at least one box above to unlock your score</span>
+    </div>
+
     <!-- Score result -->
-    <div class="score-result reveal" id="score-display">
+    <div class="score-result reveal score-hidden" id="score-display">
       <div class="score-display">
         <div class="score-num" id="score-num">0</div>
         <div class="score-out">out of 20</div>
@@ -2228,7 +2427,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
     </div>
 
     <!-- Score guide table -->
-    <table class="score-table reveal" id="score-table">
+    <table class="score-table reveal score-hidden" id="score-table">
       <thead>
         <tr>
           <th>Score</th>
@@ -2265,7 +2464,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
       </tbody>
     </table>
 
-    <div class="score-cta-wrap reveal">
+    <div class="score-cta-wrap reveal score-hidden" id="score-cta-wrap">
       <p id="score-cta-text"><strong>Scored below 12?</strong> That's where most IT companies are. Let us show you the exact gaps -free.</p>
       <a href="#audit-form" class="btn btn-primary" style="font-size:14px; padding:12px 22px;">
         Get My Free Gap Analysis <i class="fa-solid fa-arrow-right"></i>
@@ -2274,6 +2473,42 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 
   </div>
 </section>
+
+<!-- ════════════════════════════════════
+  SCORE POPUP
+════════════════════════════════════ -->
+<div class="score-popup-overlay" id="score-popup-overlay" onclick="overlayClose(event)">
+  <div class="score-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <button class="score-popup-close" onclick="closeScorePopup()" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="score-popup-head">
+      <h3 id="popup-title">See your AEO score</h3>
+      <p>One quick step we'll send your personalised score report straight to your inbox.</p>
+    </div>
+    <div class="score-popup-fields">
+      <div class="sp-field">
+        <label for="sp-name">Full Name</label>
+        <input type="text" id="sp-name" placeholder="Jane Smith" autocomplete="name">
+      </div>
+      <div class="sp-field">
+        <label for="sp-phone">Phone</label>
+        <input type="tel" id="sp-phone" placeholder="+1 555 000 0000" autocomplete="tel">
+      </div>
+      <div class="sp-field">
+        <label for="sp-email">Work Email</label>
+        <input type="email" id="sp-email" placeholder="jane@company.com" autocomplete="email">
+      </div>
+      <div class="sp-field">
+        <label for="sp-website">Website <span class="optional-tag">(optional)</span></label>
+        <input type="url" id="sp-website" placeholder="https://yourcompany.com" autocomplete="url">
+      </div>
+    </div>
+    <button class="btn-popup-submit" onclick="submitScorePopup()">
+      Reveal My Score <i class="fa-solid fa-arrow-right" style="margin-left:6px"></i>
+    </button>
+  </div>
+</div>
 
 <!-- ════════════════════════════════════
   FAQ
@@ -2450,13 +2685,11 @@ function updateScore() {
   document.getElementById('score-level-tag').textContent  = tier.tag;
   document.getElementById('score-desc').textContent       = tier.desc;
 
-  // Highlight active row in score table
   document.querySelectorAll('#score-table tbody tr').forEach(row => {
     const min = +row.dataset.min, max = +row.dataset.max;
     row.classList.toggle('active-row', total >= min && total <= max);
   });
 
-  // Update CTA text
   const ctaTxt = document.getElementById('score-cta-text');
   if (total >= 17) {
     ctaTxt.innerHTML = '<strong>Level 5 -impressive.</strong> Let\'s make sure your measurement infrastructure is proving the revenue impact.';
@@ -2471,7 +2704,67 @@ function updateScore() {
 
 function toggleCheck(item) {
   item.classList.toggle('checked');
+  const total = getTotal();
+  const btn   = document.getElementById('check-score-btn');
+  const hint  = document.getElementById('check-score-hint');
+  if (total > 0) {
+    btn.disabled = false;
+    hint.textContent = total + ' of 20 checked - click to see your AEO level';
+  } else {
+    btn.disabled = true;
+    hint.textContent = 'Tick at least one box above to unlock your score';
+  }
+}
+
+/* ── Score Popup ── */
+function openScorePopup() {
+  document.getElementById('score-popup-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('sp-name').focus(), 80);
+}
+
+function closeScorePopup() {
+  document.getElementById('score-popup-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function overlayClose(e) {
+  if (e.target === document.getElementById('score-popup-overlay')) closeScorePopup();
+}
+
+function submitScorePopup() {
+  const name  = document.getElementById('sp-name');
+  const phone = document.getElementById('sp-phone');
+  const email = document.getElementById('sp-email');
+  let valid = true;
+
+  [name, phone, email].forEach(f => {
+    f.classList.remove('invalid');
+    if (!f.value.trim()) { f.classList.add('invalid'); valid = false; }
+  });
+  if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    email.classList.add('invalid'); valid = false;
+  }
+  if (!valid) return;
+
+  closeScorePopup();
+  revealScore();
+}
+
+function revealScore() {
   updateScore();
+  const els = ['score-display', 'score-table', 'score-cta-wrap'];
+  els.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('score-hidden');
+    setTimeout(() => el.classList.add('in'), 60 + i * 120);
+  });
+  document.getElementById('check-score-btn').style.display = 'none';
+  document.getElementById('check-score-hint').style.display = 'none';
+  setTimeout(() => {
+    document.getElementById('score-display').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 200);
 }
 
 /* ── FAQ accordion ── */
