@@ -57,9 +57,9 @@ img { max-width: 100%; display: block; }
 /* ═══════════════════════════════════
    LAYOUT
 ═══════════════════════════════════ */
-.wrap    { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+.wrap    { max-width: 1300px; margin: 0 auto; padding: 0 18px; }
 .wrap-sm { max-width: 760px;  margin: 0 auto; padding: 0 28px; }
-.section { padding: 88px 0; }
+.section { padding: 60px 0; }
 .section-alt { background: var(--surface); }
 
 /* ═══════════════════════════════════
@@ -322,6 +322,48 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   max-width: 120px;
 }
 
+/* Hero two-column layout */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 48px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content { min-width: 0; }
+.hero-img-wrap {
+  position: relative;
+  animation: fadeUp .6s .28s ease both;
+  max-width: 500px;
+}
+
+
+.hero-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -28px;
+  background: radial-gradient(ellipse 85% 75% at 50% 50%, rgba(47,95,167,.32) 0%, transparent 70%);
+  border-radius: 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-img-wrap img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.1);
+}
+
 /* ═══════════════════════════════════
    STATS BAR
 ═══════════════════════════════════ */
@@ -411,17 +453,13 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   background: rgba(255,255,255,.04);
   border: 1.5px dashed rgba(255,255,255,.18);
   border-radius: 20px;
-  /* min-height: 420px; */
-  height: 513px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  /* padding: 52px 32px; */
+  height: 600px;
+  width: 1000px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   transition: border-color .25s;
+  padding: 6px;
 }
 .plugin-embed-wrap:hover {
   border-color: rgba(61,107,255,.45);
@@ -467,6 +505,17 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   margin-top: 8px;
 }
 .plugin-embed-badge i { color: var(--orange); }
+
+/* iframe inside plugin embed */
+.seo-iframe {
+  position: absolute;
+  inset: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border: none;
+  border-radius: 16px;
+  display: block;
+}
 
 /* Scan animation inside placeholder */
 .scan-line {
@@ -1255,6 +1304,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   .score-tiers { grid-template-columns: repeat(3, 1fr); }
   .pipeline-track { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .pipeline-track::before { display: none; }
+  .hero-layout { gap: 36px; }
 }
 
 @media (max-width: 920px) {
@@ -1265,6 +1315,16 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat-block { border-right: none; border-bottom: 1px solid var(--border); }
   .stat-block:last-child { border-bottom: none; }
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .hero-img-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1296,36 +1356,50 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap">
     <div class="hero-inner">
 
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Free SEO Audit Tool by White Bunnie
-      </div>
+      <div class="hero-layout">
 
-      <h1>
-        Find every SEO issue<br>
-        before your competitors<br>
-        <em>exploit them.</em>
-      </h1>
+        <!-- Left: content -->
+        <div class="hero-content">
 
-      <p class="hero-sub">
-        Run a full website SEO audit in minutes — uncover technical errors, on-page gaps, speed issues, and missed ranking opportunities. No signup required. Instant results.
-      </p>
+          <!-- <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Free SEO Audit Tool by White Bunnie
+          </div> -->
 
-      <div class="hero-cta-wrap">
-        <a href="#seo-tool" class="btn btn-primary">
-          Run Free SEO Audit Now
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </a>
-        <a href="#audit-form" class="btn btn-outline">
-          Get Expert SEO Review
-        </a>
-      </div>
+          <h1>
+            Find every SEO issue<br>
+            before your competitors<br>
+            <em>exploit them.</em>
+          </h1>
 
-      <div class="hero-trust">
-        <span>100% Free to use</span>
-        <span>No account needed</span>
-        <span>Results in seconds</span>
-        <span>Used by 1,200+ companies</span>
+          <p class="hero-sub">
+            Run a full website SEO audit in minutes uncover technical errors, on-page gaps, speed issues, and missed ranking opportunities. No signup required. Instant results.
+          </p>
+
+          <div class="hero-cta-wrap">
+            <a href="#seo-tool" class="btn btn-primary">
+              Run Free SEO Audit Now
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </a>
+            <a href="#audit-form" class="btn btn-outline">
+              Get Expert SEO Review
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span>100% Free to use</span>
+            <span>No account needed</span>
+            <span>Results in seconds</span>
+            <span>Used by 1,200+ companies</span>
+          </div>
+
+        </div>
+
+        <!-- Right: image -->
+        <div class="hero-img-wrap">
+          <img src="./images/place3.png" alt="SEO audit report showing scores and issue breakdown">
+        </div>
+
       </div>
 
       <div class="hero-stats">
@@ -1384,7 +1458,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap plugin-inner">
 
     <div class="plugin-header">
-      <div class="label">SEO Audit Tool</div>
+      <!-- <div class="label">SEO Audit Tool</div> -->
       <h2 class="h-main">Analyse your website <em>instantly</em></h2>
       <p class="section-sub">Enter any URL below and get a comprehensive SEO report covering over 200 ranking signals absolutely free.</p>
     </div>
@@ -1406,7 +1480,8 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
       </div> -->
       
       <!-- Placeholder for actual plugin iframe/script -->
-      <iframe style="border-radius: 20px;" src="https://seotoolwb.vercel.app/" width="100%" height="510" frameborder="0"></iframe>
+      
+      <iframe class="seo-iframe" src="https://seotoolwb.vercel.app/" title="Free SEO Audit Tool" loading="lazy" allowfullscreen></iframe>
     </div>
 
 
@@ -1428,7 +1503,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap">
 
     <div class="center-text">
-      <div class="label">Comprehensive Coverage</div>
+      <!-- <div class="label">Comprehensive Coverage</div> -->
       <h2 class="h-main">Everything the tool <em>checks</em></h2>
       <p class="section-sub">Our audit engine analyses your site across six critical SEO dimensions — giving you a full picture of where you stand and exactly what to fix.</p>
     </div>
@@ -1525,7 +1600,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap">
 
     <div class="center-text">
-      <div class="label">Step-by-Step Guide</div>
+      <!-- <div class="label">Step-by-Step Guide</div> -->
       <h2 class="h-main">How to use the <em>SEO Audit Tool</em></h2>
       <p class="section-sub">Three simple steps to get a full SEO health report for any website — no technical knowledge required.</p>
     </div>
@@ -1600,7 +1675,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
 <section class="section">
   <div class="wrap">
 
-    <div class="label">Why It Matters</div>
+    <!-- <div class="label">Why It Matters</div> -->
     <h2 class="h-main">Most SEO problems are <em>invisible</em><br>until rankings collapse.</h2>
 
     <div class="problem-layout reveal">
@@ -1673,7 +1748,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap">
 
     <div class="center-text">
-      <div class="label">Understanding Your Score</div>
+      <!-- <div class="label">Understanding Your Score</div> -->
       <h2 class="h-main">What your SEO score <em>really means</em></h2>
       <p class="section-sub">Your overall audit score is a composite of all six SEO dimensions. Here's how to interpret each score band and what action it requires.</p>
     </div>
@@ -1721,7 +1796,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   <div class="wrap">
 
     <div class="center-text">
-      <div class="label">Under The Hood</div>
+      <!-- <div class="label">Under The Hood</div> -->
       <h2 class="h-main">How the audit <em>engine works</em></h2>
       <p class="section-sub">Our tool runs a multi-stage analysis pipeline on every URL — replicating what Googlebot sees when it crawls your site.</p>
     </div>
@@ -1780,7 +1855,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
 <section class="section section-alt">
   <div class="wrap-sm">
     <div class="center-text">
-      <div class="label">Before You Run Your Audit</div>
+      <!-- <div class="label">Before You Run Your Audit</div> -->
       <h2 class="h-main">Common <em>questions</em></h2>
     </div>
 
