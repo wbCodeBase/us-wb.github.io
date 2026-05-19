@@ -57,7 +57,7 @@ img { max-width: 100%; display: block; }
 /* ═══════════════════════════════════
    LAYOUT
 ═══════════════════════════════════ */
-.wrap    { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.wrap    { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
 .wrap-sm { max-width: 760px;  margin: 0 auto; padding: 0 28px; }
 .section { padding: 88px 0; }
 .section-alt { background: var(--surface); }
@@ -411,13 +411,14 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   background: rgba(255,255,255,.04);
   border: 1.5px dashed rgba(255,255,255,.18);
   border-radius: 20px;
-  min-height: 420px;
+  /* min-height: 420px; */
+  height: 513px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 52px 32px;
+  /* padding: 52px 32px; */
   position: relative;
   overflow: hidden;
   transition: border-color .25s;
@@ -1276,7 +1277,7 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   .hero-stat { padding: 11px 14px; }
   .hs-num { font-size: 22px; }
   .cta-form { padding: 28px 22px; }
-  .plugin-embed-wrap { min-height: 300px; padding: 36px 20px; }
+  /* .plugin-embed-wrap { min-height: 300px; padding: 36px 20px; } */
   .trust-row { gap: 20px; }
 }
 
@@ -1385,12 +1386,12 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
     <div class="plugin-header">
       <div class="label">SEO Audit Tool</div>
       <h2 class="h-main">Analyse your website <em>instantly</em></h2>
-      <p class="section-sub">Enter any URL below and get a comprehensive SEO report covering over 200 ranking signals — absolutely free.</p>
+      <p class="section-sub">Enter any URL below and get a comprehensive SEO report covering over 200 ranking signals absolutely free.</p>
     </div>
 
     <!-- ── PLUGIN EMBED AREA ── -->
     <div class="plugin-embed-wrap reveal">
-      <div class="scan-line"></div>
+      <!-- <div class="scan-line"></div>
 
       <div class="plugin-embed-icon">
         <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -1402,12 +1403,12 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
       <div class="plugin-embed-badge">
         <i class="fa-solid fa-plug"></i>
         Plugin Embed Area &mdash; 600px &times; 400px+ Recommended
-      </div>
-
+      </div> -->
+      
       <!-- Placeholder for actual plugin iframe/script -->
-      <!-- <iframe src="YOUR_PLUGIN_URL" width="100%" height="500" frameborder="0"></iframe> -->
-
+      <iframe style="border-radius: 20px;" src="https://seotoolwb.vercel.app/" width="100%" height="510" frameborder="0"></iframe>
     </div>
+
 
     <div class="plugin-notes reveal d1">
       <div class="plugin-note"><i class="fa-solid fa-check"></i> No registration required</div>
