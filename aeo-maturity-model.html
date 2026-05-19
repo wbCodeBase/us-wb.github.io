@@ -58,7 +58,7 @@ a:hover { text-decoration: underline; }
 ═══════════════════════════════════ */
 .wrap    { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 .wrap-sm { max-width: 760px;  margin: 0 auto; padding: 0 28px; }
-.section { padding: 80px 0; }
+.section { padding: 60px 0; }
 .section-alt { background: var(--surface); }
 
 /* ═══════════════════════════════════
@@ -1255,6 +1255,41 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
   margin-top: 44px;
 }
 
+/* ── Floating Check Score Button ── */
+.float-score-wrap {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity .35s, transform .35s;
+}
+.float-score-wrap.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+/* .btn-float-score {
+  padding: 12px 26px !important;
+  font-size: 14px !important;
+  box-shadow: 0 6px 28px rgba(47,95,167,.55), 0 2px 10px rgba(0,0,0,.35) !important;
+} */
+.float-score-hint {
+  font-size: 11px;
+  color: white;
+  background: rgba(15,23,42,.82);
+  padding: 4px 12px;
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
 .check-score-hint {
   font-size: 13px;
   color: var(--ink-40);
@@ -1781,10 +1816,10 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
   <div class="wrap">
     <div class="hero-inner">
 
-      <div class="hero-badge">
+      <!-- <div class="hero-badge">
         <span class="badge-dot"></span>
         AEO Maturity Model for IT & SaaS Companies
-      </div>
+      </div> -->
 
       <h1>
         Your buyers are asking AI<br>
@@ -1836,7 +1871,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 ════════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
-    <div class="label">Why This Matters Now</div>
+    <!-- <div class="label">Why This Matters Now</div> -->
     <h2 class="h-main">SEO got you here.<br>It won't keep you <em>visible.</em></h2>
 
     <div class="problem-layout reveal">
@@ -1903,7 +1938,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 
     <div class="matrix-top">
       <div>
-        <div class="label">The AEO Maturity Model</div>
+        <!-- <div class="label">The AEO Maturity Model</div> -->
         <h2 class="h-main" style="margin-bottom:10px;">Which level is your website at?</h2>
         <p class="section-sub">Assessed across four pillars. Most IT companies are at Level 1 or 2. White Bunnie moves clients to Level 3, 4, and 5 -where AI engines start naming you.</p>
       </div>
@@ -2121,7 +2156,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 ════════════════════════════════════ -->
 <section class="section section-alt">
   <div class="wrap">
-    <div class="label">Why Your Level Matters</div>
+    <!-- <div class="label">Why Your Level Matters</div> -->
     <h2 class="h-main">Your AEO level determines<br>who gets <em>shortlisted</em></h2>
 
     <div class="pipeline-grid">
@@ -2200,7 +2235,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 ════════════════════════════════════ -->
 <section class="section">
   <div class="wrap">
-    <div class="label">What Level 4 Looks Like in Practice</div>
+    <!-- <div class="label">What Level 4 Looks Like in Practice</div> -->
     <h2 class="h-main">From zero AI citations to<br><em>191 cited pages</em> in 6 months</h2>
 
     <div class="proof-card reveal">
@@ -2248,7 +2283,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 <section class="section section-alt" id="self-audit">
   <div class="wrap">
     <div class="center-text">
-      <div class="label center">Self-Assessment</div>
+      <!-- <div class="label center">Self-Assessment</div> -->
       <h2 class="h-main">Score your website<br>in <em>5 minutes</em></h2>
       <p class="section-sub">One point per yes. 20 points total. Find out your AEO level right now -before you request the professional audit.</p>
     </div>
@@ -2400,13 +2435,13 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
     </div>
 
     <!-- Check Score Button -->
-    <div class="check-score-wrap">
+    <!-- <div class="check-score-wrap">
       <button class="btn-check-score" id="check-score-btn" disabled onclick="openScorePopup()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         Check My Score
       </button>
       <span class="check-score-hint" id="check-score-hint">Tick at least one box above to unlock your score</span>
-    </div>
+    </div> -->
 
     <!-- Score result -->
     <div class="score-result reveal score-hidden" id="score-display">
@@ -2516,7 +2551,7 @@ table.mat tbody tr:hover td { filter: brightness(1.06); }
 <section class="section">
   <div class="wrap-sm">
     <div class="center-text">
-      <div class="label center">Before You Request the Audit</div>
+      <!-- <div class="label center">Before You Request the Audit</div> -->
       <h2 class="h-main">Common <em>questions</em></h2>
     </div>
 
@@ -2704,15 +2739,21 @@ function updateScore() {
 
 function toggleCheck(item) {
   item.classList.toggle('checked');
-  const total = getTotal();
-  const btn   = document.getElementById('check-score-btn');
-  const hint  = document.getElementById('check-score-hint');
+  const total     = getTotal();
+  const btn       = document.getElementById('check-score-btn');
+  const hint      = document.getElementById('check-score-hint');
+  const floatBtn  = document.getElementById('float-score-btn');
+  const floatHint = document.getElementById('float-score-hint');
   if (total > 0) {
-    btn.disabled = false;
-    hint.textContent = total + ' of 20 checked - click to see your AEO level';
+    if (btn)  btn.disabled = false;
+    if (hint) hint.textContent = total + ' of 20 checked - click to see your AEO level';
+    if (floatBtn)  floatBtn.disabled = false;
+    if (floatHint) floatHint.textContent = total + ' of 20 checked';
   } else {
-    btn.disabled = true;
-    hint.textContent = 'Tick at least one box above to unlock your score';
+    if (btn)  btn.disabled = true;
+    if (hint) hint.textContent = 'Tick at least one box above to unlock your score';
+    if (floatBtn)  floatBtn.disabled = true;
+    if (floatHint) floatHint.textContent = 'Tick at least one box above';
   }
 }
 
@@ -2762,6 +2803,8 @@ function revealScore() {
   });
   document.getElementById('check-score-btn').style.display = 'none';
   document.getElementById('check-score-hint').style.display = 'none';
+  const fw = document.getElementById('float-score-wrap');
+  if (fw) { fw.classList.remove('visible'); fw.style.display = 'none'; }
   setTimeout(() => {
     document.getElementById('score-display').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 200);
@@ -2795,7 +2838,27 @@ function submitForm() {
   document.getElementById('form-wrap').style.display  = 'none';
   document.getElementById('form-success').classList.add('show');
 }
+
+/* ── Floating Score Button: show/hide with section visibility ── */
+document.addEventListener('DOMContentLoaded', function () {
+  const floatWrap  = document.getElementById('float-score-wrap');
+  const auditSec   = document.getElementById('self-audit');
+  if (!floatWrap || !auditSec) return;
+  const observer = new IntersectionObserver(function (entries) {
+    floatWrap.classList.toggle('visible', entries[0].isIntersecting);
+  }, { threshold: 0.04 });
+  observer.observe(auditSec);
+});
 </script>
+
+<!-- Floating Check Score Button (visible while in #self-audit section) -->
+<div class="float-score-wrap" id="float-score-wrap">
+  <button class="btn-check-score btn-float-score" id="float-score-btn" disabled onclick="openScorePopup()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    Check My Score
+  </button>
+  <span class="float-score-hint" id="float-score-hint">Tick at least one box above</span>
+</div>
 
 </body>
 </html>
