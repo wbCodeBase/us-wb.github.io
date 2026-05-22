@@ -405,9 +405,19 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
 ═══════════════════════════════════ */
 .plugin-section {
   background: var(--ink);
-  padding: 88px 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
+}
+.plugin-header-area {
+  padding: 88px 0 40px;
+  position: relative;
+  z-index: 2;
+}
+.plugin-notes-area {
+  padding: 24px 0 64px;
+  position: relative;
+  z-index: 2;
 }
 .plugin-section::before {
   content: '';
@@ -450,19 +460,11 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
 
 /* Plugin embed placeholder */
 .plugin-embed-wrap {
-  background: rgba(255,255,255,.04);
-  border: 1.5px dashed rgba(255,255,255,.18);
-  border-radius: 20px;
-  height: 600px;
-  width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
   position: relative;
+  z-index: 2;
   overflow: hidden;
-  transition: border-color .25s;
-  padding: 6px;
-}
-.plugin-embed-wrap:hover {
-  border-color: rgba(61,107,255,.45);
 }
 .plugin-embed-icon {
   width: 64px; height: 64px;
@@ -509,11 +511,11 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
 /* iframe inside plugin embed */
 .seo-iframe {
   position: absolute;
-  inset: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border: none;
-  border-radius: 16px;
+  border-radius: 0;
   display: block;
 }
 
@@ -1455,45 +1457,34 @@ h2.h-main em { font-style: normal; color: #1C68AA; -webkit-text-fill-color: #1C6
   PLUGIN / TOOL SECTION
 ════════════════════════════════════ -->
 <section class="plugin-section" id="seo-tool">
-  <div class="wrap plugin-inner">
 
-    <div class="plugin-header">
-      <!-- <div class="label">SEO Audit Tool</div> -->
-      <h2 class="h-main">Analyse your website <em>instantly</em></h2>
-      <p class="section-sub">Enter any URL below and get a comprehensive SEO report covering over 200 ranking signals absolutely free.</p>
-    </div>
-
-    <!-- ── PLUGIN EMBED AREA ── -->
-    <div class="plugin-embed-wrap reveal">
-      <!-- <div class="scan-line"></div>
-
-      <div class="plugin-embed-icon">
-        <i class="fa-solid fa-magnifying-glass-chart"></i>
+  <div class="plugin-header-area">
+    <div class="wrap plugin-inner">
+      <div class="plugin-header">
+        <!-- <div class="label">SEO Audit Tool</div> -->
+        <h2 class="h-main">Analyse your website <em>instantly</em></h2>
+        <p class="section-sub">Enter any URL below and get a comprehensive SEO report covering over 200 ranking signals absolutely free.</p>
       </div>
-      <div class="plugin-embed-title">SEO Audit Plugin</div>
-      <div class="plugin-embed-sub">
-        The SEO audit tool will be embedded here. Enter your website URL above to run a full audit covering technical health, on-page SEO, backlinks, page speed, and more.
-      </div>
-      <div class="plugin-embed-badge">
-        <i class="fa-solid fa-plug"></i>
-        Plugin Embed Area &mdash; 600px &times; 400px+ Recommended
-      </div> -->
-      
-      <!-- Placeholder for actual plugin iframe/script -->
-      
-      <iframe class="seo-iframe" src="https://seotoolwb.vercel.app/" title="Free SEO Audit Tool" loading="lazy" allowfullscreen></iframe>
     </div>
-
-
-    <div class="plugin-notes reveal d1">
-      <div class="plugin-note"><i class="fa-solid fa-check"></i> No registration required</div>
-      <div class="plugin-note"><i class="fa-solid fa-check"></i> Scans 200+ SEO signals</div>
-      <div class="plugin-note"><i class="fa-solid fa-check"></i> Instant downloadable report</div>
-      <div class="plugin-note"><i class="fa-solid fa-check"></i> Mobile & desktop check</div>
-      <div class="plugin-note"><i class="fa-solid fa-check"></i> Core Web Vitals included</div>
-    </div>
-
   </div>
+
+  <!-- ── PLUGIN EMBED AREA — full-width 100vh ── -->
+  <div class="plugin-embed-wrap reveal">
+    <iframe class="seo-iframe" src="https://ai-visibility-docker-2r4s.vercel.app/" title="Free SEO Audit Tool" loading="lazy" allowfullscreen></iframe>
+  </div>
+
+  <div class="plugin-notes-area">
+    <div class="wrap plugin-inner">
+      <div class="plugin-notes reveal d1">
+        <div class="plugin-note"><i class="fa-solid fa-check"></i> No registration required</div>
+        <div class="plugin-note"><i class="fa-solid fa-check"></i> Scans 200+ SEO signals</div>
+        <div class="plugin-note"><i class="fa-solid fa-check"></i> Instant downloadable report</div>
+        <div class="plugin-note"><i class="fa-solid fa-check"></i> Mobile &amp; desktop check</div>
+        <div class="plugin-note"><i class="fa-solid fa-check"></i> Core Web Vitals included</div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ════════════════════════════════════
