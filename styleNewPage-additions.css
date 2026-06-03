@@ -816,9 +816,6 @@
 	pointer-events: none; user-select: none;
 }
 
-/* .contact-watermark img {
-	width: 15rem; height: auto; object-fit: contain; filter: grayscale(80%);
-} */
 .contact-watermark img {
     width: 15rem;
     height: auto;
