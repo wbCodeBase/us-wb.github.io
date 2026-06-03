@@ -445,6 +445,7 @@ h2.h-main em {
 	width: 160px;
 	height: auto;
 	object-fit: contain;
+	opacity: 1 !important;
 }
 
 .hero-trust {
