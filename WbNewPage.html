@@ -4,20 +4,190 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<title>Page Title</title>
+	<title>White Bunnie – Digital Marketing Agency in India</title>
 	<link rel='stylesheet' href='./styleNewHome.css'>
-
+	<link rel='stylesheet' href='./styleNewPage-additions.css'>
 	<link
 		href='https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
 		rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
 </head>
 
-
 <body>
+
+	<!-- ════════════════════════════════════
+  NAVBAR
+════════════════════════════════════ -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-wrap">
+
+			<a href="/" class="nav-logo">
+				<img src="./images/logos/logo.svg" alt="White Bunnie Digital Marketing">
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<ul class="nav-menu" id="navMenu">
+
+				<!-- Services – Mega Menu -->
+				<li class="nav-item has-mega">
+					<a href="#services" class="nav-link">
+						Services
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+
+					<div class="mega-menu">
+						<div class="mega-inner">
+
+							<div class="mega-col">
+								<p class="mega-col-header">SEO & Visibility</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-robot"></i></div>
+									<div class="mega-item-text"><strong>AI SEO</strong><span>AI-powered search
+											visibility</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-gears"></i></div>
+									<div class="mega-item-text"><strong>Technical SEO</strong><span>Site health &amp;
+											crawlability</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+									<div class="mega-item-text"><strong>Local SEO</strong><span>Dominate local
+											searches</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="mega-item-text"><strong>E-commerce SEO</strong><span>Organic growth for
+											online stores</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Paid Advertising</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-google"></i></div>
+									<div class="mega-item-text"><strong>Google Ads / PPC</strong><span>Targeted paid
+											search campaigns</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-meta"></i></div>
+									<div class="mega-item-text"><strong>Meta Ads</strong><span>Facebook &amp; Instagram
+											advertising</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+									<div class="mega-item-text"><strong>Performance Marketing</strong><span>SEM, social
+											ads &amp; email ROI</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-filter"></i></div>
+									<div class="mega-item-text"><strong>Lead Generation</strong><span>Quality leads
+											&amp; conversion funnels</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Brand &amp; Social</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-hashtag"></i></div>
+									<div class="mega-item-text"><strong>Social Media Marketing</strong><span>Build &amp;
+											engage your audience</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-nib"></i></div>
+									<div class="mega-item-text"><strong>Content Marketing</strong><span>Blogs, videos
+											&amp; thought leadership</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-palette"></i></div>
+									<div class="mega-item-text"><strong>Branding &amp; Identity</strong><span>Logo,
+											brand strategy &amp; design</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-envelope"></i></div>
+									<div class="mega-item-text"><strong>Email Marketing</strong><span>Nurture leads
+											&amp; drive conversions</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Tech &amp; Design</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-code"></i></div>
+									<div class="mega-item-text"><strong>Web Development</strong><span>Custom &amp;
+											e-commerce websites</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+									<div class="mega-item-text"><strong>UI/UX Design</strong><span>Wireframes,
+											prototypes &amp; interfaces</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-laptop"></i></div>
+									<div class="mega-item-text"><strong>Landing Pages</strong><span>High-converting page
+											experiences</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+									<div class="mega-item-text"><strong>CRO</strong><span>Conversion rate
+											optimization</span></div>
+								</a>
+							</div>
+
+							<div class="mega-featured">
+								<div class="mega-feat-badge">Case Study</div>
+								<div class="mega-feat-stat">+312%</div>
+								<p class="mega-feat-label">SQLs in 9 months for a B2B logistics client</p>
+								<a href="#" class="mega-feat-cta">Read case study →</a>
+							</div>
+
+						</div>
+					</div>
+				</li>
+
+				<!-- Industries dropdown -->
+				<li class="nav-item has-dropdown">
+					<a href="#" class="nav-link">
+						Industries
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+					<ul class="nav-dropdown">
+						<li><a href="#"><i class="fa-solid fa-heart-pulse"></i> Healthcare</a></li>
+						<li><a href="#"><i class="fa-solid fa-building"></i> Real Estate</a></li>
+						<li><a href="#"><i class="fa-solid fa-bag-shopping"></i> E-commerce</a></li>
+						<li><a href="#"><i class="fa-solid fa-microchip"></i> SaaS &amp; Tech</a></li>
+						<li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+						<li><a href="#"><i class="fa-solid fa-coins"></i> Finance</a></li>
+					</ul>
+				</li>
+
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Case Studies</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+
+			</ul>
+
+			<div class="nav-actions">
+				<a href="#contact" class="btn btn-primary btn-sm">
+					<i class="fa-regular fa-file-lines"></i> Get Free Proposal
+				</a>
+				<a href="tel:+919876543210" class="btn btn-secondary btn-sm">
+					<i class="fa-solid fa-phone"></i> Call Us
+				</a>
+			</div>
+
+		</div>
+	</nav>
+
 
 	<!-- ════════════════════════════════════
   HERO
@@ -33,10 +203,6 @@
 				<h1>
 					Digital Marketing Agency in <em>India</em>
 				</h1>
-				<!-- <h1>
-		We help you build the authority that makes  
-        <em>AI Search.</em>
-      </h1> -->
 
 				<p class="hero-sub">
 					We turn your Website into a Lead Generation machine with our proven Digital Marketing Services.
@@ -50,9 +216,8 @@
 				</p>
 
 				<div class="hero-cta-wrap-parent">
-
 					<div class="hero-cta-wrap">
-						<a href="#audit-form" class="btn btn-primary">
+						<a href="#contact" class="btn btn-primary">
 							Discover Our Project
 							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -60,24 +225,394 @@
 								<polyline points="12,5 19,12 12,19" />
 							</svg>
 						</a>
-
-						<a href="#audit-form" class="btn btn-secondary">
+						<a href="tel:+919876543210" class="btn btn-secondary">
 							Call Us
 							<i class="fa-solid fa-phone"></i>
 						</a>
 					</div>
-
 					<div class="hero-logo-sec">
-						<img src="./newHome/shopify.png" alt="Partner Logos" class="Shopify partner-logos">
-						<img src="./newHome/googleP.png" alt="Partner Logos" class="Google partner-logos">
+						<img src="./images/shopify-partner.png" alt="Shopify Partner" class="partner-logos">
+						<img src="./images/google.png" alt="Google Partner" class="partner-logos">
 					</div>
-
 				</div>
-
 
 			</div>
 		</div>
 	</section>
+
+
+	<!-- ════════════════════════════════════
+  LOGO MARQUEE
+════════════════════════════════════ -->
+	<section class="logos-section">
+		<div class="logos-marquee-wrap">
+			<div class="logos-track">
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb52cbf347a7bee5a67_65.png"
+						alt="Beta Bionics" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5a48d10e656844936_66.png"
+						alt="Galaxy" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5e8e149a53f3e0a32_67.png"
+						alt="Hanans" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb4e27ac209dfc5a33a_64.png"
+						alt="Qrc" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab2706df522240c914_3.png"
+						alt="Wingify" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab6408366462caa613_16.png"
+						alt="Docere" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab05ab1ac6f023a362_7.png"
+						alt="Business Next" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3311978fda77c02db_53.png"
+						alt="Painters USA" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb39d2ec9571427e271_59.png"
+						alt="Hesseison" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3cff7d863ec977aad_52.png"
+						alt="Unacem" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3a48d10e65684488c_56.png"
+						alt="Working" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3689d3d4fb411cb33_60.png"
+						alt="Broughton Partners" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeadeafaad0083ca2960_8.png"
+						alt="Medtronics" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac3b5afb8137cdae12_25.png"
+						alt="Evanssion" /></div>
+				<!-- duplicates for seamless loop -->
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb52cbf347a7bee5a67_65.png"
+						alt="Beta Bionics" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5a48d10e656844936_66.png"
+						alt="Galaxy" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5e8e149a53f3e0a32_67.png"
+						alt="Hanans" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb4e27ac209dfc5a33a_64.png"
+						alt="Qrc" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab2706df522240c914_3.png"
+						alt="Wingify" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab6408366462caa613_16.png"
+						alt="Docere" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab05ab1ac6f023a362_7.png"
+						alt="Business Next" /></div>
+			</div>
+		</div>
+
+		<div class="logos-marquee-wrap" style="margin-top:0">
+			<div class="logos-track-row2">
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaba2822dd698f88375_13.png"
+						alt="Oxacane" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab70ec12d02659df63_5.png"
+						alt="ToTheNew" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabb08b48f21b0f7499_10.png"
+						alt="Jeena Seeke" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf3785a32ae0cf390_9.png"
+						alt="Marquis" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf5f0b40cc9b3d872_4.png"
+						alt="Bajaj" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabdb4528e6e00ad414_11.png"
+						alt="Cion" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaa6f600b4c3b29ba9b_6.png"
+						alt="Skootr" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb337a848545144eac9_2.png"
+						alt="Primal" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0168c62722380945d_35.png"
+						alt="Mom Junction" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb1754e5f2d9669cb86_45.png"
+						alt="True Connections" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb081adf1aba3f096bd_34.png"
+						alt="Runwal" /></div>
+				<!-- duplicates -->
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaba2822dd698f88375_13.png"
+						alt="Oxacane" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab70ec12d02659df63_5.png"
+						alt="ToTheNew" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabb08b48f21b0f7499_10.png"
+						alt="Jeena Seeke" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf3785a32ae0cf390_9.png"
+						alt="Marquis" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf5f0b40cc9b3d872_4.png"
+						alt="Bajaj" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabdb4528e6e00ad414_11.png"
+						alt="Cion" /></div>
+				<div class="logo-item"><img
+						src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaa6f600b4c3b29ba9b_6.png"
+						alt="Skootr" /></div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  STATS SECTION
+════════════════════════════════════ -->
+	<section class="stats-section">
+		<div class="stats-wrap">
+			<div class="stats-grid">
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">16+</span>
+						<p>Years of experience delivering top-tier digital marketing results for clients worldwide.</p>
+					</div>
+					<p class="stat-body">Over a decade and a half of proven excellence in digital marketing.</p>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">1000+</span>
+						<p>Successful campaigns executed across SEO, PPC, social media and content marketing.</p>
+					</div>
+					<p class="stat-body">A thousand campaigns that drove real, measurable business growth.</p>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">120+</span>
+						<p>Businesses helped across India, USA, UAE, and Canada with custom digital strategies.</p>
+					</div>
+					<p class="stat-body">120+ brands trust White Bunnie for their digital transformation.</p>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">99k+</span>
+						<p>Leads generated for clients through data-driven digital marketing campaigns.</p>
+					</div>
+					<p class="stat-body">Nearly 100,000 qualified leads delivered to our clients.</p>
+				</article>
+			</div>
+
+			<nav class="stats-tabs" aria-label="Client case studies">
+				<a href="#" class="tab" data-tab="1"><span class="tab-title">Northwind Logistics</span><span
+						class="tab-meta">+312% SQLs, 9 mo</span></a>
+				<a href="#" class="tab" data-tab="2"><span class="tab-title">TechFlow SaaS</span><span
+						class="tab-meta">+158% Leads, 6 mo</span></a>
+				<a href="#" class="tab active" data-tab="3"><span class="tab-title">MedCare India</span><span
+						class="tab-meta">+245% Organic, 8 mo</span></a>
+				<a href="#" class="tab" data-tab="4"><span class="tab-title">Retail Giant</span><span
+						class="tab-meta">+63% ROAS, 4 mo</span></a>
+				<a href="#" class="tab" data-tab="5"><span class="tab-title">EduTech Brand</span><span
+						class="tab-meta">+390% SQLs, 7 mo</span></a>
+			</nav>
+		</div>
+	</section>
+
+
+
+	<section class="wbtc-section">
+		<div class="wbtc">
+			<div class="wbtc-head">
+				<h1>Digital Marketing Company Well Regarded by <span class="wbtc-accent">Clients</span></h1>
+				<p>Real results. Real relationships. See what our clients have to say about working with us.</p>
+			</div>
+
+			<!-- ============================================================
+       ALL CONTENT LIVES HERE. Each <article class="wbtc-slide"> is one
+       testimonial. To add one, copy a whole <article> block. To remove
+       one, delete it. The cards + dots below build themselves from these.
+ 
+       Edit the meta on the <article> tag:
+         data-name, data-role, data-company, data-location,
+         data-rating (1-5), data-href (case-study link),
+         data-photo (client headshot URL — leave "" for placeholder)
+       Edit the quote / stats / description as plain text inside.
+  ============================================================ -->
+			<div class="wbtc-stage" id="wbtc-stage">
+
+				<!-- ===== TESTIMONIAL 1 ===== -->
+				<article class="wbtc-slide" data-name="Randy Cheng" data-role="Founder &amp; CEO"
+					data-company="Collab Management Group" data-location="Construction Consultant, Canada"
+					data-rating="5" data-href="#" data-photo="./newHome/Thumbnail 1.jpg.jpeg">
+					<div class="wbtc-media">
+						<div class="wbtc-photo"></div>
+						<svg class="wbtc-placeholder" viewBox="0 0 24 24" fill="#fff">
+							<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z" />
+						</svg>
+						<div class="wbtc-ghost-name"></div>
+						<div class="wbtc-label"></div>
+						<button class="wbtc-play" aria-label="Play video"></button>
+						<div class="wbtc-pill"></div>
+					</div>
+					<div class="wbtc-body">
+						<div class="wbtc-quote-mark">&ldquo;</div>
+						<p class="wbtc-quote">Highly efficient, and backed by strategies that help businesses grow.</p>
+						<div class="wbtc-stats">
+							<div class="wbtc-stat">
+								<div class="wbtc-num">+600%</div>
+								<div class="wbtc-lbl">Organic Traffic</div>
+							</div>
+							<div class="wbtc-stat">
+								<div class="wbtc-num">+783%</div>
+								<div class="wbtc-lbl">Business Leads</div>
+							</div>
+						</div>
+						<p class="wbtc-desc">I've had the pleasure of working with <strong>Neha and the White Bunnie
+								team</strong> for several months.</p>
+						<a class="wbtc-cta"><span class="wbtc-cta-label">Read Collab Case Study</span><span
+								class="wbtc-arw">&rarr;</span></a>
+					</div>
+				</article>
+
+				<!-- ===== TESTIMONIAL 2 ===== -->
+				<article class="wbtc-slide" data-name="Sanjay Ayre" data-role="CEO &mdash; MVP Fitness"
+					data-company="Health &amp; Fitness, Columbia" data-location="Health &amp; Fitness, Columbia"
+					data-rating="5" data-href="#" data-photo="./newHome/Thumbnail 2.jpg.jpeg">
+					<div class="wbtc-media">
+						<div class="wbtc-photo"></div>
+						<svg class="wbtc-placeholder" viewBox="0 0 24 24" fill="#fff">
+							<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z" />
+						</svg>
+						<div class="wbtc-ghost-name"></div>
+						<div class="wbtc-label"></div>
+						<button class="wbtc-play" aria-label="Play video"></button>
+						<div class="wbtc-pill"></div>
+					</div>
+					<div class="wbtc-body">
+						<div class="wbtc-quote-mark">&ldquo;</div>
+						<p class="wbtc-quote">They turned our digital presence into a genuine growth engine.</p>
+						<div class="wbtc-stats">
+							<div class="wbtc-stat">
+								<div class="wbtc-num">+412%</div>
+								<div class="wbtc-lbl">Lead Volume</div>
+							</div>
+							<div class="wbtc-stat">
+								<div class="wbtc-num">+5.2x</div>
+								<div class="wbtc-lbl">Return On Ad Spend</div>
+							</div>
+						</div>
+						<p class="wbtc-desc">The <strong>White Bunnie team</strong> understood our market instantly and
+							delivered results we could measure from week one.</p>
+						<a class="wbtc-cta"><span class="wbtc-cta-label">Read MVP Fitness Case Study</span><span
+								class="wbtc-arw">&rarr;</span></a>
+					</div>
+				</article>
+
+				<!-- ===== TESTIMONIAL 3 ===== -->
+				<article class="wbtc-slide" data-name="Seth Kleinman" data-role="CEO &mdash; Go Remote CR"
+					data-company="Travel Service, Costa Rica" data-location="Travel Service, Costa Rica" data-rating="5"
+					data-href="#" data-photo="./newHome/Thumbnail 4.jpg.jpeg">
+					<div class="wbtc-media">
+						<div class="wbtc-photo"></div>
+						<svg class="wbtc-placeholder" viewBox="0 0 24 24" fill="#fff">
+							<path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z" />
+						</svg>
+						<div class="wbtc-ghost-name"></div>
+						<div class="wbtc-label"></div>
+						<button class="wbtc-play" aria-label="Play video"></button>
+						<div class="wbtc-pill"></div>
+					</div>
+					<div class="wbtc-body">
+						<div class="wbtc-quote-mark">&ldquo;</div>
+						<p class="wbtc-quote">Bookings climbed steadily while our cost per lead dropped.</p>
+						<div class="wbtc-stats">
+							<div class="wbtc-stat">
+								<div class="wbtc-num">+340%</div>
+								<div class="wbtc-lbl">Direct Bookings</div>
+							</div>
+							<div class="wbtc-stat">
+								<div class="wbtc-num">-48%</div>
+								<div class="wbtc-lbl">Cost Per Lead</div>
+							</div>
+						</div>
+						<p class="wbtc-desc">Working with <strong>White Bunnie</strong> felt like having a real growth
+							partner, not just an agency.</p>
+						<a class="wbtc-cta"><span class="wbtc-cta-label">Read Go Remote Case Study</span><span
+								class="wbtc-arw">&rarr;</span></a>
+					</div>
+				</article>
+
+			</div>
+
+			<div class="wbtc-dots" id="wbtc-dots"></div>
+
+			<div class="wbtc-carousel">
+				<button class="wbtc-arrow" id="wbtc-prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2.2">
+						<path d="M15 18l-6-6 6-6" />
+					</svg></button>
+				<div class="wbtc-cards" id="wbtc-cards"></div>
+				<button class="wbtc-arrow" id="wbtc-next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2.2">
+						<path d="M9 18l6-6-6-6" />
+					</svg></button>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+
+
+	
+
+	
+
+	<!-- ════════════════════════════════════
+  CTA BANNER
+════════════════════════════════════ -->
+	<section class="cta-banner">
+		<div class="wrap">
+			<div class="cta-banner-inner">
+				<div class="cta-banner-left">
+					<h2>Looking for a digital marketing agency to <em>boost</em> your average revenue?</h2>
+				</div>
+				<div class="cta-banner-right">
+					<p>To enhance your average revenue, get in touch with us and receive a free proposal from our
+						digital marketing specialists.</p>
+					<div class="cta-banner-actions">
+						<a href="#contact" class="btn cta-btn-outline">
+							<i class="fa-regular fa-file-lines"></i> Get Free Proposal
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg>
+						</a>
+						<a href="tel:+919876543210" class="btn cta-btn-solid">
+							<i class="fa-solid fa-phone"></i> Call Us
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
 
 
 
@@ -86,593 +621,1234 @@
 
 
 	<!-- ════════════════════════════════════
-  Clients Logos-->
-
-	<section class="logos-section">
-
-		<!-- ── ROW 1 — scrolls left ── -->
-		<div class="logos-marquee-wrap">
-			<div class="logos-track">
-				<!-- ─ ORIGINAL SET ─ duplicate this entire block to add logos ─ -->
-				<!-- To use a real logo: replace the .logo-placeholder div with <img src="logo.svg" alt="Company Name"> -->
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb52cbf347a7bee5a67_65.png"
-						alt="Beta Bionics" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5a48d10e656844936_66.png"
-						alt="Galaxy" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5e8e149a53f3e0a32_67.png"
-						alt="Hanans" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb4e27ac209dfc5a33a_64.png"
-						alt="Qrc" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab2706df522240c914_3.png"
-						alt="wingify" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab6408366462caa613_16.png"
-						alt="docere" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab05ab1ac6f023a362_7.png"
-						alt="Business Next" />
-				</div>
-
-				<!-- ─ DUPLICATE SET ─ -->
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb52cbf347a7bee5a67_65.png"
-						alt="Beta Bionics" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5a48d10e656844936_66.png"
-						alt="Galaxy" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb5e8e149a53f3e0a32_67.png"
-						alt="Hanans" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb4e27ac209dfc5a33a_64.png"
-						alt="Qrc" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab2706df522240c914_3.png"
-						alt="wingify" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab6408366462caa613_16.png"
-						alt="docere" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab05ab1ac6f023a362_7.png"
-						alt="Business Next" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3311978fda77c02db_53.png"
-						alt="Painters usa" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb39d2ec9571427e271_59.png"
-						alt="Hesseison" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3cff7d863ec977aad_52.png"
-						alt="Unacem" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3a48d10e65684488c_56.png"
-						alt="Working" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3689d3d4fb411cb33_60.png"
-						alt="Broughton partners" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3e75ce3a51f9d8091_57.png"
-						alt="Kion" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3a84642d94ed3ba3d_61.png"
-						alt="xna" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3b3fb4428dc2e8a7d_55.png"
-						alt="windward" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb341e4864b514d01b3_63.png"
-						alt="ivf" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3bd218caee9e51b17_54.png"
-						alt="sampro" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb33ff809daafec8e4e_62.png"
-						alt="bearing tree" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb3bc798a7035d5533c_58.png"
-						alt="cell" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb341f8fd343492d6fb_49.png"
-						alt="vivax" />
-				</div>
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeadeafaad0083ca2960_8.png"
-						alt="medtronics" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac3b5afb8137cdae12_25.png"
-						alt="evanssion" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaca103e937f375821e_18.png"
-						alt="sanjeevani wealth" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaddd2bbbff44741703_26.png"
-						alt="knowlarity" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeada8989acf4c3c8b06_22.png"
-						alt="unify apps" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aead170335633c216b6d_31.png"
-						alt="patodia" />
-				</div>
-
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aead71a3ae2005c25dc8_20.png"
-						alt="rastomjee" />
-				</div>
-
-			</div>
-			<!-- end .logos-track -->
-		</div>
-		<!-- end row 1 -->
-
-
-
-		<!-- ── ROW 2 — scrolls right (optional, remove if not needed) ── -->
-		<div class="logos-marquee-wrap" style="margin-top: 0">
-			<div class="logos-track-row2">
-				<!-- ─ ORIGINAL SET ─ -->
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaba2822dd698f88375_13.png"
-						alt="Oxacane" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab70ec12d02659df63_5.png"
-						alt="ToTheNew" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabb08b48f21b0f7499_10.png"
-						alt="Jeena Seeke" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf3785a32ae0cf390_9.png"
-						alt="Marquis" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf5f0b40cc9b3d872_4.png"
-						alt="bajaj" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabdb4528e6e00ad414_11.png"
-						alt="Cion" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaa6f600b4c3b29ba9b_6.png"
-						alt="Skootr" />
-				</div>
-
-				<!-- ─ DUPLICATE SET ─ -->
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaba2822dd698f88375_13.png"
-						alt="Oxacane" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeab70ec12d02659df63_5.png"
-						alt="ToTheNew" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabb08b48f21b0f7499_10.png"
-						alt="Jeena Seeke" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf3785a32ae0cf390_9.png"
-						alt="Marquis" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabf5f0b40cc9b3d872_4.png"
-						alt="bajaj" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeabdb4528e6e00ad414_11.png"
-						alt="Cion" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeaa6f600b4c3b29ba9b_6.png"
-						alt="Skootr" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb337a848545144eac9_2.png"
-						alt="Primal" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb30ff7717c94c9848b_50.png"
-						alt="Pr Russel" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb30ede5abe24cd02a9_51.png"
-						alt="Sti" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0168c62722380945d_35.png"
-						alt="mom junction" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb1754e5f2d9669cb86_45.png"
-						alt="true connections" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb18d75d8ba0f4b6cf8_48.png"
-						alt="aum biotech" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb18ef84e281a28b177_37.png"
-						alt="atmos" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb140c86e73b85bb3ca_47.png"
-						alt="belong health" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0b9240fb9c4c1f957_38.png"
-						alt="centuary" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0be5bbae2039994fc_44.png"
-						alt="huco" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0d0605554fec6fa17_43.png"
-						alt="uni experts" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0ac74040f91327f54_40.png"
-						alt="saroj agro" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0322e5f917f8bd439_42.png"
-						alt="isca" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0a6bc91533af11818_41.png"
-						alt="icreon" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb0ec42570e6ae27c11_39.png"
-						alt="idh" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb041e4864b514d018f_46.png"
-						alt="mars" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb081adf1aba3f096bd_34.png"
-						alt="runwal" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeb03d6fca5a795b5aa7_33.png"
-						alt="wg" />
-				</div>
-
-
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aead3d6fca5a795b5a3f_17.png"
-						alt="planetcast" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac0f52bcfeb3f8d430_15.png"
-						alt="smc" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac41f8fd343492d5ef_21.png"
-						alt="sinch" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeacdef047dd8ac900cb_28.png"
-						alt="nms infra" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac41f8fd343492d5ef_21.png"
-						alt="sinch" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac3c175345ff798d65_30.png"
-						alt="pure software" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac1c8164e5132e283d_29.png"
-						alt="liine" />
-				</div>
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeac08a3fc7054e697eb_19.png"
-						alt="asbury" />
-				</div>
-
-				<div class="logo-item">
-					<img src="https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/69f0aeacec42570e6ae27acf_27.png"
-						alt="manglam" />
-				</div>
-
-
-			</div>
-			<!-- end .logos-track-row2 -->
-		</div>
-		<!-- end row 2 -->
-	</section>
-
-
-
-
-
-
-
-	<!-- Stats Section  -->
-	<section class="stats-section">
-
-
-		<div class="stats-wrap">
-
-			<div class="stats-grid">
-				<article class="stat-card">
-					<div class="stat-head">
-						<span class="stat-number">16+</span>
-						<p>Our track record for providing the best digital marketing services is second to none.</p>
-					</div>
-					<p class="stat-body">Our track record for providing the best digital marketing services is second to
-						none.</p>
-				</article>
-
-				<article class="stat-card">
-					<div class="stat-head">
-						<span class="stat-number">1000+</span>
-						<p>Our track record for providing the best digital marketing services is second to none.</p>
-					</div>
-					<p class="stat-body">Our track record for providing the best digital marketing services is second to
-						none.</p>
-				</article>
-
-				<article class="stat-card">
-					<div class="stat-head">
-						<span class="stat-number">120+</span>
-						<p>Our track record for providing the best digital marketing services is second to none.</p>
-					</div>
-					<p class="stat-body">Our track record for providing the best digital marketing services is second to
-						none.</p>
-				</article>
-
-				<article class="stat-card">
-					<div class="stat-head">
-						<span class="stat-number">99k+</span>
-						<p>Our track record for providing the best digital marketing services is second to none.</p>
-					</div>
-					<p class="stat-body">Our track record for providing the best digital marketing services is second to
-						none.</p>
-				</article>
+  WALL OF LOVE
+════════════════════════════════════ -->
+	<section class="wall-section">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="svc-label-badge">Client Love</span>
+				<h2 class="h-main">Wall of <em>Love</em></h2>
+				<p class="section-sub">Stories from partners and clients who love working with us.</p>
 			</div>
 
-			<nav class="stats-tabs" aria-label="Client case studies">
-				<a href="#case-1" class="tab" data-tab="1">
-					<span class="tab-title">Northwind Logistics</span>
-					<span class="tab-meta">+312% SQLs, 9 mo</span>
-				</a>
-				<a href="#case-2" class="tab" data-tab="2">
-					<span class="tab-title">Northwind Logistics</span>
-					<span class="tab-meta">+312% SQLs, 9 mo</span>
-				</a>
-				<a href="#case-3" class="tab active" data-tab="3">
-					<span class="tab-title">Northwind Logistics</span>
-					<span class="tab-meta">+312% SQLs, 9 mo</span>
-				</a>
-				<a href="#case-4" class="tab" data-tab="4">
-					<span class="tab-title">Northwind Logistics</span>
-					<span class="tab-meta">+312% SQLs, 9 mo</span>
-				</a>
-				<a href="#case-5" class="tab" data-tab="5">
-					<span class="tab-title">Northwind Logistics</span>
-					<span class="tab-meta">+312% SQLs, 9 mo</span>
-				</a>
-			</nav>
+			<div class="wall-bento">
 
+				<!-- Card 1: Google Review -->
+				<article class="wall-card wall-light">
+					<div class="wall-review-logo">
+						<img src="./newHome/wallOfLv/G2.png" alt="Google Logo" width="28" height="28">
+					</div>
+					<div class="wall-stars">★★★★★</div>
+					<p class="wall-quote">"We were drowning with 7 people. Got back so many hours each week from
+						reporting. Finally have bandwidth to focus on actual strategy."</p>
+					<div class="wall-author">
+						<!-- <div class="wall-avatar wall-av-blue">RD</div> -->
+						<div class="wall-author-info">
+							<strong>Roger Dunn</strong>
+							<span>Global Performance Lead · Rivert</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- Card 2: NIMBLE (dark, large) -->
+				<article class="wall-card wall-dark wallnimble">
+					<!-- <div class="wall-brand-tag">— NIMBLE</div>
+					<blockquote class="wall-big-quote">"CLOSED Q1 AT +158% PLEASE DON'T CHANGE A THING."</blockquote> -->
+					<div class="wall-nimble-img">
+						<img src="./newHome/wallOfLv/nimble.png"
+							alt="Nimble">
+					</div>
+				</article>
+
+				<!-- Card 3: Trustpilot -->
+				<article class="wall-card wall-light">
+					<div class="wall-review-logo wall-tp-logo">
+						<img src="./newHome/wallOfLv/Trustpilot.png" alt="Trustpilot Logo" width="86" height="22">
+					</div>
+					<div style="color: #00B779;" class="wall-stars">★★★★★</div>
+					<p class="wall-quote">"Found wasted spend in search terms we'd never have caught manually. Cut
+						those, reallocated budget. ROAS up 45%."</p>
+					<div class="wall-author">
+						<!-- <div class="wall-avatar wall-av-orange">DR</div> -->
+						<div class="wall-author-info">
+							<strong>Daniel Roser</strong>
+							<span>CEO · 7 reviews</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- Card 4: X / Twitter -->
+				<article class="wall-card wall-light">
+					<div class="wall-review-logo">
+						<img src="./newHome/wallOfLv/Twitter.png" alt="Twitter Logo" width="36" height="20">
+					</div>
+					<p class="wall-quote">"Our agency does audits for potential clients 5× faster now. Used to take
+						days, now it's like an hour. Way easier to win new business."</p>
+					<div class="wall-author">
+						<!-- <div class="wall-avatar wall-av-green">GK</div> -->
+						<div class="wall-author-info">
+							<strong>Gabriela K.</strong>
+							<span>@ppc_bella · 3h</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- Card 5: Stats dark -->
+				<article class="wall-card wall-dark wall-stats-card">
+					<div class="wall-stats-thumb">
+						<img src="./newHome/wallOfLv/stats.png"
+							alt="Analytics">
+					</div>
+				</article>
+
+				<!-- Card 6: Clutch -->
+				<article class="wall-card wall-light">
+					<div class="wall-review-logo wall-clutch-logo">
+						<img src="./newHome/wallOfLv/Clutch.png" alt="Clutch Logo" width="72" height="34">
+					</div>
+					<p class="wall-quote">"Caught that our conversion tracking was double-counting. We had no idea for 3
+						months. Fixed it and everything made way more sense."</p>
+					<div class="wall-author">
+						<!-- <div class="wall-avatar wall-av-purple">EM</div> -->
+						<div class="wall-author-info">
+							<strong>Elena M.</strong>
+							<span>CMO · TechFlow</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- Card 7: +63% blue impact -->
+				<article class="wall-card wall-blue-impact">
+					<p class="wall-impact-eyebrow">IMPACT</p>
+					<div class="wall-impact-num">+63%</div>
+					<p class="wall-impact-desc">Better ROAS after switching to AI agents</p>
+				</article>
+
+				<!-- Card 8: Award photo -->
+				<article class="wall-card wall-photo-card">
+					<img src="./newHome/wallOfLv/Mam-Ashneer.png" alt="White Bunnie Award">
+					<div class="wall-photo-overlay"></div>
+				</article>
+
+				<!-- Card 9: Speedy -->
+				<article class="wall-card wall-light">
+					<p class="wall-brand-eyebrow">SPEEDY</p>
+					<div class="wall-speedy-stat">1 DAY</div>
+					<p class="wall-quote">Got the whole team up and running. Super easy to pick up.</p>
+					<p class="wall-verified-tag">✓ Verified customer · Speedy</p>
+				</article>
+
+			</div>
+
+			<!-- <div class="wall-features-row">
+				<div class="wall-feat">
+					<div class="wall-feat-icon"><i class="fa-solid fa-robot"></i></div>
+					<div class="wall-feat-text">
+						<strong>AI-Powered Performance</strong>
+						<span>Smarter campaigns, every time</span>
+					</div>
+				</div>
+				<div class="wall-feat">
+					<div class="wall-feat-icon"><i class="fa-solid fa-chart-bar"></i></div>
+					<div class="wall-feat-text">
+						<strong>Data-Driven Decisions</strong>
+						<span>Insights that actually move the needle</span>
+					</div>
+				</div>
+				<div class="wall-feat">
+					<div class="wall-feat-icon"><i class="fa-solid fa-rocket"></i></div>
+					<div class="wall-feat-text">
+						<strong>Faster Results, Less Guesswork</strong>
+						<span>Launch and iterate at speed</span>
+					</div>
+				</div>
+				<div class="wall-feat">
+					<div class="wall-feat-icon"><i class="fa-solid fa-star"></i></div>
+					<div class="wall-feat-text">
+						<strong>Trusted by Top Brands Worldwide</strong>
+						<span>Proven across 50+ industries</span>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- <p class="wall-footer-note">ALL REVIEWS INDEPENDENTLY VERIFIED</p> -->
 		</div>
 	</section>
-
-
-
 
 
 
 
 	
+
+
+	<!-- ════════════════════════════════════
+  MAXIMIZE ROI SECTION
+════════════════════════════════════ -->
+	<section class="maximize-roi-section">
+		<div class="wrap">
+
+			<div class="trusted-row">
+				<div class="trusted-group">
+					<p class="trusted-label">TRUSTED BY B2B COMPANIES</p>
+					<div class="trusted-logos">
+						<span>STOK</span><span>ASSOCIATED</span><span>MT. EVEREST</span>
+						<span>nimble</span><span>freedomcapita</span><span>DDD</span>
+					</div>
+				</div>
+				<div class="trusted-divider"></div>
+				<div class="trusted-group">
+					<p class="trusted-label">TRUSTED BY IT COMPANIES</p>
+					<div class="trusted-logos">
+						<span>SaasWerx</span><span>MERSOL</span><span>P3WER</span>
+						<span>HexaView</span><span>DoSELECT</span>
+					</div>
+				</div>
+				<div class="trusted-divider"></div>
+				<div class="trusted-group">
+					<p class="trusted-label">TRUSTED BY SMALL BUSINESSES</p>
+					<div class="trusted-logos">
+						<span>AC-COM</span><span>DOCTORS</span><span>PEAK CLEANING</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="maximize-inner">
+				<div class="center-text" style="margin-bottom:48px">
+					<h2 class="h-main">Maximize ROI With Customized<br><em>Digital Marketing</em> Services</h2>
+				</div>
+
+				<div class="maximize-img-wrap">
+					<img src="./images/difference.jpg" alt="Digital Marketing ROI Growth" class="maximize-img"
+						onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80'">
+					<div class="maximize-img-border"></div>
+				</div>
+
+				<p class="maximize-text">The ultimate aim of hiring a top digital marketing agency is to get strong
+					returns on investment and White Bunnie is the right place for any business. If you are looking for
+					the best digital marketing company in India then you have come to the right place. We hold Years of
+					experience in digital marketing services and boast's some of the best digital marketing
+					professionals.</p>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<!-- ════════════════════════════════════
+  SERVICES BENTO
+════════════════════════════════════ -->
+	<section class="services-section" id="services">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="svc-label-badge">What We Do</span>
+				<h2 class="h-main">The Digital Marketing <br>Services <em>We Offer</em></h2>
+				<p class="section-sub">Our digital marketing services increase brand visibility, drive more qualified
+					leads, and deliver measurable results with data-driven strategies for maximum ROI. Here are the
+					following services we provide:</p>
+			</div>
+
+			<div class="services-bento">
+
+				<article class="svc-card svc-light">
+					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-code"></i></div>
+					<h3>Web Development</h3>
+					<p>From custom builds to e-commerce, stunning online experiences tailored to your needs.</p>
+					<div class="svc-tags">
+						<span class="svc-tag">Custom</span>
+						<span class="svc-tag">E-commerce</span>
+					</div>
+					<div class="svc-ghost">01</div>
+				</article>
+
+				<article class="svc-card svc-dark">
+					<div class="svc-top-bar">UI / UX &nbsp;<i class="fa-solid fa-table-columns"></i></div>
+					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-pen-ruler"></i></div>
+					<h3>UI / UX Design</h3>
+					<p>Innovative designs and development solutions that set you apart from the competition.</p>
+					<div class="svc-tags">
+						<span class="svc-tag svc-tag-dk">Wireframes</span>
+						<span class="svc-tag svc-tag-dk">Prototypes</span>
+					</div>
+					<div class="svc-ghost">02</div>
+				</article>
+
+				<article class="svc-card svc-blue-lt">
+					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-hashtag"></i></div>
+					<h3>SMM Services</h3>
+					<p>Creating and managing digital marketing campaigns across every major social platform.</p>
+					<div class="svc-tags">
+						<span class="svc-tag">Social</span>
+						<span class="svc-tag">Content</span>
+					</div>
+					<div class="svc-ghost">03</div>
+				</article>
+
+				<article class="svc-card svc-blue-grad">
+					<!-- <div class="svc-ai-badge"><i class="fa-solid fa-robot"></i> AI</div> -->
+					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+					<h3>AI SEO</h3>
+					<p>Next-generation AI SEO designed to maximize visibility, drive targeted traffic, and achieve
+						sustainable growth.</p>
+					<div class="svc-ai-stats">
+						<div class="svc-ai-stat"><span>+5,556%</span><small>AI referral traffic</small></div>
+						<div class="svc-ai-stat"><span>+1,078%</span><small>ChatGPT search traffic</small></div>
+					</div>
+					<div class="svc-ghost">04</div>
+				</article>
+
+				<article class="svc-card svc-light">
+					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+					<h3>SEO</h3>
+					<p>Improve your search engine rankings and increase organic traffic with proven strategies.</p>
+					<div class="svc-tags">
+						<span class="svc-tag">On-page</span>
+						<span class="svc-tag">Technical</span>
+					</div>
+					<div class="svc-ghost">05</div>
+				</article>
+
+				<article class="svc-card svc-black">
+					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-filter"></i></div>
+					<h3>Lead Generation</h3>
+					<p>Quality leads through targeted campaigns and conversion optimisation techniques.</p>
+					<div class="svc-tags">
+						<span class="svc-tag svc-tag-dk">Funnels</span>
+						<span class="svc-tag svc-tag-dk">CRO</span>
+					</div>
+					<div class="svc-ghost">06</div>
+				</article>
+
+				<article class="svc-card svc-blue-lt">
+					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-brands fa-google"></i></div>
+					<h3>PPC</h3>
+					<p>Expertly managed pay-per-click campaigns that drive targeted traffic and deliver best results.
+					</p>
+					<div class="svc-tags">
+						<span class="svc-tag">Google Ads</span>
+						<span class="svc-tag">Meta</span>
+					</div>
+					<div class="svc-ghost">07</div>
+				</article>
+
+				<article class="svc-card svc-light">
+					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-palette"></i></div>
+					<h3>Branding Service</h3>
+					<p>Build a strong, recognisable identity through logo design, marketing materials, and cohesive
+						brand messaging that resonates.</p>
+					<div class="svc-tags">
+						<span class="svc-tag">Identity</span>
+						<span class="svc-tag">Logo</span>
+						<span class="svc-tag">Messaging</span>
+					</div>
+					<div class="svc-ghost">08</div>
+				</article>
+
+				<article class="svc-card svc-navy">
+					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-chart-line"></i></div>
+					<h3>Performance Marketing</h3>
+					<p>Measurable results through SEM, social ads, and email marketing that drives real ROI.</p>
+					<div class="svc-tags">
+						<span class="svc-tag svc-tag-dk">SEM</span>
+						<span class="svc-tag svc-tag-dk">Email</span>
+					</div>
+					<div class="svc-ghost">09</div>
+				</article>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  SOLUTIONS FEATURE CARDS
+════════════════════════════════════ -->
+	<!-- <section class="solutions-section">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="svc-label-badge">Our Approach</span>
+				<h2 class="h-main">Powering Results-Driven <em>Digital Marketing</em></h2>
+				<p class="section-sub">We help businesses move from guesswork to proven execution — connecting SEO, paid
+					ads, social media, and brand strategy into one scalable growth model.</p>
+			</div>
+
+			<div class="solutions-grid">
+
+				<article class="sol-card">
+					<div class="sol-img-placeholder sol-ph-1">
+						<i class="fa-solid fa-magnifying-glass-chart"></i>
+					</div>
+					<div class="sol-body">
+						<span class="sol-eyebrow">SEO &amp; AI Visibility</span>
+						<h3>Rank Higher, Get Found on Google &amp; AI Engines</h3>
+						<p>From technical SEO to AI-powered content strategies, we ensure your brand appears at every
+							touchpoint — Google, ChatGPT, Gemini, and Perplexity.</p>
+						<a href="#" class="sol-link">Explore SEO Services →</a>
+					</div>
+				</article>
+
+				<article class="sol-card sol-featured">
+					<div class="sol-img-placeholder sol-ph-2">
+						<i class="fa-solid fa-chart-line"></i>
+					</div>
+					<div class="sol-body">
+						<span class="sol-eyebrow">Paid Advertising</span>
+						<h3>Performance Marketing That Drives Real Revenue</h3>
+						<p>Expertly managed Google Ads, Meta campaigns, and performance marketing strategies that
+							maximise ROAS and deliver qualified leads at scale.</p>
+						<a href="#" class="sol-link">Explore Paid Ads →</a>
+					</div>
+				</article>
+
+				<article class="sol-card">
+					<div class="sol-img-placeholder sol-ph-3">
+						<i class="fa-solid fa-palette"></i>
+					</div>
+					<div class="sol-body">
+						<span class="sol-eyebrow">Brand &amp; Social</span>
+						<h3>Build a Brand That Stands Out in Every Market</h3>
+						<p>Cohesive brand identity, powerful social media presence, and content strategies that convert
+							followers into loyal customers and ambassadors.</p>
+						<a href="#" class="sol-link">Explore Branding →</a>
+					</div>
+				</article>
+
+			</div>
+		</div>
+	</section> -->
+
+
+
+	<!-- ════════════════════════════════════
+  AI AUDIT CTA
+════════════════════════════════════ -->
+	<section class="ai-audit-cta">
+		<div class="wrap">
+			<div class="ai-audit-inner">
+				<div class="ai-audit-left">
+					<h2>See how <em>AI recommends</em> your brand right now.</h2>
+				</div>
+				<div class="ai-audit-right">
+					<p>Free visibility audit across ChatGPT, Gemini, and Google AI Mode.</p>
+					<!-- <a href="#contact" class="btn btn-audit">Get Your Free Audit →</a> -->
+				</div>
+				<div class="cta-banner-actions">
+						<a href="#contact" class="btn cta-btn-outline">
+							<!-- <i class="fa-regular fa-file-lines"></i> -->
+							 Get Your Free Audit
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg>
+						</a>
+						<a href="tel:+919876543210" class="btn cta-btn-solid">
+							<i class="fa-solid fa-phone"></i> Call Us
+						</a>
+					</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- ════════════════════════════════════
+  AI SEO SECTION
+════════════════════════════════════ -->
+	<section class="ai-seo-section">
+		<div class="wrap">
+			<div class="ai-seo-grid">
+
+				<div class="ai-seo-left">
+					<span class="svc-label-badge">AI-First Agency</span>
+					<h2 class="h-main" style="text-align:left;margin-bottom:6px">The Best<br><em>AI SEO Agency</em></h2>
+					<p class="ai-seo-tagline">Built for AI Visibility</p>
+					<p class="section-sub" style="text-align:left;margin:0 0 28px;font-size:16px">Helping businesses win
+						visibility across AI Search, LLMs &amp; Answer Engines with proven, data-backed frameworks.</p>
+					<div class="ai-seo-ctas">
+						<a href="#contact" class="btn btn-primary"><i class="fa-regular fa-file-lines"></i> Get Free
+							Proposal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg></a>
+						<a href="tel:+919876543210" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call
+							Us</a>
+					</div>
+					<div class="ai-seo-stats">
+						<div class="ai-seo-stat-item">
+							<span class="ai-stat-num">+63%</span>
+							<span class="ai-stat-label">Better ROAS after</span>
+						</div>
+						<div class="ai-seo-stat-item ai-stat-blue">
+							<span class="ai-stat-num">+85%</span>
+							<span class="ai-stat-label">AI search visibility</span>
+						</div>
+						<div class="ai-seo-stat-item">
+							<span class="ai-stat-num">+312%</span>
+							<span class="ai-stat-label">Organic leads in 9 mo</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="ai-seo-right">
+					<p class="ai-cap-label">AI Visibility Capabilities</p>
+					<div class="ai-cap-cards">
+						<div class="ai-cap-card">
+							<div class="ai-cap-head">
+								<div class="ai-cap-icon ai-cap-icon-google"><i class="fa-brands fa-google"></i></div>
+								<strong>AI Mode Visibility (Google)</strong>
+							</div>
+							<p>Passage-level relevance · Conversational query architecture · Topical authority clusters
+								· Entity-based SEO</p>
+						</div>
+						<div class="ai-cap-card">
+							<div class="ai-cap-head">
+								<div class="ai-cap-icon ai-cap-icon-gpt"><i class="fa-solid fa-brain"></i></div>
+								<strong>ChatGPT Search Visibility</strong>
+							</div>
+							<p>Citation optimization · Brand mention clustering · Structured data for GPT summarization
+							</p>
+						</div>
+						<div class="ai-cap-card">
+							<div class="ai-cap-head">
+								<div class="ai-cap-icon ai-cap-icon-gem"><i class="fa-solid fa-gem"></i></div>
+								<strong>Perplexity &amp; Gemini</strong>
+							</div>
+							<p>Source authority stacking · Real-time content freshness · Knowledge Graph reinforcement
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- ════════════════════════════════════
+  CASE STUDIES
+════════════════════════════════════ -->
+	<section class="casestudies-section">
+		<div class="wrap">
+			<div class="cs-header">
+				<div class="cs-head-left">
+					<span class="svc-label-badge">Case Studies</span>
+					<h2 class="h-main">Real Results. <em>Real Clients.</em></h2>
+				</div>
+				<div class="cs-pagination">
+					<span class="cs-count" id="csCount">1 – 3 of 7</span>
+					<button class="cs-nav-btn" id="csPrev" aria-label="Previous">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="15 18 9 12 15 6" />
+						</svg>
+					</button>
+					<button class="cs-nav-btn" id="csNext" aria-label="Next">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="9 18 15 12 9 6" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="cs-track-outer">
+				<div class="cs-track" id="csTrack"></div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- ════════════════════════════════════
+  WHY WHITE BUNNIE
+════════════════════════════════════ -->
+	<section class="why-section">
+		<div class="wrap">
+			<div class="why-grid">
+				<div class="why-img-col">
+					<div class="why-img-wrap">
+						<img src="./images/handshake.jpg" alt="White Bunnie Team"
+							onerror="this.src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80'">
+						<div class="why-badge-float">
+							<span class="why-badge-num">100+</span>
+							<span class="why-badge-text">Happy Clients</span>
+						</div>
+					</div>
+				</div>
+				<div class="why-content-col">
+					<span class="svc-label-badge">Why White Bunnie</span>
+					<h2 class="h-main" style="text-align:left">The Agency That <em>Delivers</em>, Not Just Promises</h2>
+					<p class="section-sub" style="text-align:left;margin:0 0 32px;font-size:16px">We don't just run
+						campaigns — we build digital growth engines. Here's what sets us apart from every other agency.
+					</p>
+
+					<div class="why-features">
+						<div class="why-feature">
+							<div class="why-feat-icon"><i class="fa-solid fa-robot"></i></div>
+							<div>
+								<strong>AI-Powered Strategies</strong>
+								<p>We harness cutting-edge AI tools to gain insights your competitors miss and execute
+									at a speed no manual process can match.</p>
+							</div>
+						</div>
+						<div class="why-feature">
+							<div class="why-feat-icon"><i class="fa-solid fa-chart-bar"></i></div>
+							<div>
+								<strong>Data-Driven Decisions</strong>
+								<p>Every action we take is backed by data. No guesswork, no gut feelings — just hard
+									numbers that drive measurable results.</p>
+							</div>
+						</div>
+						<div class="why-feature">
+							<div class="why-feat-icon"><i class="fa-solid fa-certificate"></i></div>
+							<div>
+								<strong>Certified Professionals</strong>
+								<p>Our team holds Google, Meta, and HubSpot certifications. You're in the hands of
+									experts who know their craft inside-out.</p>
+							</div>
+						</div>
+						<div class="why-feature">
+							<div class="why-feat-icon"><i class="fa-solid fa-globe"></i></div>
+							<div>
+								<strong>Global Reach, Local Expertise</strong>
+								<p>Serving clients in India, USA, UAE, and Canada with tailored strategies that respect
+									local market nuances.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  PROCESS SECTION
+════════════════════════════════════ -->
+	<section class="process-section">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="svc-label-badge">How We Work</span>
+				<h2 class="h-main">Our Proven <em>4-Step Process</em></h2>
+				<p class="section-sub">A transparent, result-driven approach that takes your business from where it is
+					to where it needs to be — without the fluff.</p>
+			</div>
+
+			<div class="process-grid">
+
+				<div class="process-step">
+					<div class="process-num">01</div>
+					<div class="process-icon-wrap"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+					<h3>Discovery &amp; Audit</h3>
+					<p>We deep-dive into your current digital presence, competitors, and market to uncover quick wins
+						and long-term growth levers.</p>
+				</div>
+
+				<div class="process-connector">
+					<div class="process-line"></div>
+				</div>
+
+				<div class="process-step">
+					<div class="process-num">02</div>
+					<div class="process-icon-wrap"><i class="fa-solid fa-map"></i></div>
+					<h3>Strategy &amp; Planning</h3>
+					<p>We craft a custom, channel-specific marketing strategy aligned with your business goals, target
+						audience, and revenue milestones.</p>
+				</div>
+
+				<div class="process-connector">
+					<div class="process-line"></div>
+				</div>
+
+				<div class="process-step">
+					<div class="process-num">03</div>
+					<div class="process-icon-wrap"><i class="fa-solid fa-rocket"></i></div>
+					<h3>Execution &amp; Optimization</h3>
+					<p>Our team executes with precision — running campaigns, publishing content, building links, and
+						continuously optimizing for performance.</p>
+				</div>
+
+				<div class="process-connector">
+					<div class="process-line"></div>
+				</div>
+
+				<div class="process-step">
+					<div class="process-num">04</div>
+					<div class="process-icon-wrap"><i class="fa-solid fa-chart-bar"></i></div>
+					<h3>Reporting &amp; Scaling</h3>
+					<p>Transparent reporting with real numbers. We identify what's working, double down on winners, and
+						scale results month over month.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  FAQ SECTION
+════════════════════════════════════ -->
+	<section class="faq-section">
+		<div class="wrap">
+			<div class="faq-grid">
+
+				<div class="faq-head-col">
+					<span class="svc-label-badge">FAQs</span>
+					<h2 class="h-main" style="text-align:left">Frequently Asked <em>Questions</em></h2>
+					<p class="section-sub" style="text-align:left;margin:0 0 28px">Can't find what you're looking for?
+						Talk to our team.</p>
+					<a href="#contact" class="btn btn-primary">Ask Us Anything <svg viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+							width="16" height="16">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12,5 19,12 12,19" />
+						</svg></a>
+				</div>
+
+				<div class="faq-list">
+
+					<div class="faq-item">
+						<button class="faq-q">What digital marketing services does White Bunnie offer? <svg
+								class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>White Bunnie offers a comprehensive suite including SEO (AI SEO, Technical, Local,
+									E-commerce), PPC/Google Ads, Meta Advertising, Social Media Marketing, Content
+									Marketing, Web Development, UI/UX Design, Branding, Lead Generation, and Performance
+									Marketing.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">How long does it take to see results from digital marketing? <svg
+								class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>PPC campaigns can generate leads within days of launch. SEO typically shows
+									meaningful progress within 3-6 months, with compounding growth over time. Social
+									media and content marketing build momentum over 2-4 months. We provide monthly
+									reports so you always know exactly where you stand.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">What makes White Bunnie different from other agencies? <svg
+								class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>White Bunnie is an AI-first agency with a data-driven approach. We're among the few
+									agencies that actively optimise for AI search engines (ChatGPT, Gemini, Perplexity)
+									in addition to Google. Our certified team has helped 120+ businesses across four
+									countries achieve measurable ROI improvements.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">What is your pricing model? <svg class="faq-chevron" width="20"
+								height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>We offer flexible engagement models: monthly retainers, project-based pricing, and
+									performance-based models. Pricing depends on the scope of services and your business
+									goals. Contact us for a free proposal tailored to your budget and objectives.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">Do you work with businesses outside India? <svg class="faq-chevron"
+								width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+								stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>Yes! While White Bunnie is headquartered in India, we work with clients across the
+									USA, UAE, Canada, and other countries. Our digital-first approach means we can
+									effectively serve businesses worldwide with local market expertise.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">How do you measure and report on campaign performance? <svg
+								class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg></button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>We provide detailed monthly reports covering all KPIs relevant to your goals —
+									traffic, conversions, leads, ROAS, keyword rankings, and more. We also offer a
+									real-time dashboard so you can monitor performance at any time. Quarterly strategy
+									reviews ensure we're always aligned with your evolving business goals.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  CONTACT SECTION
+════════════════════════════════════ -->
+	<section class="contact-section" id="contact">
+		<div class="wrap">
+			<div class="contact-grid">
+
+				<div class="contact-left">
+					<span class="svc-label-badge contact-badge">Let's Get Started</span>
+					<h2>Change The Way You <br> Engage With  <em> Your <br> Audience </em></h2>
+					<p>Get In Touch With Our Highly Skilled Digital <br> Boost Your Website Rankings.</p>
+
+					<div class="contact-watermark">
+						<img src="./newHome/footerArrow.png" alt="White Bunnie" class="contact-logo">
+					</div>
+
+				</div>
+
+				<div class="contact-right">
+					<form class="contact-form" id="auditForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="cf-name">Full Name *</label>
+								<input type="text" id="cf-name" name="name" placeholder="John Smith" required>
+							</div>
+							<div class="form-group">
+								<label for="cf-email">Email Address *</label>
+								<input type="email" id="cf-email" name="email" placeholder="john@company.com" required>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="cf-phone">Phone Number</label>
+								<input type="tel" id="cf-phone" name="phone" placeholder="+91 98765 43210">
+							</div>
+							<div class="form-group">
+								<label for="cf-company">Company Name</label>
+								<input type="text" id="cf-company" name="company" placeholder="Your Company">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cf-website">Website URL</label>
+							<input type="url" id="cf-website" name="website" placeholder="https://yourwebsite.com">
+						</div>
+						<div class="form-group">
+							<label for="cf-service">Service Interested In</label>
+							<select id="cf-service" name="service">
+								<option value="" disabled selected>Select a service</option>
+								<option>AI SEO</option>
+								<option>SEO</option>
+								<option>PPC / Google Ads</option>
+								<option>Social Media Marketing</option>
+								<option>Web Development</option>
+								<option>Performance Marketing</option>
+								<option>Full Digital Marketing</option>
+								<option>Other</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="cf-message">Tell Us About Your Goals</label>
+							<textarea id="cf-message" name="message" rows="3"
+								placeholder="Briefly describe your marketing challenges and goals..."></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary btn-full">
+							Get My Free Audit
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg>
+						</button>
+						<p class="form-note">No credit card required · 100% free · Response within 24 hours</p>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  FOOTER
+════════════════════════════════════ -->
+	<footer class="footer">
+		<div class="wrap">
+			<div class="footer-top">
+
+				<div class="footer-brand">
+					<a href="/" class="footer-logo-link">
+						<img src="./images/logos/logo.svg" alt="White Bunnie" class="footer-logo">
+					</a>
+					<p>AI-first digital marketing agency helping businesses win visibility across every channel that
+						matters.</p>
+					<div class="footer-socials">
+						<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+						<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+					</div>
+					<div class="footer-countries">
+						<img src="./images/country/india.png" alt="India" title="India">
+						<img src="./images/country/us.png" alt="USA" title="USA">
+						<img src="./images/country/uae.png" alt="UAE" title="UAE">
+						<img src="./images/country/canada.png" alt="Canada" title="Canada">
+					</div>
+				</div>
+
+				<div class="footer-nav-grid">
+					<div class="footer-col">
+						<h4>Services</h4>
+						<ul>
+							<li><a href="#">AI SEO</a></li>
+							<li><a href="#">Technical SEO</a></li>
+							<li><a href="#">PPC / Google Ads</a></li>
+							<li><a href="#">Social Media Marketing</a></li>
+							<li><a href="#">Performance Marketing</a></li>
+							<li><a href="#">Web Development</a></li>
+							<li><a href="#">UI/UX Design</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Company</h4>
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Case Studies</a></li>
+							<li><a href="#">Our Team</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Press</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Industries</h4>
+						<ul>
+							<li><a href="#">Healthcare</a></li>
+							<li><a href="#">Real Estate</a></li>
+							<li><a href="#">E-commerce</a></li>
+							<li><a href="#">SaaS &amp; Tech</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">Finance</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Contact</h4>
+						<ul>
+							<li><a href="mailto:hello@whitebunnie.com"><i class="fa-solid fa-envelope"></i>
+									hello@whitebunnie.com</a></li>
+							<li><a href="tel:+919876543210"><i class="fa-solid fa-phone"></i> +91 98765 43210</a></li>
+							<li><a href="#"><i class="fa-solid fa-location-dot"></i> New Delhi, India</a></li>
+						</ul>
+						<div class="footer-partners">
+							<img src="./images/shopify-partner.png" alt="Shopify Partner">
+							<img src="./images/google.png" alt="Google Partner">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="footer-bottom">
+				<p>© 2025 White Bunnie Digital Marketing. All rights reserved.</p>
+				<div class="footer-bottom-links">
+					<a href="#">Privacy Policy</a>
+					<a href="#">Terms of Service</a>
+					<a href="#">Sitemap</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
 	<script>
-
-
-		/* Reads everything from the HTML above — no content stored here. */
-		const stage = document.getElementById("stage");
-		const slides = Array.from(stage.querySelectorAll(".slide"));
-		const dotsWrap = document.getElementById("dots");
-		const cardsWrap = document.getElementById("cards");
-		const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
-		const DURATION = 6000;
-		const SIL = '<svg class="ph" viewBox="0 0 24 24" fill="#94A3B8"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z"/></svg>';
-		const stars = r => "★".repeat(r) + "☆".repeat(5 - r);
-
-		let i = 0, timer = null, dir = 1;
-
-		// hydrate each slide's media + cache stat targets, build cards/dots
-		slides.forEach((slide, idx) => {
-			const name = slide.dataset.name, role = slide.dataset.role,
-				company = slide.dataset.company, loc = slide.dataset.location,
-				rating = parseInt(slide.dataset.rating || "5", 10),
-				href = slide.dataset.href || "#", photo = slide.dataset.photo || "";
-
-			// fill media meta (kept in HTML as data-* so there's one source)
-			slide.querySelector(".ghost-name").textContent = name;
-			slide.querySelector(".label").innerHTML = role + " &mdash; " + company;
-			slide.querySelector(".pill").textContent = loc;
-			slide.querySelector(".cta").setAttribute("href", href);
-
-			// photo or placeholder
-			const photoEl = slide.querySelector(".photo");
-			const phEl = slide.querySelector(".placeholder");
-			if (photo) { photoEl.style.backgroundImage = `url('${photo}')`; phEl.style.display = "none"; }
-			else { photoEl.style.display = "none"; }
-
-			// cache stat target values from the HTML text
-			slide._stats = Array.from(slide.querySelectorAll(".num")).map(n => n.textContent.trim());
-
-			// dot
-			const dot = document.createElement("button");
-			dot.className = "dot"; dot.setAttribute("aria-label", "Slide " + (idx + 1));
-			dot.onclick = () => { dir = idx >= i ? 1 : -1; go(idx); resetTimer(); };
-			dotsWrap.appendChild(dot);
-
-			// card (derived from same HTML data)
-			const card = document.createElement("button");
-			card.className = "card";
-			const thumb = photo ? `<div class="thumb" style="background-image:url('${photo}')"></div>` : `<div class="thumb">${SIL}</div>`;
-			card.innerHTML = `${thumb}
-    <div class="c-info">
-      <div class="c-name">${name}</div>
-      <div class="c-role">${role} · ${company}</div>
-      <div class="stars">${stars(rating)}</div>
-    </div>
-    <span class="mini-play"></span>`;
-			card.onclick = () => { dir = idx >= i ? 1 : -1; go(idx); resetTimer(); };
-			cardsWrap.appendChild(card);
+		// Navbar scroll shadow
+		const navbar = document.getElementById('navbar');
+		window.addEventListener('scroll', () => {
+			navbar.classList.toggle('scrolled', window.scrollY > 20);
 		});
 
-		function countUp(node, raw) {
-			if (reduce) { node.textContent = raw; return; }
-			const m = raw.match(/^([+\-]?)(\d+(?:\.\d+)?)(.*)$/);
-			if (!m) { node.textContent = raw; return; }
-			const prefix = m[1], target = parseFloat(m[2]), suffix = m[3];
-			const dec = (m[2].split(".")[1] || "").length, dur = 900, start = performance.now();
-			(function f(now) {
-				const t = Math.min((now - start) / dur, 1); const e = 1 - Math.pow(1 - t, 3);
-				node.textContent = prefix + (target * e).toFixed(dec) + suffix;
-				if (t < 1) requestAnimationFrame(f); else node.textContent = raw;
-			})(start);
-		}
-
-		function render() {
-			slides.forEach((s, idx) => {
-				const on = idx === i;
-				s.classList.toggle("active", on);
-				s.classList.toggle("rev", on && dir < 0);
-				if (on) {
-					void s.offsetWidth; // restart animation
-					s.querySelectorAll(".num").forEach((n, k) => countUp(n, s._stats[k]));
+		// Mobile menu toggle
+		const navToggle = document.getElementById('navToggle');
+		const navMenu = document.getElementById('navMenu');
+		if (navToggle && navMenu) {
+			navToggle.addEventListener('click', () => {
+				const open = navMenu.classList.toggle('open');
+				navToggle.classList.toggle('open', open);
+				navToggle.setAttribute('aria-expanded', open);
+			});
+			document.addEventListener('click', (e) => {
+				if (!navbar.contains(e.target)) {
+					navMenu.classList.remove('open');
+					navToggle.classList.remove('open');
+					navToggle.setAttribute('aria-expanded', false);
 				}
 			});
-			dotsWrap.querySelectorAll(".dot").forEach((d, idx) => d.classList.toggle("on", idx === i));
-			cardsWrap.querySelectorAll(".card").forEach((c, idx) => c.classList.toggle("active", idx === i));
 		}
-		function go(n) { i = (n + slides.length) % slides.length; render(); }
-		function next() { dir = 1; go(i + 1); }
-		function prev() { dir = -1; go(i - 1); }
-		function start() { if (!reduce) timer = setInterval(next, DURATION); }
-		function resetTimer() { clearInterval(timer); start(); }
 
-		document.getElementById("next").onclick = () => { next(); resetTimer(); };
-		document.getElementById("prev").onclick = () => { prev(); resetTimer(); };
-		document.addEventListener("keydown", e => {
-			if (e.key === "ArrowRight") { next(); resetTimer(); }
-			if (e.key === "ArrowLeft") { prev(); resetTimer(); }
+		// Stats tabs highlight on click
+		document.querySelectorAll('.stats-tabs .tab').forEach(tab => {
+			tab.addEventListener('click', (e) => {
+				e.preventDefault();
+				document.querySelectorAll('.stats-tabs .tab').forEach(t => t.classList.remove('active'));
+				tab.classList.add('active');
+			});
 		});
-		stage.addEventListener("mouseenter", () => clearInterval(timer));
-		stage.addEventListener("mouseleave", start);
 
-		render(); start();
+		// FAQ accordion
+		document.querySelectorAll('.faq-q').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const item = btn.closest('.faq-item');
+				const isOpen = item.classList.contains('open');
+				document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+				if (!isOpen) item.classList.add('open');
+			});
+		});
 
+		// Reveal on scroll
+		const revealEls = document.querySelectorAll('.reveal');
+		if (revealEls.length && 'IntersectionObserver' in window) {
+			const obs = new IntersectionObserver(entries => {
+				entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+			}, { threshold: 0.12 });
+			revealEls.forEach(el => obs.observe(el));
+		}
+
+		// Case Studies — smooth sliding carousel
+		const csCards = [
+			{
+				img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80',
+				badge: 'Financial Services',
+				title: 'A Leading NBFC Triples Qualified Leads in 6 Months Through AI SEO &amp; PPC',
+				desc: 'White Bunnie revamped their entire digital acquisition funnel — slashing cost-per-lead by 41% and scaling monthly qualified leads from 120 to 380.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80',
+				badge: 'IT / ITES',
+				title: 'A SaaS Platform Scales 5× Organic Traffic in 9 Months with Technical SEO',
+				desc: 'By fixing core web vitals, rebuilding site architecture, and executing a content cluster strategy, the client surpassed 50,000 monthly organic sessions.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80',
+				badge: 'Healthcare',
+				title: 'A Healthcare Startup Generates 500+ Monthly Patient Leads with Performance Marketing',
+				desc: 'Through Meta &amp; Google Ads with precise audience segmentation, we reduced CPA by 52% while scaling monthly appointment bookings 4× in just 4 months.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80',
+				badge: 'E-commerce',
+				title: 'An E-commerce Brand Achieves 3.8× ROAS Improvement with Performance Marketing',
+				desc: 'A complete overhaul of ad creative, bidding strategy, and audience targeting delivered a 380% increase in purchase conversion rate within 90 days.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=700&q=80',
+				badge: 'Real Estate',
+				title: 'A Real Estate Developer Generates 200+ Site Visits Monthly with Hyper-Local SEO',
+				desc: 'Local SEO, Google Business Profile optimization, and targeted content drove a 4× increase in organic property inquiry forms within 5 months.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80',
+				badge: 'Education',
+				title: 'An EdTech Platform Grows Enrollments by 220% with Social Media &amp; Content Marketing',
+				desc: 'A focused content strategy, YouTube SEO, and LinkedIn campaigns drove massive brand awareness, reducing CAC by 38% and tripling course enrollments.'
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=700&q=80',
+				badge: 'SaaS',
+				title: 'A B2B SaaS Company Achieves +312% SQL Growth in Under 9 Months',
+				desc: 'Revamping paid acquisition, lifecycle email sequences, and SDR nurture programs delivered the highest pipeline quarter in company history.'
+			}
+		];
+		let csPage = 0;
+		const csPerPage = 3;
+		const csTotal = csCards.length;
+		const csTotalPages = Math.ceil(csTotal / csPerPage);
+		const csTrack = document.getElementById('csTrack');
+
+		// Build all pages upfront so sliding works
+		if (csTrack) {
+			const pages = [];
+			for (let pi = 0; pi < csTotal; pi += csPerPage) {
+				pages.push(csCards.slice(pi, pi + csPerPage));
+			}
+			csTrack.innerHTML = pages.map(page => `
+			<div class="cs-page">
+				${page.map(c => `
+					<article class="cs-card">
+						<div class="cs-img-wrap">
+							<img src="${c.img}" alt="${c.badge}" loading="lazy">
+							<span class="cs-industry-badge">${c.badge}</span>
+						</div>
+						<div class="cs-body">
+							<h3>${c.title}</h3>
+							<p>${c.desc}</p>
+						</div>
+					</article>
+				`).join('')}
+			</div>
+		`).join('');
+		}
+
+		function renderCS() {
+			const countEl = document.getElementById('csCount');
+			if (!csTrack) return;
+			const start = csPage * csPerPage;
+			const end = Math.min(start + csPerPage, csTotal);
+			countEl.textContent = (start + 1) + ' – ' + end + ' of ' + csTotal;
+			csTrack.style.transform = `translateX(-${csPage * 100}%)`;
+		}
+
+		document.getElementById('csNext')?.addEventListener('click', () => {
+			if (csPage < csTotalPages - 1) { csPage++; renderCS(); }
+		});
+		document.getElementById('csPrev')?.addEventListener('click', () => {
+			if (csPage > 0) { csPage--; renderCS(); }
+		});
+		renderCS();
+
+		// Contact form submit placeholder
+		const auditForm = document.getElementById('auditForm');
+		if (auditForm) {
+			auditForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const btn = auditForm.querySelector('button[type="submit"]');
+				btn.textContent = 'Sending...';
+				btn.disabled = true;
+				setTimeout(() => {
+					btn.textContent = 'Request Received! We\'ll be in touch within 24 hrs.';
+					btn.style.background = '#00C97A';
+				}, 1200);
+			});
+		}
 	</script>
 
-	
+
+	<script>
+		/* Reads everything from the HTML above — no content stored here. */
+		(function () {
+			const stage = document.getElementById("wbtc-stage");
+			const slides = Array.from(stage.querySelectorAll(".wbtc-slide"));
+			const dotsWrap = document.getElementById("wbtc-dots");
+			const cardsWrap = document.getElementById("wbtc-cards");
+			const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+			const DURATION = 6000;
+			const SIL = '<svg class="wbtc-ph" viewBox="0 0 24 24" fill="#94A3B8"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6Z"/></svg>';
+			const stars = r => "★".repeat(r) + "☆".repeat(5 - r);
+
+			let i = 0, timer = null, dir = 1;
+
+			slides.forEach((slide, idx) => {
+				const name = slide.dataset.name, role = slide.dataset.role,
+					company = slide.dataset.company, loc = slide.dataset.location,
+					rating = parseInt(slide.dataset.rating || "5", 10),
+					href = slide.dataset.href || "#", photo = slide.dataset.photo || "";
+
+				slide.querySelector(".wbtc-ghost-name").textContent = name;
+				slide.querySelector(".wbtc-label").innerHTML = role + " &mdash; " + company;
+				slide.querySelector(".wbtc-pill").textContent = loc;
+				slide.querySelector(".wbtc-cta").setAttribute("href", href);
+
+				// Inject YouTube play icon into the play button
+				const playBtn = slide.querySelector(".wbtc-play");
+				if (playBtn) {
+					playBtn.innerHTML = '<svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24S68 13.05 66.52 7.74z" fill="#FF0000"/><path d="M45 24 27 14v20" fill="#fff"/></svg>';
+				}
+
+				const photoEl = slide.querySelector(".wbtc-photo");
+				const phEl = slide.querySelector(".wbtc-placeholder");
+				if (photo) { photoEl.style.backgroundImage = "url('" + photo + "')"; phEl.style.display = "none"; }
+				else { photoEl.style.display = "none"; }
+
+				slide._stats = Array.from(slide.querySelectorAll(".wbtc-num")).map(n => n.textContent.trim());
+
+				const dot = document.createElement("button");
+				dot.className = "wbtc-dot"; dot.setAttribute("aria-label", "Slide " + (idx + 1));
+				dot.onclick = () => { dir = idx >= i ? 1 : -1; go(idx); resetTimer(); };
+				dotsWrap.appendChild(dot);
+
+				const card = document.createElement("button");
+				card.className = "wbtc-card";
+				const thumb = photo
+					? '<div class="wbtc-thumb" style="background-image:url(\'' + photo + '\')"></div>'
+					: '<div class="wbtc-thumb">' + SIL + '</div>';
+				card.innerHTML = thumb +
+					'<div class="wbtc-card-meta">' +
+					'<div class="wbtc-c-name">' + name + '</div>' +
+					'<div class="wbtc-c-role">' + company + '</div>' +
+					'<div class="wbtc-stars">' + stars(rating) + '</div>' +
+					'</div>';
+				card.onclick = () => { dir = idx >= i ? 1 : -1; go(idx); resetTimer(); };
+				cardsWrap.appendChild(card);
+			});
+
+			function countUp(node, raw) {
+				if (reduce) { node.textContent = raw; return; }
+				const m = raw.match(/^([+\-]?)(\d+(?:\.\d+)?)(.*)$/);
+				if (!m) { node.textContent = raw; return; }
+				const prefix = m[1], target = parseFloat(m[2]), suffix = m[3];
+				const dec = (m[2].split(".")[1] || "").length, dur = 900, start = performance.now();
+				(function f(now) {
+					const t = Math.min((now - start) / dur, 1); const e = 1 - Math.pow(1 - t, 3);
+					node.textContent = prefix + (target * e).toFixed(dec) + suffix;
+					if (t < 1) requestAnimationFrame(f); else node.textContent = raw;
+				})(start);
+			}
+
+			function render() {
+				slides.forEach((s, idx) => {
+					const on = idx === i;
+					s.classList.toggle("wbtc-active", on);
+					s.classList.toggle("wbtc-rev", on && dir < 0);
+					if (on) {
+						void s.offsetWidth;
+						s.querySelectorAll(".wbtc-num").forEach((n, k) => countUp(n, s._stats[k]));
+					}
+				});
+				dotsWrap.querySelectorAll(".wbtc-dot").forEach((d, idx) => d.classList.toggle("wbtc-on", idx === i));
+				cardsWrap.querySelectorAll(".wbtc-card").forEach((c, idx) => c.classList.toggle("wbtc-active", idx === i));
+			}
+			function go(n) { i = (n + slides.length) % slides.length; render(); }
+			function next() { dir = 1; go(i + 1); }
+			function prev() { dir = -1; go(i - 1); }
+			function start() { if (!reduce) timer = setInterval(next, DURATION); }
+			function resetTimer() { clearInterval(timer); start(); }
+
+			document.getElementById("wbtc-next").onclick = () => { next(); resetTimer(); };
+			document.getElementById("wbtc-prev").onclick = () => { prev(); resetTimer(); };
+			document.addEventListener("keydown", e => {
+				if (e.key === "ArrowRight") { next(); resetTimer(); }
+				if (e.key === "ArrowLeft") { prev(); resetTimer(); }
+			});
+			stage.addEventListener("mouseenter", () => clearInterval(timer));
+			stage.addEventListener("mouseleave", start);
+
+			render(); start();
+		})();
+	</script>
+
 </body>
 
 </html>
