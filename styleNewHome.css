@@ -1123,7 +1123,7 @@ h2.h-main em {
 .wbtc-media {
 	position: relative;
 	aspect-ratio: 16/10;
-	border-radius: 22px;
+	border-radius: 12px;
 	overflow: hidden;
 	background: #f1f5f9;
 	box-shadow: var(--wbtc-shadow-md);
@@ -1136,7 +1136,7 @@ h2.h-main em {
 	background: rgba(0, 0, 0, 0);
 	transition: background .3s ease;
 	z-index: 1;
-	border-radius: 22px;
+	border-radius: 8px;
 }
 
 .wbtc-photo {
@@ -1214,8 +1214,8 @@ h2.h-main em {
 }
 
 .wbtc-quote {
-	font-size: clamp(22px, 2.7vw, 29px);
-	font-weight: 700;
+	font-size: clamp(22px, 2.7vw, 26px);
+	font-weight: 500;
 	font-style: italic;
 	color: var(--wbtc-ink);
 	letter-spacing: -.015em;
@@ -1331,7 +1331,7 @@ h2.h-main em {
 .wbtc-carousel {
 	display: flex;
 	align-items: center;
-	gap: 14px;
+	gap: 18px;
 	margin-top: 26px;
 }
 
@@ -1373,50 +1373,56 @@ h2.h-main em {
 }
 
 .wbtc-card {
-	position: relative;
 	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	gap: 0;
-	background: #fff;
-	border: 2px solid var(--wbtc-line);
-	border-radius: 16px;
-	padding: 0;
+	align-items: center;
+	gap: 14px;
+	background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+	border: 1px solid transparent;
+	border-radius: 8px;
+	padding: 5px 8px;
 	cursor: pointer;
 	text-align: left;
-	overflow: hidden;
-	transition: transform .3s var(--wbtc-ease), box-shadow .3s var(--wbtc-ease), border-color .3s var(--wbtc-ease);
+	opacity: .36;
+	filter: saturate(.72);
+	transform: scale(.97);
+	box-shadow: none;
+	transition: opacity .25s var(--wbtc-ease), transform .25s var(--wbtc-ease), box-shadow .25s var(--wbtc-ease), border-color .25s var(--wbtc-ease), filter .25s var(--wbtc-ease), background .25s var(--wbtc-ease);
 	min-width: 0;
 }
 
 .wbtc-card:hover {
-	transform: translateY(-4px);
-	box-shadow: var(--wbtc-shadow-md);
-	border-color: var(--wbtc-line);
+	opacity: .72;
+	filter: saturate(.95);
+	transform: scale(.985);
 }
 
 .wbtc-card.wbtc-active {
-	border-color: var(--wbtc-blue);
-	box-shadow: var(--wbtc-shadow-blue);
+	/* border-color: var(--wbtc-blue);	 */
+	background: #fff;
+	opacity: 1;
+	filter: none;
+	transform: scale(1);
+	box-shadow: 0 14px 36px rgba(37, 99, 235, .18);
 }
 
 .wbtc-thumb {
 	flex: none;
-	width: 100%;
-	aspect-ratio: 16/10;
+	width: 86px;
+	height: 58px;
+	border-radius: 8px;
 	overflow: hidden;
 	background: #e2e8f0;
 	background-size: cover;
 	background-position: center;
-	transition: transform .4s var(--wbtc-ease);
+	transition: transform .3s var(--wbtc-ease);
 }
 
 .wbtc-card:hover .wbtc-thumb {
-	transform: scale(1.04);
+	transform: scale(1.03);
 }
 
 .wbtc-ph {
-	width: 40%;
+	width: 34px;
 	opacity: .25;
 	margin: auto;
 	display: block;
@@ -1426,36 +1432,53 @@ h2.h-main em {
 }
 
 .wbtc-card-meta {
-	padding: 12px 14px 14px;
+	min-width: 0;
+	flex: 1;
 }
 
 .wbtc-c-name {
-	font-size: 12px;
-	font-weight: 800;
+	font-size: 14px;
+	font-weight: 600;
 	color: var(--wbtc-ink);
 	text-transform: uppercase;
 	letter-spacing: .03em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	line-height: 1.05;
 }
 
 .wbtc-c-role {
 	font-size: 10px;
 	color: var(--wbtc-slate-light);
-	font-weight: 600;
-	letter-spacing: .02em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-top: 3px;
+	font-weight: 700;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	line-height: 1.35;
+	margin-top: 4px;
 }
 
 .wbtc-stars {
-	margin-top: 5px;
-	font-size: 11px;
+	/* margin-top: 2px; */
+	font-size: 13px;
 	color: var(--wbtc-amber);
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+}
+
+.wbtc-card-icon {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 20px;
+	border-radius: 999px;
+	background: #ff4b55;
+	box-shadow: 0 6px 16px rgba(255, 75, 85, .28);
+}
+
+.wbtc-card-icon svg {
+	width: 14px;
+	height: 14px;
+	display: block;
+	fill: #fff;
 }
 
 @media(max-width:880px) {
@@ -1470,10 +1493,19 @@ h2.h-main em {
 
 	.wbtc-carousel {
 		flex-direction: column;
+		align-items: stretch;
 	}
 
 	.wbtc-arrow {
 		display: none;
+	}
+
+	.wbtc-card {
+		transform: none;
+	}
+
+	.wbtc-c-name {
+		font-size: 14px;
 	}
 }
 
