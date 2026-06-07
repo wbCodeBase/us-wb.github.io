@@ -199,8 +199,8 @@
 }
 
 .nav-link:hover {
-	color: #2563EB;
-	background: #EEF2FF;
+	color: #111827;
+	background: #f3f4f6;
 	text-decoration: none;
 }
 
@@ -237,8 +237,7 @@
 	left: 0;
 	right: 0;
 	background: #fff;
-	border-bottom: 1px solid #e5e7eb;
-	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(-10px);
@@ -255,9 +254,9 @@
 .mega-inner {
 	max-width: 1240px;
 	margin: 0 auto;
-	padding: 36px 36px 32px;
+	padding: 32px 36px 28px;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr) 220px;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 0 40px;
 }
 
@@ -283,19 +282,19 @@
 }
 
 .mega-item:hover {
-	background: #EEF2FF;
+	background: #f3f4f6;
 	text-decoration: none;
 }
 
 .mega-item-icon {
 	width: 36px;
 	height: 36px;
-	background: #EEF2FF;
+	background: #f3f4f6;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #2563EB;
+	color: #374151;
 	font-size: 14px;
 	flex-shrink: 0;
 }
@@ -305,7 +304,7 @@
 	font-size: 13.5px;
 	font-weight: 600;
 	color: #111827;
-	margin-bottom: 2px;
+	margin-bottom: 0px;
 }
 
 .mega-item-text span {
@@ -313,53 +312,49 @@
 	color: #6b7280;
 }
 
-.mega-featured {
-	background: linear-gradient(135deg, #1e3a8a, #2563EB);
-	border-radius: 16px;
-	padding: 24px 20px;
+/* ─── MEGA MENU CTA STRIP ─── */
+.mega-cta-strip {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 18px 36px;
 	display: flex;
-	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	border-top: 1px solid #f3f4f6;
 }
 
-.mega-feat-badge {
-	display: inline-flex;
-	width: fit-content;
-	background: rgba(255, 255, 255, .18);
-	color: #fff;
-	font-size: 10px;
+.mega-cta-text strong {
+	display: block;
+	font-size: 28px;
 	font-weight: 700;
-	letter-spacing: .08em;
-	text-transform: uppercase;
-	padding: 3px 10px;
-	border-radius: 100px;
-	margin-bottom: 14px;
+	color: #111827;
+	margin-bottom: 2px;
 }
 
-.mega-feat-stat {
-	font-size: 3rem;
-	font-weight: 900;
+.mega-cta-text p {
+	font-size: 12.5px;
+	color: #6b7280;
+	margin: 0;
+}
+
+.mega-cta-btn {
+	flex-shrink: 0;
+	padding: 9px 22px;
+	background: #111827;
 	color: #fff;
-	line-height: 1;
-	margin-bottom: 8px;
-}
-
-.mega-feat-label {
-	font-size: 13px;
-	color: rgba(255, 255, 255, .8);
-	flex: 1;
-	margin-bottom: 16px;
-}
-
-.mega-feat-cta {
-	font-size: 13px;
+	font-size: 13.5px;
 	font-weight: 600;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: background .18s;
+	white-space: nowrap;
+}
+
+.mega-cta-btn:hover {
+	background: #374151;
 	color: #fff;
 	text-decoration: none;
-}
-
-.mega-feat-cta:hover {
-	text-decoration: underline;
-	color: #fff;
 }
 
 /* ─── INDUSTRIES DROPDOWN ─── */
@@ -372,7 +367,6 @@
 	top: calc(100% + 8px);
 	left: 0;
 	background: #fff;
-	border: 1px solid #e5e7eb;
 	border-radius: 14px;
 	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 	list-style: none;
@@ -405,13 +399,13 @@
 }
 
 .nav-dropdown li a i {
-	color: #2563EB;
+	color: #374151;
 	width: 16px;
 }
 
 .nav-dropdown li a:hover {
-	background: #EEF2FF;
-	color: #2563EB;
+	background: #f3f4f6;
+	color: #111827;
 }
 
 /* ─── MOBILE TOGGLE ─── */
@@ -1785,12 +1779,12 @@
 .why-feature {
 	display: flex;
 	align-items: flex-start;
-	gap: 18px;
+	gap: 10px;
 }
 
 .why-feat-icon {
-	width: 46px;
-	height: 46px;
+	width: 16px;
+	height: 16px;
 	background: #EEF2FF;
 	border-radius: 13px;
 	display: flex;
@@ -1799,6 +1793,11 @@
 	color: #2563EB;
 	font-size: 19px;
 	flex-shrink: 0;
+}
+
+.why-feat-icon i{
+	font-size: 14px;
+	margin-top: 9px;
 }
 
 .why-feature strong {
@@ -1846,11 +1845,12 @@
 }
 
 .process-icon-wrap {
+	display: none;
 	width: 62px;
 	height: 62px;
 	background: #EEF2FF;
 	border-radius: 18px;
-	display: flex;
+	/* display: flex; */
 	align-items: center;
 	justify-content: center;
 	font-size: 24px;
@@ -1863,13 +1863,14 @@
 .process-step:hover .process-icon-wrap {
 	background: #2563EB;
 	color: #fff;
+
 }
 
 .process-step h3 {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
 	color: #111827;
-	margin-bottom: 10px;
+	margin: 10px;
 }
 
 .process-step p {
