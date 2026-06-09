@@ -4737,7 +4737,7 @@
 
 .pillars-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 24px;
 	margin-top: 48px;
 }
@@ -4748,6 +4748,7 @@
 	border-radius: 16px;
 	padding: 36px 32px;
 	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	text-align: justify;
 }
 
 .pillar-card:hover {
