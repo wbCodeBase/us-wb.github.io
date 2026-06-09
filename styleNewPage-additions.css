@@ -4605,6 +4605,33 @@
 	100% { transform: translateX(-50%); }
 }
 
+/* Hero Service Tags */
+.hero-tags-strip {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	padding: 28px 1.5rem 0;
+}
+.hero-tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 7px 16px;
+	border-radius: 8px;
+	background: #EEF2FF;
+	border: 1px solid #c7d4f8;
+	color: #1e40af;
+	font-size: 0.82rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	white-space: nowrap;
+	transition: background 0.18s, border-color 0.18s;
+}
+.hero-tag:hover {
+	background: #dde7ff;
+	border-color: #93aef5;
+}
+
 .hc-strip {
 	/* border-top: 1px solid rgba(0, 0, 0, 0.08); */
 	padding: 18px 0;
@@ -4696,5 +4723,77 @@
 
 	.hc-marquee-track {
 		gap: 32px;
+	}
+}
+
+
+/* ══════════════════════════════════════════════════
+   WHY WORK WITH US – 4 PILLARS
+══════════════════════════════════════════════════ */
+.pillars-section {
+	padding: 80px 0 90px;
+	background: #ffffff;
+}
+
+.pillars-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+	margin-top: 48px;
+}
+
+.pillar-card {
+	background: #f7f9ff;
+	border: 1px solid #e8edf8;
+	border-radius: 16px;
+	padding: 36px 32px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pillar-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 40px rgba(37, 99, 235, 0.1);
+	border-color: #bfdbfe;
+}
+
+.pillar-icon-wrap {
+	width: 52px;
+	height: 52px;
+	background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+	border-radius: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.pillar-icon-wrap i {
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.pillar-card h3 {
+	font-size: 18px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0 0 12px;
+	letter-spacing: -0.2px;
+}
+
+.pillar-card p {
+	font-size: 15px;
+	line-height: 1.7;
+	color: #4b5563;
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.pillars-grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.pillar-card {
+		padding: 28px 24px;
 	}
 }
