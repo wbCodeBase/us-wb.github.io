@@ -60,7 +60,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
-	max-width: 580px;
+	max-width: 780px;
 }
 
 .pfc-badge {
@@ -93,7 +93,7 @@
 }
 
 .pfc-heading {
-	font-size: clamp(22px, 3vw, 30px);
+	font-size: clamp(1.6rem, 3vw, 2.4rem);
 	font-weight: 800;
 	color: #0f172a;
 	line-height: 1.2;
@@ -3751,7 +3751,7 @@
 }
 
 .ai-showcase-head .h-main {
-	font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+	font-size: clamp(2rem, 4vw, 3.5rem);
 	background: linear-gradient(135deg, #111827 20%, #2563EB 90%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
