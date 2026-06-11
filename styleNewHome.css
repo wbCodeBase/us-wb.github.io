@@ -48,8 +48,8 @@
 
 	--navy-900: #070c1a;
 	--navy-800: #0b1224;
-	--card-bg: rgba(20, 28, 48, 0.55);
-	--card-border: rgba(255, 255, 255, 0.08);
+	--card-bg: rgba(8, 14, 40, 0.88);
+	--card-border: rgba(80, 140, 255, 0.20);
 	--divider: rgba(255, 255, 255, 0.12);
 	--text-main: #eef2fb;
 	--text-soft: #aab4cc;
@@ -804,12 +804,50 @@ h2.h-main em {
 }
 
 
+.ticker-wrap {
+    background: #2563eb;
+    padding: 9px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes scrolll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.ticker-tr {
+    display: inline-flex;
+    animation: scrolll 32s linear infinite;
+    will-change: transform;
+}
+
+.ticker-wrap:hover .ticker-tr {
+    animation-play-state: paused;
+}
+
+
+.ticker-tr span{
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: 0 26px;
+}
+
+.ticker-tr span::before {
+    content: '● ';
+    opacity: .45;
+    margin-right: 6px;
+}
+
 .stats-section::before {
 	content: "";
 	position: absolute;
 	inset: 0;
 	z-index: -2;
-	background: url("./images/bg.jpg") center/cover no-repeat fixed;
+	background: url("./newHome/bg3.jpg") center/cover no-repeat fixed;
 	/* background: url("./images/bg.jpg") center/cover no-repeat fixed; */
 	/* background: url("https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/6a0d701bdbee3709791909ff_pexels-jakubzerdzicki-27459716.jpg") center/cover no-repeat fixed; */
 	/* background: url("https://cdn.prod.website-files.com/6416ef11d18f1b7a9f7bb0c7/6a0d661a862d5a33ef885afe_pexels-gustavo-fring-5621960.jpg") center/cover no-repeat fixed; */
@@ -829,9 +867,6 @@ h2.h-main em {
 
 .stats-section::after{content: "";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,transparent 0%,transparent 40%,rgba(0,0,0,.45) 70%,rgba(0,0,0,.78) 100%)}
 
-/* backdrop-filter: blur(8px) saturate(100%);
-		-webkit-backdrop-filter: blur(8px) saturate(140%); */
-
 .stats-wrap {
 	max-width: 1180px;
 	margin: 0 auto;
@@ -849,10 +884,11 @@ h2.h-main em {
 	background: var(--card-bg);
 	backdrop-filter: blur(18px) saturate(140%);
 	-webkit-backdrop-filter: blur(18px) saturate(140%);
+	/* border: 1px solid rgb(43, 89, 255); */
 	border: 1px solid var(--card-border);
 	border-radius: 8px;
 	padding: clamp(24px, 3vw, 40px);
-	box-shadow: 0 24px 50px -24px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 8px 30px rgba(0, 5, 22, 0.5), 0 24px 50px -20px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 	opacity: 0;
 	transform: translateY(24px);
 	animation: rise .7s cubic-bezier(.2, .7, .3, 1) forwards;
@@ -877,7 +913,7 @@ h2.h-main em {
 
 .stat-card:hover {
 	transform: translateY(-6px);
-	border-color: rgba(127, 180, 255, 0.35);
+	border: 1px dashed rgba(255, 255, 255, 0.5);
 	box-shadow: 0 30px 60px -22px rgba(20, 50, 140, 0.55);
 }
 
@@ -988,6 +1024,59 @@ h2.h-main em {
 .tab.active .tab-meta {
 	color: #bcd0ff;
 }
+
+
+
+
+ .keyword-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 25px 20px;
+    background: #f9fefb;
+    border: 1.5px dashed #3a9e7e;
+    border-radius: 16px;
+    padding: 14px 20px;
+}
+
+.keyword-bar i {
+    font-size: 18px;
+    color: #3a9e7e;
+    flex-shrink: 0;
+}
+.keyword-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+.keyword-text {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #085041;
+}
+.keyword-badge {
+    margin-left: auto;
+    background: #d4edda;
+    color: #1a7a45;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+.keyword-bar i {
+    font-size: 18px;
+    color: #3a9e7e;
+    flex-shrink: 0;
+}
+
+
+
 
 @keyframes rise {
 	to {
@@ -1532,7 +1621,7 @@ section#wb-client-strip p.section-sub {
     align-items: center;
     padding-right: 48px;
 }
-.wb-logo {
+/* .wb-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1551,7 +1640,7 @@ section#wb-client-strip p.section-sub {
 .wb-logo img:hover {
     filter: grayscale(0%);
     transform: scale(1.06);
-}
+} */
 @keyframes wbScrollAnim {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }

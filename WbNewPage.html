@@ -11,13 +11,15 @@
 		href='https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
 		rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
 
 </head>
 
 <body>
 
-	<!-- ════════════════════════════════════
-  NAVBAR
+<!-- ════════════════════════════════════
+  	NAVBAR
 ════════════════════════════════════ -->
 	<nav class="navbar" id="navbar">
 		<div class="nav-wrap">
@@ -252,14 +254,14 @@
 		</div>
 
 		<!-- Happy Customers Marquee (inside hero, full-width) -->
-		<div class="hc-strip">
+		<!-- <div class="hc-strip">
 			<div class="hc-inner">
 				<div class="hc-label">
 					<p><strong>Some of our<br>Happy Customers</strong></p>
 				</div>
 				<div class="hc-marquee-wrap">
 					<div class="hc-marquee-track">
-						<!-- set 1 -->
+						
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/clc.png" alt="AG-COM LLC"></div>
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/saasworx.png" alt="SaasWorx"></div>
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/peersol.png"
@@ -270,7 +272,8 @@
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/hexaview.png" alt="Hexaview"></div>
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/31West.png"
 								alt="31West Global Services"></div>
-						<!-- set 2 (duplicate for seamless loop) -->
+						
+						
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/ag.png" alt="AG-COM LLC"></div>
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/saasworx.png" alt="SaasWorx"></div>
 						<div class="hc-logo-item"><img src="./newHome/clientLogo/peersol.png"
@@ -284,8 +287,23 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</section>
+
+	<div class="ticker-wrap" aria-hidden="true">
+		<div class="ticker-tr">
+			<span>Google AI Mode hits 1B monthly users</span><span>Performance Max gets new asset controls</span>
+			<span>Topical authority beats keyword density in May update</span><span>ChatGPT Search now reads structured
+				data</span>
+			<span>Bing Ads CPCs are 33% lower than Google Ads</span><span>INP replaced FID in Core Web Vitals</span>
+			<span>E-E-A-T signals expanding to PPC landing pages</span>
+			<span>Google AI Mode hits 1B monthly users</span><span>Performance Max gets new asset controls</span>
+			<span>Topical authority beats keyword density in May update</span><span>ChatGPT Search now reads structured
+				data</span>
+			<span>Bing Ads CPCs are 33% lower than Google Ads</span><span>INP replaced FID in Core Web Vitals</span>
+			<span>E-E-A-T signals expanding to PPC landing pages</span>
+		</div>
+	</div>
 
 
 	<!-- ════════════════════════════════════
@@ -428,7 +446,7 @@
 	<!-- ════════════════════════════════════
   STATS SECTION
 ════════════════════════════════════ -->
-	<section class="stats-section">
+	<section class="stats-section" data-nav-theme="dark">
 
 		<!-- <div class="hero-fade"></div> -->
 
@@ -573,7 +591,7 @@
 	<!-- ════════════════════════════════════
   CTA BANNER
 ════════════════════════════════════ -->
-	<section class="cta-banner">
+	<section class="cta-banner" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="cta-banner-inner">
 				<div class="cta-banner-left">
@@ -618,7 +636,7 @@
 	<!-- ════════════════════════════════════
   WALL OF LOVE
 ════════════════════════════════════ -->
-	<section class="wall-section">
+	<section class="wall-section" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="section-head">
 				<!-- <span class="svc-label-badge">Client Love</span> -->
@@ -779,7 +797,7 @@
 	<!-- ════════════════════════════════════
   SERVICES BENTO
 ════════════════════════════════════ -->
-	<section class="services-section" id="services">
+	<section class="services-section" data-nav-theme="dark" id="services">
 		<div class="wrap">
 			<div class="section-head">
 				<!-- <span class="svc-label-badge">What We Do</span> -->
@@ -789,111 +807,87 @@
 					following services we provide:</p>
 			</div>
 
-			<div class="services-bento">
+			<div class="svc-cards-grid">
 
-				<article class="svc-card svc-light">
-					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-code"></i></div>
+				<article class="svc-card-new svc-col-7">
+					<div class="svc-icon-new"><i class="fa-solid fa-code"></i></div>
 					<h3>Web Development</h3>
 					<p>From custom builds to e-commerce, stunning online experiences tailored to your needs.</p>
-					<div class="svc-tags">
-						<span class="svc-tag">Custom</span>
-						<span class="svc-tag">E-commerce</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">01</div> -->
 				</article>
 
-				<article class="svc-card svc-dark">
-					<div class="svc-top-bar">UI / UX &nbsp;<i class="fa-solid fa-table-columns"></i></div>
-					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-pen-ruler"></i></div>
+				<article class="svc-card-new svc-col-8">
+					<div class="svc-icon-new"><i class="fa-solid fa-pen-ruler"></i></div>
 					<h3>UI / UX Design</h3>
 					<p>Innovative designs and development solutions that set you apart from the competition.</p>
-					<div class="svc-tags">
-						<span class="svc-tag svc-tag-dk">Wireframes</span>
-						<span class="svc-tag svc-tag-dk">Prototypes</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">02</div> -->
 				</article>
 
-				<article class="svc-card svc-blue-lt">
-					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-hashtag"></i></div>
+				<article class="svc-card-new svc-col-3">
+					<div class="svc-icon-new"><i class="fa-solid fa-hashtag"></i></div>
 					<h3>SMM Services</h3>
 					<p>Creating and managing digital marketing campaigns across every major social platform.</p>
-					<div class="svc-tags">
-						<span class="svc-tag">Social</span>
-						<span class="svc-tag">Content</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">03</div> -->
 				</article>
 
-				<article class="svc-card svc-blue-grad">
-					<!-- <div class="svc-ai-badge"><i class="fa-solid fa-robot"></i> AI</div> -->
-					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+				<article class="svc-card-new svc-col-1">
+					<div class="svc-icon-new"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
 					<h3>AI SEO</h3>
-					<p>Next-generation AI SEO designed to maximize visibility, drive targeted traffic, and achieve
-						sustainable growth.</p>
-					<div class="svc-ai-stats">
-						<div class="svc-ai-stat"><span>+5,556%</span><small>AI referral traffic</small></div>
-						<div class="svc-ai-stat"><span>+1,078%</span><small>ChatGPT search traffic</small></div>
+					<p>Next-generation AI SEO designed to maximize visibility, drive targeted traffic, and achieve sustainable growth.</p>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">04</div> -->
 				</article>
 
-				<article class="svc-card svc-light">
-					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-magnifying-glass"></i></div>
+				<article class="svc-card-new svc-col-4">
+					<div class="svc-icon-new"><i class="fa-solid fa-magnifying-glass"></i></div>
 					<h3>SEO</h3>
 					<p>Improve your search engine rankings and increase organic traffic with proven strategies.</p>
-					<div class="svc-tags">
-						<span class="svc-tag">On-page</span>
-						<span class="svc-tag">Technical</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">05</div> -->
 				</article>
 
-				<article class="svc-card svc-black">
-					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-filter"></i></div>
+				<article class="svc-card-new svc-col-6">
+					<div class="svc-icon-new"><i class="fa-solid fa-filter"></i></div>
 					<h3>Lead Generation</h3>
 					<p>Quality leads through targeted campaigns and conversion optimisation techniques.</p>
-					<div class="svc-tags">
-						<span class="svc-tag svc-tag-dk">Funnels</span>
-						<span class="svc-tag svc-tag-dk">CRO</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">06</div> -->
 				</article>
 
-				<article class="svc-card svc-blue-lt">
-					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-brands fa-google"></i></div>
+				<article class="svc-card-new svc-col-5">
+					<div class="svc-icon-new"><i class="fa-brands fa-google"></i></div>
 					<h3>PPC</h3>
-					<p>Expertly managed pay-per-click campaigns that drive targeted traffic and deliver best results.
-					</p>
-					<div class="svc-tags">
-						<span class="svc-tag">Google Ads</span>
-						<span class="svc-tag">Meta</span>
+					<p>Expertly managed pay-per-click campaigns that drive targeted traffic and deliver best results.</p>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">07</div> -->
 				</article>
 
-				<article class="svc-card svc-light">
-					<div class="svc-icon-wrap svc-icon-blue"><i class="fa-solid fa-palette"></i></div>
+				<article class="svc-card-new svc-col-2">
+					<div class="svc-icon-new"><i class="fa-solid fa-palette"></i></div>
 					<h3>Branding Service</h3>
-					<p>Build a strong, recognisable identity through logo design, marketing materials, and cohesive
-						brand messaging that resonates.</p>
-					<div class="svc-tags">
-						<span class="svc-tag">Identity</span>
-						<span class="svc-tag">Logo</span>
-						<span class="svc-tag">Messaging</span>
+					<p>Build a strong, recognisable identity through logo design, marketing materials, and cohesive brand messaging.</p>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">08</div> -->
 				</article>
 
-				<article class="svc-card svc-navy">
-					<div class="svc-icon-wrap svc-icon-white"><i class="fa-solid fa-chart-line"></i></div>
+				<article class="svc-card-new svc-col-9">
+					<div class="svc-icon-new"><i class="fa-solid fa-chart-line"></i></div>
 					<h3>Performance Marketing</h3>
 					<p>Measurable results through SEM, social ads, and email marketing that drives real ROI.</p>
-					<div class="svc-tags">
-						<span class="svc-tag svc-tag-dk">SEM</span>
-						<span class="svc-tag svc-tag-dk">Email</span>
+					<div class="svc-card-foot">
+						<a href="#" class="svc-learn-link">LEARN MORE <span class="svc-arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
 					</div>
-					<!-- <div class="svc-ghost">09</div> -->
 				</article>
 
 			</div>
@@ -924,7 +918,7 @@
 						<h3>Rank Higher, Get Found on Google &amp; AI Engines</h3>
 						<p>From technical SEO to AI-powered content strategies, we ensure your brand appears at every
 							touchpoint — Google, ChatGPT, Gemini, and Perplexity.</p>
-						<a href="#" class="sol-link">Explore SEO Services →</a>
+						<a href="#" class="sol-link">Explore SEO Services <i class="fa-solid fa-arrow-right"></i></a>
 					</div>
 				</article>
 
@@ -937,7 +931,7 @@
 						<h3>Performance Marketing That Drives Real Revenue</h3>
 						<p>Expertly managed Google Ads, Meta campaigns, and performance marketing strategies that
 							maximise ROAS and deliver qualified leads at scale.</p>
-						<a href="#" class="sol-link">Explore Paid Ads →</a>
+						<a href="#" class="sol-link">Explore Paid Ads <i class="fa-solid fa-arrow-right"></i></a>
 					</div>
 				</article>
 
@@ -950,7 +944,7 @@
 						<h3>Build a Brand That Stands Out in Every Market</h3>
 						<p>Cohesive brand identity, powerful social media presence, and content strategies that convert
 							followers into loyal customers and ambassadors.</p>
-						<a href="#" class="sol-link">Explore Branding →</a>
+						<a href="#" class="sol-link">Explore Branding <i class="fa-solid fa-arrow-right"></i></a>
 					</div>
 				</article>
 
@@ -960,10 +954,10 @@
 
 
 
-	<!-- ════════════════════════════════════
+<!-- ════════════════════════════════════
   AI AUDIT CTA
 ════════════════════════════════════ -->
-	<section class="ai-audit-cta">
+	<section class="ai-audit-cta" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="ai-audit-inner">
 				<div class="ai-audit-left">
@@ -971,7 +965,7 @@
 				</div>
 				<div class="ai-audit-right">
 					<p>Free visibility audit across ChatGPT, Gemini, and Google AI Mode.</p>
-					<!-- <a href="#contact" class="btn btn-audit">Get Your Free Audit →</a> -->
+					<!-- <a href="#contact" class="btn btn-audit">Get Your Free Audit <i class="fa-solid fa-arrow-right"></i></a> -->
 				</div>
 				<div class="cta-banner-actions">
 					<a href="#contact" class="btn cta-btn-outline">
@@ -1069,7 +1063,7 @@
 
 
 
-	<!-- ════════════════════════════════════
+<!-- ════════════════════════════════════
   AI SEARCH PERFORMANCE SHOWCASE
 ════════════════════════════════════ -->
 	<section class="ai-showcase-section">
@@ -1111,31 +1105,40 @@
 					</div>
 				</div>
 
+				<div class="keyword-bar">
+					<i class="ti ti-search"></i>
+					<span class="keyword-label">Keyword:</span>
+					<span class="keyword-text">best running shoes 2025</span>
+					<span class="keyword-badge">
+						<i class="ti ti-trending-up" style="font-size:13px;"></i> #1 Position
+					</span>
+				</div>
+
 				<!-- ChatGPT -->
 				<div class="ai-panel" id="chatgpt">
 					<div class="stats-grid">
-						<div class="stat-card highlight">
+						<div class="stat-card-ai highlight">
 							<i class="fas fa-eye stat-icon"></i>
 							<h6>Visibility</h6>
 							<div class="stat-value-row">
 								<h2>99%</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-trophy stat-icon"></i>
 							<h6>Rank</h6>
 							<div class="stat-value-row">
 								<h2>#1</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-chart-bar stat-icon"></i>
 							<h6>Avg. Position</h6>
 							<div class="stat-value-row">
 								<h2>2.61</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-smile-beam stat-icon"></i>
 							<h6>Net Sentiment</h6>
 							<div class="stat-value-row">
@@ -1183,7 +1186,7 @@
 				<!-- Perplexity -->
 				<div class="ai-panel" id="perplexity">
 					<div class="stats-grid">
-						<div class="stat-card highlight">
+						<div class="stat-card-ai highlight">
 							<i class="fas fa-eye stat-icon"></i>
 							<h6>Visibility</h6>
 							<div class="stat-value-row">
@@ -1191,14 +1194,14 @@
 										style="font-size:11px"></i> 8.4</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-trophy stat-icon"></i>
 							<h6>Rank</h6>
 							<div class="stat-value-row">
 								<h2>#1</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-chart-bar stat-icon"></i>
 							<h6>Avg. Position</h6>
 							<div class="stat-value-row">
@@ -1206,7 +1209,7 @@
 										style="font-size:11px"></i> 1.3</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-smile-beam stat-icon"></i>
 							<h6>Net Sentiment</h6>
 							<div class="stat-value-row">
@@ -1247,7 +1250,7 @@
 				<!-- Gemini -->
 				<div class="ai-panel active" id="gemini">
 					<div class="stats-grid">
-						<div class="stat-card highlight">
+						<div class="stat-card-ai highlight">
 							<i class="fas fa-eye stat-icon"></i>
 							<h6>Visibility</h6>
 							<div class="stat-value-row">
@@ -1255,14 +1258,14 @@
 										style="font-size:11px"></i> 8.4</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-trophy stat-icon"></i>
 							<h6>Rank</h6>
 							<div class="stat-value-row">
 								<h2>#1</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-chart-bar stat-icon"></i>
 							<h6>Avg. Position</h6>
 							<div class="stat-value-row">
@@ -1270,7 +1273,7 @@
 										style="font-size:11px"></i> 1.3</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-smile-beam stat-icon"></i>
 							<h6>Net Sentiment</h6>
 							<div class="stat-value-row">
@@ -1323,7 +1326,7 @@
 				<!-- Claude -->
 				<div class="ai-panel" id="claude">
 					<div class="stats-grid">
-						<div class="stat-card highlight">
+						<div class="stat-card-ai highlight">
 							<i class="fas fa-eye stat-icon"></i>
 							<h6>Visibility</h6>
 							<div class="stat-value-row">
@@ -1331,14 +1334,14 @@
 										style="font-size:11px"></i> 8.4</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-trophy stat-icon"></i>
 							<h6>Rank</h6>
 							<div class="stat-value-row">
 								<h2>#1</h2>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-chart-bar stat-icon"></i>
 							<h6>Avg. Position</h6>
 							<div class="stat-value-row">
@@ -1346,7 +1349,7 @@
 										style="font-size:11px"></i> 1.3</span>
 							</div>
 						</div>
-						<div class="stat-card">
+						<div class="stat-card-ai">
 							<i class="fas fa-smile-beam stat-icon"></i>
 							<h6>Net Sentiment</h6>
 							<div class="stat-value-row">
@@ -1381,10 +1384,10 @@
 	</section><!-- /.ai-showcase-section -->
 
 
-	<!-- ════════════════════════════════════
+<!-- ════════════════════════════════════
   CLIENT VIDEO REVIEWS
 ════════════════════════════════════ -->
-	<section class="casestudies-section">
+	<section class="casestudies-section" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="cs-header">
 				<div class="cs-head-left">
@@ -1522,25 +1525,41 @@
 				<article class="pillar-card">
 					<div class="pillar-icon-wrap"><i class="fa-solid fa-trophy"></i></div>
 					<h3>We Have Proven Results</h3>
-					<p>You deserve to work with a digital marketing agency that delivers on its promises. That's why we at White Bunnie have a track record of success in helping our clients achieve their online marketing goals. Whether it's increasing traffic, leads, conversions, or sales, we have the expertise and the tools to make it happen. White Bunnie listens to your needs and creates a tailor-made strategy that works for your business.</p>
+					<p>You deserve to work with a digital marketing agency that delivers on its promises. That's why we
+						at White Bunnie have a track record of success in helping our clients achieve their online
+						marketing goals. Whether it's increasing traffic, leads, conversions, or sales, we have the
+						expertise and the tools to make it happen. White Bunnie listens to your needs and creates a
+						tailor-made strategy that works for your business.</p>
 				</article>
 
 				<article class="pillar-card">
 					<div class="pillar-icon-wrap"><i class="fa-solid fa-handshake"></i></div>
 					<h3>Customer Satisfaction</h3>
-					<p>We always put our customers first and treat them with the utmost respect and professionalism. As a digital marketing agency, White Bunnie is different from the rest. We don't just deliver results, we also build lasting relationships with our clients. We are always available, responsive, and transparent in our communication. We are not just your service provider, we are your partner in growth.</p>
+					<p>We always put our customers first and treat them with the utmost respect and professionalism. As
+						a digital marketing agency, White Bunnie is different from the rest. We don't just deliver
+						results, we also build lasting relationships with our clients. We are always available,
+						responsive, and transparent in our communication. We are not just your service provider, we are
+						your partner in growth.</p>
 				</article>
 
 				<article class="pillar-card">
 					<div class="pillar-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
 					<h3>We Are Honest &amp; Ethical</h3>
-					<p>We value Ethics, Trust, and Loyalty. We don't believe in using shady tactics or cutting corners to get results. We only use ethical and proven methods that comply with the latest industry standards and best practices. We work with our clients as partners, not as customers. We understand their goals, challenges, and expectations, and we deliver solutions that meet or exceed them.</p>
+					<p>We value Ethics, Trust, and Loyalty. We don't believe in using shady tactics or cutting corners
+						to get results. We only use ethical and proven methods that comply with the latest industry
+						standards and best practices. We work with our clients as partners, not as customers. We
+						understand their goals, challenges, and expectations, and we deliver solutions that meet or
+						exceed them.</p>
 				</article>
 
 				<article class="pillar-card">
 					<div class="pillar-icon-wrap"><i class="fa-solid fa-chess-knight"></i></div>
 					<h3>Customized Strategy</h3>
-					<p>At White Bunnie, we know that every business is unique and has different goals and challenges. That's why we don't offer cookie-cutter solutions or generic packages. We create customized strategies that are tailored to your specific needs and objectives. We analyze your industry, competitors, audience, and current performance, and we design a plan that suits your budget and timeline.</p>
+					<p>At White Bunnie, we know that every business is unique and has different goals and challenges.
+						That's why we don't offer cookie-cutter solutions or generic packages. We create customized
+						strategies that are tailored to your specific needs and objectives. We analyze your industry,
+						competitors, audience, and current performance, and we design a plan that suits your budget and
+						timeline.</p>
 				</article>
 
 			</div>
@@ -1926,7 +1945,7 @@
 						<div class="ctesti-slide">
 							<div class="ctesti-stars">★★★★★</div>
 							<blockquote class="ctesti-quote">"Speed is one of our core values and the WhiteBunnie team
-								lives it. They don't just execute — they anticipate what's needed and move before you
+								lives it. They don't just execute they anticipate what's needed and move before you
 								ask."</blockquote>
 							<div class="ctesti-stat-box">
 								<span class="ctesti-stat-num">+312%</span>
@@ -1943,7 +1962,7 @@
 
 						<div class="ctesti-slide">
 							<div class="ctesti-stars">★★★★★</div>
-							<blockquote class="ctesti-quote">"Professional, reliable, great value — and the results have
+							<blockquote class="ctesti-quote">"Professional, reliable, great value and the results have
 								compounded over time. 2 years in and they're still finding new growth levers for us."
 							</blockquote>
 							<div class="ctesti-stat-box">
@@ -2248,7 +2267,7 @@
 	<!-- ════════════════════════════════════
   CONTACT SECTION
 ════════════════════════════════════ -->
-	<section class="contact-section" id="contact">
+	<section class="contact-section" id="contact" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="contact-grid">
 
@@ -2374,12 +2393,246 @@
 
 
 
+	
+
+
+
+	<!-- ════════════════════════════════════
+  PRE-FOOTER SLIM CTA
+════════════════════════════════════ -->
+	<section class="pre-footer-cta">
+		<!-- decorative blobs -->
+		<div class="pfc-blob pfc-blob-1"></div>
+		<div class="pfc-blob pfc-blob-2"></div>
+
+		<div class="wrap">
+			<div class="pfc-inner">
+
+				<div class="pfc-left">
+					
+					<h3 class="pfc-heading">Ready to <em>10x</em> your digital growth?</h3>
+					<p class="pfc-sub">Join 100+ B2B brands that trust White Bunnie to turn clicks into clients with AI-powered strategies built for 2025.</p>
+
+					<div class="pfc-trust-row">
+						<div class="pfc-trust-item">
+							<span class="pfc-stars">★★★★★</span>
+							<span class="pfc-trust-label">5.0 on Clutch</span>
+						</div>
+						<span class="pfc-sep">·</span>
+						<div class="pfc-trust-item">
+							<strong>100+</strong>
+							<span class="pfc-trust-label">Clients Served</span>
+						</div>
+						<span class="pfc-sep">·</span>
+						<div class="pfc-trust-item">
+							<strong>8+</strong>
+							<span class="pfc-trust-label">Years of Expertise</span>
+						</div>
+						<span class="pfc-sep">·</span>
+						<!-- <div class="pfc-trust-item">
+							<strong>4 Countries</strong>
+							<span class="pfc-trust-label">IND · USA · UAE · CAN</span>
+						</div> -->
+					</div>
+				</div>
+
+				<div class="pfc-right">
+					<a href="#contact" class="pfc-btn-primary">
+						<i class="fa-regular fa-file-lines"></i>
+						Get Free Proposal
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15">
+							<line x1="5" y1="12" x2="19" y2="12"/>
+							<polyline points="12,5 19,12 12,19"/>
+						</svg>
+					</a>
+					<a href="tel:+919876543210" class="pfc-btn-ghost">
+						<i class="fa-solid fa-phone"></i>
+						Call Us
+					</a>
+					
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 
 	<!-- ════════════════════════════════════
   FOOTER
 ════════════════════════════════════ -->
-	<footer class="footer">
+
+
+	<footer class="wb-footer" data-nav-theme="dark">
+
+		<div class="wb-container">
+
+			<!-- COLUMN 1 -->
+			<div class="wb-col wb-col-1">
+				<div class="wb-logo"><img src="https://whitebunnie.com/wp-content/uploads/2024/10/logo.png"></div>
+
+				<p class="wb-desc">
+					AI Search Marketing Agency for IT Services, SaaS & B2B Tech - India & USA.
+				</p>
+
+				<p class="wb-label">We get you cited on</p>
+
+				<div class="wb-tags">
+					<span>ChatGPT</span>
+					<span>Perplexity</span>
+					<span>Gemini</span>
+					<span>Claude</span>
+					<span>SearchGPT</span>
+					<span>Google SGE</span>
+				</div>
+
+				<p class="wb-address">Sector 63, Noida, 201301, India</p>
+
+				<div class="iconCont">
+					<span>
+						<a target="_blank" href="https://www.facebook.com/Dwhitebunnie"
+							title="White Bunnie on Facebook">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/facebook-1.png" alt="facebook">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://twitter.com/WhiteBunnie6" title="White Bunnie on X (Twitter)">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/twitter.png" alt="twitter">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.instagram.com/dwhitebunnie/"
+							title="White Bunnie on Instagram">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/instagram.png" alt="twitter">
+						</a>
+					</span>
+
+
+					<span>
+						<a target="_blank" href="https://in.linkedin.com/company/whitebunnie/"
+							title="White Bunnie on LinkedIn">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/linkedin.png" alt="linkedin">
+
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.youtube.com/@whitebunniedigital/"
+							title="White Bunnie on YouTube">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/youtube.png" alt="youtube">
+						</a>
+					</span>
+
+				</div>
+			</div>
+
+			<!-- COLUMN 2 -->
+			<div class="wb-col">
+				<h4>AI SEARCH SERVICES</h4>
+				<ul>
+					<li><a href="#">GEO - Generative Engine Optimization</a></li>
+					<li><a href="#">AEO - Answer Engine Optimization </a></li>
+					<li><a href="#">AI Visibility Audit </a></li>
+					<li><a href="#">Schema Markup & Structured Data</a></li>
+					<li><a href="#">AI Citation Building</a></li>
+					<li><a href="#">SEO for B2B & IT</a></li>
+					<li><a href="#">Google Ads / PPC</a></li>
+					<li><a href="#">Website Design & Dev</a></li>
+					<li><a href="#">White-Label SEO & GEO</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 3 -->
+			<div class="wb-col">
+				<h4>INDUSTRIES WE SERVE</h4>
+				<ul>
+					<li><a href="#">IT Services & ITES</a></li>
+					<li><a href="#">SaaS Companies</a></li>
+					<li><a href="#">B2B Tech Brands</a></li>
+					<li><a href="#">Oracle & ERP Consulting</a></li>
+					<li><a href="#">eCommerce</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Finance & Fintech</a></li>
+				</ul>
+
+
+			</div>
+
+			<!-- COLUMN 4 -->
+			<div class="wb-col">
+				<h4>RESOURCES</h4>
+				<ul>
+					<li><a href="#">GEO Guide for B2B SaaS </a></li>
+					<li><a href="#">AEO Playbook for IT Brands</a></li>
+					<li><a href="#">AI Visibility Tracker Tool</a></li>
+					<li><a href="#">Schema Markup Guide</a></li>
+					<li><a href="#">Free SEO Audit</a></li>
+					<li><a href="#">Blog & Insights</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 5 -->
+			<div class="wb-col">
+				<h4>REGION</h4>
+
+				<ul class="region-list">
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/india.png"> IND
+					</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/us.png"> USA</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/uae.png"> UAE</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/canada.png"> CAN
+					</li>
+				</ul>
+
+				<iframe style="margin:10px 0px 0px;max-width:320x;"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1474767051486!2d77.37573897528881!3d28.625341775668737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5229b065c81%3A0xf39234a7e6a0c2cd!2sWhite%20Bunnie%20-%20Digital%20Marketing%20Agency%20in%20Noida%20%7C%20SEO%20Agency%20in%20Noida!5e0!3m2!1sen!2sin!4v1738731978606!5m2!1sen!2sin"
+					width="100%" height="200px" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+		</div>
+
+
+		<!-- SCHEMA STRIP -->
+		<!-- <div class="wb-schema">
+			<span>● About Us</span>
+			<span>● Our Team</span>
+			<span>● Careers</span>
+			<span>● Contact Us</span>
+			<span>● FAQ's</span>
+		</div> -->
+
+		<!-- BOTTOM BAR -->
+		<div class="wb-bottom">
+			<div class="wb-copy">
+				© 2026 White Bunnie Digital Pvt. Ltd.
+			</div>
+
+			<div class="wb-legal">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Sitemap</a>
+			</div>
+
+			<div class="wb-cert">
+				Google Partner · Meta Business Partner · Since 2015
+			</div>
+
+			<div class="wb-quick">
+				<a href="#">GEO</a>
+				<a href="#">AEO</a>
+				<a href="#">AI Visibility Audit</a>
+				<a href="#">White-Label</a>
+
+			</div>
+		</div>
+
+	</footer>
+
+
+	<!-- <footer class="footer" data-nav-theme="dark">
 		<div class="wrap">
 			<div class="footer-top">
 
@@ -2465,7 +2718,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 
 
 	<script>
@@ -2965,6 +3218,58 @@
 			});
 
 		});
+	</script>
+
+	<script>
+		/* ── Navbar dark-section detection ── */
+		(function () {
+			var navbar = document.getElementById('navbar');
+			var darkSections = document.querySelectorAll('[data-nav-theme="dark"]');
+			if (!navbar || !darkSections.length) return;
+
+			function updateNavTheme() {
+				var navH = navbar.offsetHeight + 10;
+				var isDark = false;
+				darkSections.forEach(function (sec) {
+					var r = sec.getBoundingClientRect();
+					if (r.top <= navH && r.bottom >= 0) isDark = true;
+				});
+				navbar.classList.toggle('nav-on-dark', isDark);
+			}
+
+			window.addEventListener('scroll', updateNavTheme, { passive: true });
+			updateNavTheme();
+		})();
+	</script>
+
+	<script>
+		/* ── Ticker / Marquee ── */
+		(function () {
+			const wrap = document.querySelector('.ticker-wrap');
+			if (!wrap) return;
+
+			/* Collect original spans only (remove hardcoded duplicates if present) */
+			const allSpans = Array.from(wrap.querySelectorAll('span'));
+			const half = allSpans.length / 2;
+			const origSpans = (Number.isInteger(half) && half >= 1)
+				? allSpans.slice(0, half)
+				: allSpans;
+
+			/* Build a single track with originals + one clone set for seamless loop */
+			const track = document.createElement('div');
+			track.className = 'ticker-tr';
+			origSpans.forEach(s => track.appendChild(s.cloneNode(true)));
+			origSpans.forEach(s => track.appendChild(s.cloneNode(true)));
+
+			wrap.innerHTML = '';
+			wrap.appendChild(track);
+
+			/* Auto-speed: ~80 px/s based on actual content width */
+			requestAnimationFrame(() => {
+				const singleW = track.scrollWidth / 2;
+				track.style.animationDuration = Math.max(18, singleW / 80) + 's';
+			});
+		})();
 	</script>
 
 </body>
