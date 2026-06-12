@@ -4625,20 +4625,26 @@
 	background: #fff;
 	border-top: 1px solid #f0f1f5;
 	border-bottom: 1px solid #f0f1f5;
+	overflow: hidden;
 }
 
 .client-trust-row {
 	display: flex;
 	align-items: stretch;
 	gap: 0;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
 }
 
 .client-trust-group {
 	flex: 1;
-	padding: 0 36px;
+	min-width: 0;
+	padding: 0 0px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
 }
 
 .client-trust-group:first-child {
@@ -4667,28 +4673,47 @@
 }
 
 .client-trust-logos {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 14px 18px;
-	align-items: center;
-	justify-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	overflow: hidden;
+	/* exactly 2 logos (140px) + 1 gap (16px) visible */
+	width: 330px;
+	max-width: 100%;
+}
+
+.ct-marquee-row {
+	overflow: hidden;
 	width: 100%;
 }
 
-.client-trust-logos img {
-	max-width: 108px;
-	max-height: 46px;
-	width: auto;
-	height: auto;
-	object-fit: contain;
-	/* filter: grayscale(100%); */
-	/* opacity: 0.6; */
-	transition: opacity 0.22s ease, filter 0.22s ease;
+.ct-marquee-track {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: max-content;
+	animation: ctScrollLeft 12s linear infinite;
 }
 
-.client-trust-logos img:hover {
-	filter: grayscale(0%);
-	opacity: 1;
+.ct-marquee-track img {
+	width: 140px;
+	height: 52px;
+	object-fit: contain;
+	flex-shrink: 0;
+	transition: opacity 0.22s ease;
+}
+
+.ct-marquee-track img:hover {
+	opacity: 0.75;
+}
+
+.client-trust-logos:hover .ct-marquee-track {
+	animation-play-state: paused;
+}
+
+@keyframes ctScrollLeft {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
 }
 
 /* â”€â”€ Responsive â”€â”€ */
@@ -4696,11 +4721,12 @@
 	.client-trust-row {
 		flex-wrap: wrap;
 		gap: 36px 0;
+		padding: 0 20px;
 	}
 
 	.client-trust-group {
 		flex: 1 1 calc(50% - 1px);
-		padding: 0 24px;
+		padding: 0 20px;
 	}
 
 	.client-trust-group:first-child {
@@ -4715,9 +4741,13 @@
 		display: none;
 	}
 
-	.client-trust-logos img {
-		max-width: 90px;
-		max-height: 40px;
+	.client-trust-logos {
+		width: 256px; /* 2 × 120px + 16px */
+	}
+
+	.ct-marquee-track img {
+		width: 120px;
+		height: 44px;
 	}
 }
 
@@ -4729,6 +4759,7 @@
 	.client-trust-row {
 		flex-direction: column;
 		gap: 32px;
+		padding: 0 16px;
 	}
 
 	.client-trust-group {
@@ -4737,13 +4768,13 @@
 	}
 
 	.client-trust-logos {
-		grid-template-columns: repeat(3, 1fr);
-		gap: 12px 10px;
+		width: 240px; /* 2 × 112px + 16px */
+		max-width: 100%;
 	}
 
-	.client-trust-logos img {
-		max-width: 80px;
-		max-height: 34px;
+	.ct-marquee-track img {
+		width: 112px;
+		height: 40px;
 	}
 }
 
