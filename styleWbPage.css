@@ -9,8 +9,9 @@
 ══════════════════════════════════════════════════════════ */
 :root {
   /* ── Brand ── */
-  --clr-primary:      #2563EB;
-  --clr-primary-dk:   #1d4ed8;
+  --clr-primary:      #1877F2;
+  /* --clr-primary-dk:   #1d4ed8; */
+  --clr-primary-dk:   #3b5998;
   --clr-primary-lt:   #EEF2FF;
   --clr-primary-mid:  #3D6BFF;
   --clr-accent:       #7c3aed;
@@ -1154,7 +1155,8 @@ h2.h-main em {
   --svc-surface: #ffffff;
   --svc-border: rgba(148,163,184,0.18);
   --svc-icon-bg: rgba(37,99,235,0.08);
-  --svc-icon-color: #1d4ed8;
+  /* --svc-icon-color: #1d4ed8; */
+  --svc-icon-color: #1877f2;
   --svc-tag-bg: #f8fbff;
   --svc-tag-border: rgba(148,163,184,0.22);
   --svc-tag-color: #334155;
@@ -1375,15 +1377,21 @@ h2.h-main em {
 }
 
 @media (max-width: 640px) {
+  
+.svc-card-content {
+  /* display: flex; */
+  flex-direction: column;
+}
+
   .services-section::before { display: none; }
   .svc-cards-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "web"
-      "uiux"
-      "smm"
-      "ai-seo"
-      "seo"
+    "ai-seo"
+    "uiux"
+    "smm"
+    "seo"
+    "web"
       "lead"
       "ppc"
       "branding"
@@ -1478,7 +1486,7 @@ h2.h-main em {
 }
 .ai-showcase-head .h-main {
   font-size: clamp(2rem,4vw,3.5rem);
-  background: linear-gradient(135deg, #111827 20%, var(--clr-primary) 90%);
+  background: linear-gradient(135deg, #111827 2%, var(--clr-primary) 98%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1544,17 +1552,22 @@ h2.h-main em {
 .keyword-bar {
   display: flex; align-items: center; gap: 12px;
   margin: 20px 25px 20px;
-  background: #f9fefb;
-  border: 1.5px dashed #3a9e7e;
-  border-radius: 16px;
+  /* background: #f9fefb; */
+  background: #edf5ff;
+  border: 1.5px dashed #1877F2;
+  /* border: 1.5px dashed #3a9e7e; */
+  border-radius: 8px;
   padding: 14px 20px;
 }
 .keyword-bar i     { font-size: 18px; color: #3a9e7e; flex-shrink: 0; }
 .keyword-label     { font-size: 13px; color: #666; font-weight: 500; flex-shrink: 0; }
-.keyword-text      { font-size: 15px; font-weight: 700; text-transform: capitalize; color: #085041; }
+.keyword-text      { font-size: 15px; font-weight: 700; text-transform: capitalize; color: #1877F2; }
+/* .keyword-text      { font-size: 15px; font-weight: 700; text-transform: capitalize; color: #085041; } */
 .keyword-badge {
   margin-left: auto;
-  background: #d4edda; color: #1a7a45;
+  background: #c8e1ff; 
+  color: #1877F2;
+  /* background: #d4edda; color: #1a7a45; */
   padding: 5px 14px; border-radius: 50px;
   font-size: 13px; font-weight: 600;
   display: flex; align-items: center; gap: 5px;
@@ -1590,7 +1603,7 @@ h2.h-main em {
   pointer-events: none; z-index: 0;
 }
 .ai-results-section .stat-card-ai:hover { transform: translateY(-4px) scale(1.02); }
-.ai-results-section .stat-card-ai.highlight { background: #cde9df; border-color: #a8d9c8; }
+.ai-results-section .stat-card-ai.highlight { background: #edf5ff; border: 1px solid #85aad7; }
 .ai-results-section .stat-card-ai:nth-child(2) { border: 1px solid #ddd; }
 .ai-results-section .stat-card-ai:nth-child(3) { border: 1px solid #ddd; }
 .ai-results-section .stat-card-ai:nth-child(4) { border: 1px solid #ddd; }
@@ -1599,7 +1612,7 @@ h2.h-main em {
   order: 1; position: absolute; top: 20px; right: 22px;
   border-radius: var(--r);
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: #3a9e7e; z-index: 2;
+  font-size: 18px; color: #1877F2; z-index: 2;
 }
 .ai-results-section .stat-card-ai h6 {
   order: 2; flex: 1; margin: 0;
@@ -1607,10 +1620,10 @@ h2.h-main em {
   text-transform: uppercase; letter-spacing: .10em; line-height: 1.35;
   z-index: 2; position: relative;
 }
-.ai-results-section .stat-card-ai.highlight h6 { color: #085041; }
+.ai-results-section .stat-card-ai.highlight h6 { color: #1877F2; }
 .ai-results-section .stat-value-row { order: 3; flex-shrink: 0; display: flex; align-items: center; gap: 16px; position: relative; }
-.ai-results-section .stat-card-ai h2 { margin: 0; font-size: 30px; line-height: 1; font-weight: 800; color: #111; letter-spacing: -.02em; }
-.ai-results-section .stat-card-ai.highlight h2 { color: #085041; }
+.ai-results-section .stat-card-ai h2 { margin: 0; font-size: 30px; line-height: 1; font-weight: 800; color: #1877F2; letter-spacing: -.02em; }
+.ai-results-section .stat-card-ai.highlight h2 { color: #1877F2; }
 
 .ai-results-section .stat-badge {
   display: inline-flex; align-items: center; gap: 2px;
