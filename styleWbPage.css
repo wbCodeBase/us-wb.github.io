@@ -1197,6 +1197,24 @@ h2.h-main em {
   grid-row: auto;
 }
 
+.svc-card-content {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.svc-card-ver-content {
+    display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
 .svc-shift-up,
 .svc-shift-down { margin-top: 0; }
 
