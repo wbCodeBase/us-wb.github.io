@@ -893,13 +893,13 @@ h2.h-main em {
 ════════════════════════════════════════ */
 
 .wbn-hero-zone {
-    position: relative;
-    padding: 130px 0 60px;
-    overflow: hidden;
+  position: relative;
+  padding: 130px 0 60px;
+  overflow: hidden;
 }
 
 /* Grid Pattern */
-.wbn-hero-zone::after {
+/* .wbn-hero-zone::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -908,148 +908,165 @@ h2.h-main em {
         linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
     background-size: 52px 52px;
     pointer-events: none;
+} */
+
+
+.wbn-hero-zone-two::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--hero-grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--hero-grid-major) 1px, transparent 1px), linear-gradient(var(--hero-grid-minor) 1px, transparent 1px), linear-gradient(90deg, var(--hero-grid-minor) 1px, transparent 1px);
+
+  /* Denser grid */
+  background-size:
+    80px 80px,
+    80px 80px,
+    16px 16px,
+    16px 16px;
+
+  pointer-events: none;
 }
 
 .wbn-hero-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .wbn-hero-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.13);
-    border-radius: 100px;
-    padding: 7px 18px 7px 11px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--clr-primary);
-    letter-spacing: .07em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    animation: fadeUp .5s ease both;
-    text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 100px;
+  padding: 7px 18px 7px 11px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clr-primary);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  animation: fadeUp .5s ease both;
+  text-align: center;
 }
 
 .wbn-hero-content h1 {
-    font-family: var(--font);
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 28px;
-    text-align: center;
-    max-width: 1000px;
-    animation: fadeUp .55s .08s ease both;
+  font-family: var(--font);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 28px;
+  text-align: center;
+  max-width: 1000px;
+  animation: fadeUp .55s .08s ease both;
 }
 
 .wbn-hero-content h1 em {
-    font-style: normal;
-    color: var(--clr-primary);
+  font-style: normal;
+  color: var(--clr-primary);
 }
 
 .wbn-hero-description {
-    font-size: 17px;
-    color: rgb(87, 87, 87);
-    max-width: 850px;
-    line-height: 1.45;
-    text-align: center;
-    margin-bottom: 30px;
-    animation: fadeUp .55s .16s ease both;
+  font-size: 17px;
+  color: rgb(87, 87, 87);
+  max-width: 850px;
+  line-height: 1.45;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeUp .55s .16s ease both;
 }
 
 .wbn-action-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .wbn-hero-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    animation: fadeUp .55s .24s ease both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  animation: fadeUp .55s .24s ease both;
 }
 
 .wbn-partner-showcase {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .wbn-partner-logo {
-    width: 160px;
-    height: auto;
-    object-fit: contain;
-    opacity: 1 !important;
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  opacity: 1 !important;
 }
 
 .wbn-service-ribbon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 28px 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 28px 1.5rem 0;
 }
 
 .wbn-service-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 16px;
-    border-radius: var(--r);
-    border: 1px solid var(--clr-primary);
-    color: var(--clr-primary);
-    font-size: .82rem;
-    font-weight: 600;
-    letter-spacing: .01em;
-    white-space: nowrap;
-    transition: background .18s ease,
-                border-color .18s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: var(--r);
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  transition: background .18s ease,
+    border-color .18s ease;
 }
 
 .wbn-service-pill:hover {
-    background: #dde7ff;
-    border-color: #93aef5;
+  background: #dde7ff;
+  border-color: #93aef5;
 }
 
 /* Responsive */
 
 @media (max-width: 640px) {
 
-    .wbn-hero-zone {
-        padding: 100px 0 56px;
-    }
+  .wbn-hero-zone {
+    padding: 100px 0 56px;
+  }
 
-    .wbn-hero-content h1 {
-        font-size: 2.4rem;
-        line-height: 1.1;
-    }
+  .wbn-hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
 
-    .wbn-hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .wbn-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .wbn-hero-buttons .btn {
-        justify-content: center;
-    }
+  .wbn-hero-buttons .btn {
+    justify-content: center;
+  }
 
-    .wbn-partner-showcase {
-        justify-content: center;
-    }
+  .wbn-partner-showcase {
+    justify-content: center;
+  }
 
-    .wbn-hero-description {
-        font-size: 14px;
-    }
+  .wbn-hero-description {
+    font-size: 14px;
+  }
 }
 
 
@@ -1112,7 +1129,8 @@ h2.h-main em {
   align-items: center;
   justify-content: center;
   padding: 16px 0 8px;
-  pointer-events: none;   /* let clicks pass through to icons behind */
+  pointer-events: none;
+  /* let clicks pass through to icons behind */
 }
 
 /* re-enable pointer events only on actual interactive content */
@@ -1494,7 +1512,7 @@ h2.h-main em {
     padding: 60px 0 0;
   }
 
-  .hero-logo-sec img{
+  .hero-logo-sec img {
     width: 130px;
   }
 
@@ -1529,7 +1547,7 @@ h2.h-main em {
     align-items: stretch;
   }
 
-  .hero-cta-wrap .btn { 
+  .hero-cta-wrap .btn {
     justify-content: center;
   }
 
