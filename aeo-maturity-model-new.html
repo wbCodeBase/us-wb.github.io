@@ -1,0 +1,2850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AEO Maturity Model – How to Check Your AEO Score | White Bunnie</title>
+	<meta name="description"
+		content="The White Bunnie AEO Maturity Model: a 5-level framework to check your website's AEO score. Used by IT, SaaS &amp; ITES companies targeting US, UK &amp; UAE enterprise buyers.">
+
+	<link rel="stylesheet" href="./styleWbPage.css">
+	<link
+		href='https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+		rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<style>
+		/* ══════════════════════════════════════════════════════════
+		   AEO MATURITY MODEL  PAGE-SPECIFIC COMPONENTS
+		   Built on the White Bunnie design system (styleWbPage.css).
+		   Every value below resolves to a shared design token.
+		══════════════════════════════════════════════════════════ */
+
+		/* ── Layout shells ── */
+		.wrap { padding: 0 24px; }
+
+		.wrap-narrow {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 24px;
+		}
+
+		.aeo-section     { padding: var(--section-pad) 0; background: var(--clr-white); }
+		.aeo-section-alt { padding: var(--section-pad) 0; background: var(--clr-bg); }
+
+		/* ══════════════════════════════════════════════════════════
+		   1. PROBLEM  copy + AI answer mock
+		══════════════════════════════════════════════════════════ */
+		.aeo-problem-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 56px;
+			align-items: center;
+			margin-top: 48px;
+		}
+
+		.aeo-problem-text p {
+			font-size: 17px;
+			color: var(--clr-ink-3);
+			line-height: 1.8;
+			margin-bottom: 20px;
+		}
+		.aeo-problem-text p:last-child { margin-bottom: 0; }
+		.aeo-problem-text strong { color: var(--clr-ink); font-weight: 700; }
+
+		.ai-mock {
+			background: var(--clr-dark-surface);
+			border: 1px solid rgba(255,255,255,.08);
+			border-radius: 18px;
+			padding-bottom: 22px;
+			overflow: hidden;
+			box-shadow: 0 24px 60px rgba(7,12,26,.28);
+		}
+
+		.mock-bar {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			padding: 14px 18px;
+			background: rgba(255,255,255,.03);
+			border-bottom: 1px solid rgba(255,255,255,.07);
+		}
+		.mock-dot { width: 10px; height: 10px; border-radius: 50%; }
+		.d-red   { background: #ff5f57; }
+		.d-amber { background: #febc2e; }
+		.d-green { background: #28c840; }
+
+		.mock-query-box {
+			margin: 18px 18px 0;
+			background: rgba(255,255,255,.05);
+			border: 1px solid rgba(255,255,255,.09);
+			border-radius: var(--r-md);
+			padding: 15px 17px;
+		}
+		.mock-q-label,
+		.mock-a-label {
+			font-size: 10.5px;
+			font-weight: 800;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+		.mock-q-label { color: var(--stat-grad-from); }
+		.mock-a-label { color: var(--stat-text-soft); }
+
+		.mock-q-text {
+			font-size: 15px;
+			font-weight: 600;
+			color: var(--stat-text-main);
+			line-height: 1.55;
+		}
+
+		.mock-answer-box {
+			margin: 14px 18px 0;
+			background: rgba(24,119,242,.09);
+			border: 1px solid var(--stat-card-border);
+			border-radius: var(--r-md);
+			padding: 15px 17px;
+		}
+		.mock-a-text {
+			font-size: 13.5px;
+			color: #c8d2e6;
+			line-height: 1.75;
+		}
+		.mock-a-text strong { color: var(--clr-white); font-weight: 700; }
+
+		.mock-cite {
+			margin-top: 12px;
+			font-size: 12px;
+			font-weight: 600;
+			color: var(--stat-grad-from);
+		}
+
+		.mock-absent {
+			margin: 14px 18px 0;
+			background: rgba(239,68,68,.1);
+			border: 1px dashed rgba(239,68,68,.35);
+			border-radius: var(--r);
+			padding: 12px 15px;
+			font-size: 12.5px;
+			font-weight: 600;
+			color: #fca5a5;
+			text-align: center;
+			line-height: 1.6;
+		}
+
+		@media (max-width: 980px) {
+			.aeo-problem-grid { grid-template-columns: 1fr; gap: 36px; }
+		}
+
+		/* ══════════════════════════════════════════════════════════
+		   2. MATURITY MATRIX
+		══════════════════════════════════════════════════════════ */
+		.aeo-matrix-section { padding: var(--section-pad) 0; background: var(--clr-bg); }
+
+		.level-legend {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 40px;
+		}
+		.leg-item {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 12.5px;
+			font-weight: 600;
+			color: var(--clr-ink-2);
+			background: var(--clr-white);
+			border: 1px solid var(--clr-border);
+			border-radius: 100px;
+			padding: 7px 16px;
+		}
+		.leg-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+		.lg1 { background: #94a3b8; }
+		.lg2 { background: #60a5fa; }
+		.lg3 { background: var(--clr-primary); }
+		.lg4 { background: var(--clr-accent); }
+		.lg5 { background: var(--clr-green); }
+
+		.tbl-hint {
+			display: none;
+			font-size: 12.5px;
+			color: var(--clr-ink-4);
+			text-align: center;
+			margin-bottom: 14px;
+		}
+		@media (max-width: 1100px) { .tbl-hint { display: block; } }
+
+		.tbl-scroll {
+			overflow-x: auto;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 18px;
+			box-shadow: var(--shadow-sm);
+			-webkit-overflow-scrolling: touch;
+		}
+
+		table.mat {
+			width: 100%;
+			min-width: 1060px;
+			border-collapse: separate;
+			border-spacing: 0;
+		}
+
+		.mat th, .mat td {
+			padding: 20px 18px;
+			vertical-align: top;
+			text-align: left;
+			border-bottom: 1px solid #eef1f8;
+		}
+		.mat tbody tr:last-child td { border-bottom: none; }
+
+		.th-gap { width: 176px; background: var(--clr-white); }
+		.th-col { background: #f7f9ff; border-left: 1px solid #eef1f8; }
+		.ch1 { box-shadow: inset 0 3px 0 #94a3b8; }
+		.ch2 { box-shadow: inset 0 3px 0 #60a5fa; }
+		.ch3 { box-shadow: inset 0 3px 0 var(--clr-primary); }
+		.ch4 { box-shadow: inset 0 3px 0 var(--clr-accent); }
+		.ch5 { box-shadow: inset 0 3px 0 var(--clr-green); }
+
+		.th-in { display: flex; flex-direction: column; gap: 6px; }
+		.th-num {
+			font-size: 11px;
+			font-weight: 800;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+		}
+		.ch1 .th-num { color: #94a3b8; }
+		.ch2 .th-num { color: #60a5fa; }
+		.ch3 .th-num { color: var(--clr-primary); }
+		.ch4 .th-num { color: var(--clr-accent); }
+		.ch5 .th-num { color: var(--clr-green); }
+
+		.th-name {
+			font-size: 19px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.02em;
+		}
+		.th-tag {
+			font-size: 12px;
+			font-weight: 500;
+			color: var(--clr-ink-3);
+			line-height: 1.5;
+		}
+
+		.td-label {
+			width: 176px;
+			background: var(--clr-white);
+			position: sticky;
+			left: 0;
+			z-index: 2;
+			border-right: 1px solid #eef1f8;
+		}
+		.row-lbl { display: flex; align-items: center; gap: 12px; }
+		.row-ico {
+			width: 38px; height: 38px;
+			border-radius: 11px;
+			display: flex; align-items: center; justify-content: center;
+			flex-shrink: 0;
+		}
+		.row-ico svg { width: 18px; height: 18px; }
+		.ico-c { background: #eff6ff; }
+		.ico-t { background: #ecfdf5; }
+		.ico-a { background: #f5f3ff; }
+		.ico-m { background: #fff7ed; }
+		.row-txt { font-size: 15px; font-weight: 700; color: var(--clr-ink); }
+
+		.mat td.tc1 { background: #fcfcfd;              border-left: 1px solid #eef1f8; }
+		.mat td.tc2 { background: var(--clr-white);     border-left: 1px solid #eef1f8; }
+		.mat td.tc3 { background: rgba(24,119,242,.025); border-left: 1px solid #eef1f8; }
+		.mat td.tc4 { background: rgba(24,119,242,.05);  border-left: 1px solid #eef1f8; }
+		.mat td.tc5 { background: rgba(24,119,242,.08);  border-left: 1px solid #eef1f8; }
+
+		.cell-title {
+			font-size: 14.5px;
+			font-weight: 700;
+			color: var(--clr-ink);
+			line-height: 1.45;
+			margin-bottom: 7px;
+		}
+		.cell-body {
+			font-size: 13px;
+			color: var(--clr-ink-3);
+			line-height: 1.65;
+		}
+
+		/* Pin the "WB delivers this" pill to the bottom of its cell so the pills
+		   line up across a row instead of floating wherever the copy ends. */
+		.mat tbody td:not(.td-label) { position: relative; padding-bottom: 52px; }
+
+		.wb-pill {
+			position: absolute;
+			left: 18px;
+			bottom: 20px;
+			display: inline-flex;
+			align-items: center;
+			font-size: 10px;
+			font-weight: 800;
+			letter-spacing: .07em;
+			text-transform: uppercase;
+			color: var(--clr-primary);
+			background: var(--clr-primary-lt);
+			border: 1px solid #d7e2f7;
+			border-radius: var(--r);
+			padding: 4px 10px;
+		}
+
+		.matrix-cta-bar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			flex-wrap: wrap;
+			margin-top: 28px;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 16px;
+			padding: 24px 30px;
+		}
+		.matrix-cta-bar p {
+			font-size: 16px;
+			color: var(--clr-ink-3);
+			line-height: 1.65;
+			margin: 0;
+		}
+		.matrix-cta-bar strong { color: var(--clr-ink); font-weight: 700; }
+
+		/* ══════════════════════════════════════════════════════════
+		   3. PIPELINE  what each level means
+		══════════════════════════════════════════════════════════ */
+		.pipeline-lv-tag {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 11.5px;
+			font-weight: 800;
+			letter-spacing: .08em;
+			text-transform: uppercase;
+			color: var(--clr-primary);
+			margin-bottom: 16px;
+		}
+		.lv-indicator { display: flex; gap: 4px; }
+		.lv-dot {
+			width: 7px; height: 7px;
+			border-radius: 50%;
+			background: #d7e2f7;
+		}
+		.lv-dot.active { background: var(--clr-primary); }
+
+		.pipeline-cta {
+			grid-column: 1 / -1;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 28px;
+			flex-wrap: wrap;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 16px;
+			padding: 26px 30px;
+			box-shadow: var(--shadow-sm);
+		}
+		.pipeline-cta p {
+			font-size: 16px;
+			color: var(--clr-ink-3);
+			line-height: 1.75;
+			margin: 0;
+		}
+		.pipeline-cta strong { color: var(--clr-ink); font-weight: 700; }
+		.pipeline-cta i { color: var(--clr-primary); font-size: 12px; margin: 0 2px; }
+
+		/* ══════════════════════════════════════════════════════════
+		   4. PROOF / CASE STUDY
+		══════════════════════════════════════════════════════════ */
+		.proof-card {
+			display: grid;
+			grid-template-columns: 1.3fr 1fr;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: var(--shadow-sm);
+			margin-top: 48px;
+		}
+
+		.proof-left { padding: 44px 40px; }
+
+		.proof-company { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+		.proof-avatar {
+			width: 54px; height: 54px;
+			border-radius: 15px;
+			background: linear-gradient(135deg, var(--clr-primary) 0%, #4f46e5 100%);
+			color: var(--clr-white);
+			display: flex; align-items: center; justify-content: center;
+			font-size: 18px; font-weight: 800;
+			flex-shrink: 0;
+		}
+		.proof-company-info strong {
+			display: block;
+			font-size: 19px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.02em;
+		}
+		.proof-company-info span { font-size: 13px; color: var(--clr-ink-3); }
+
+		.proof-quote {
+			font-size: 21px;
+			font-weight: 500;
+			font-style: italic;
+			color: var(--clr-ink);
+			line-height: 1.65;
+			margin-bottom: 26px;
+		}
+
+		.proof-journey { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+		.jbadge {
+			font-size: 12.5px;
+			font-weight: 700;
+			border-radius: 100px;
+			padding: 7px 16px;
+		}
+		.jb-from { background: #f1f5f9; color: var(--clr-ink-2); border: 1px solid var(--clr-border); }
+		.jb-to   { background: var(--clr-primary-lt); color: var(--clr-primary); border: 1px solid #c7d4f8; }
+		.proof-arrow { color: var(--clr-ink-4); font-size: 12px; }
+
+		.proof-right {
+			background: var(--clr-dark-surface);
+			padding: 40px 34px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.proof-metric { padding: 20px 0; }
+		.pm-val {
+			font-size: 2.6rem;
+			font-weight: 800;
+			line-height: 1;
+			letter-spacing: -.02em;
+			margin-bottom: 10px;
+			background: linear-gradient(90deg, var(--stat-grad-from), var(--stat-grad-to));
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: transparent;
+		}
+		.pm-val em { font-style: normal; }
+		.pm-label { font-size: 13px; color: var(--stat-text-soft); line-height: 1.6; }
+		.proof-divider { height: 1px; background: rgba(255,255,255,.1); }
+
+		@media (max-width: 980px) {
+			.proof-card { grid-template-columns: 1fr; }
+			.proof-left { padding: 34px 26px; }
+			.proof-quote { font-size: 18px; }
+		}
+
+		/* ══════════════════════════════════════════════════════════
+		   5. SELF-AUDIT CHECKLIST
+		══════════════════════════════════════════════════════════ */
+		.check-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px;
+			margin-top: 48px;
+		}
+
+		.check-card {
+			background: #f7f9ff;
+			border: 1px solid #e8edf8;
+			border-radius: 16px;
+			padding: 32px 30px;
+			transition: box-shadow .25s ease, border-color .25s ease;
+		}
+		.check-card:hover { box-shadow: 0 12px 40px rgba(37,99,235,.08); border-color: #bfdbfe; }
+
+		.check-head {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #e3e9f6;
+		}
+		.check-ico {
+			width: 48px; height: 48px;
+			border-radius: 14px;
+			display: flex; align-items: center; justify-content: center;
+			flex-shrink: 0;
+		}
+		.check-ico svg { width: 22px; height: 22px; }
+		.pi-content { background: #eff6ff; }
+		.pi-tech    { background: #ecfdf5; }
+		.pi-auth    { background: #f5f3ff; }
+		.pi-meas    { background: #fff7ed; }
+
+		.check-head h3 {
+			font-size: 20px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.02em;
+			margin: 0 0 2px;
+		}
+		.check-head span { font-size: 12.5px; font-weight: 500; color: var(--clr-ink-3); }
+
+		.check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+		.check-item {
+			display: flex;
+			align-items: flex-start;
+			gap: 13px;
+			padding: 14px 15px;
+			background: var(--clr-white);
+			border: 1px solid var(--clr-border);
+			border-radius: var(--r);
+			cursor: pointer;
+			transition: border-color .18s, background .18s;
+		}
+		.check-item:hover { border-color: #bfdbfe; background: #fafcff; }
+		.check-item span {
+			font-size: 14px;
+			color: var(--clr-ink-2);
+			line-height: 1.65;
+		}
+
+		.check-box {
+			position: relative;
+			width: 20px; height: 20px;
+			border: 2px solid #cbd5e1;
+			border-radius: 6px;
+			flex-shrink: 0;
+			margin-top: 2px;
+			transition: background .18s, border-color .18s;
+		}
+		.check-item.checked { border-color: var(--clr-primary); background: var(--clr-primary-lt); }
+		.check-item.checked .check-box { background: var(--clr-primary); border-color: var(--clr-primary); }
+		.check-item.checked .check-box::after {
+			content: '';
+			position: absolute;
+			left: 5px; top: 1px;
+			width: 5px; height: 10px;
+			border: solid var(--clr-white);
+			border-width: 0 2.5px 2.5px 0;
+			transform: rotate(45deg);
+		}
+		.check-item.checked span { color: var(--clr-ink); font-weight: 500; }
+
+		@media (max-width: 980px) { .check-grid { grid-template-columns: 1fr; } }
+
+		/* ── Score reveal button ── */
+		.check-score-wrap {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			margin-top: 44px;
+		}
+		.btn-check-score {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding: 14px 32px;
+			background: linear-gradient(135deg, var(--clr-primary) 0%, #4f46e5 100%);
+			color: var(--clr-white);
+			font-family: var(--font);
+			font-size: 15.5px;
+			font-weight: 700;
+			border: none;
+			border-radius: var(--r);
+			cursor: pointer;
+			box-shadow: var(--shadow-blue);
+			transition: transform .2s, box-shadow .2s, opacity .2s;
+		}
+		.btn-check-score:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(37,99,235,.38); }
+		.btn-check-score:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }
+		.check-score-hint { font-size: 12.5px; color: var(--clr-ink-4); }
+
+		/* ── Floating score button ── */
+		.float-score-wrap {
+			position: fixed;
+			right: 24px; bottom: 24px;
+			z-index: 900;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 7px;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(14px);
+			transition: opacity .28s ease, transform .28s ease, visibility .28s ease;
+		}
+		.float-score-wrap.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+		.btn-float-score { font-size: 14px; padding: 12px 24px; }
+		.float-score-hint {
+			font-size: 11.5px;
+			font-weight: 600;
+			color: var(--clr-ink-2);
+			background: var(--clr-white);
+			border: 1px solid var(--clr-border);
+			border-radius: 100px;
+			padding: 5px 13px;
+			box-shadow: var(--shadow-sm);
+		}
+		@media (max-width: 640px) {
+			.float-score-wrap { right: 14px; bottom: 14px; left: 14px; align-items: center; }
+			.btn-float-score { width: 100%; justify-content: center; }
+		}
+
+		/* ── Score result ── */
+		.score-hidden { display: none !important; }
+
+		.score-result {
+			display: grid;
+			grid-template-columns: 210px 1fr;
+			gap: 34px;
+			align-items: center;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 20px;
+			padding: 34px 36px;
+			margin-top: 44px;
+			box-shadow: var(--shadow-sm);
+		}
+		.score-display {
+			text-align: center;
+			background: var(--clr-primary-lt);
+			border: 1px solid #d7e2f7;
+			border-radius: 16px;
+			padding: 26px 16px;
+		}
+		.score-num {
+			font-size: 3.6rem;
+			font-weight: 900;
+			color: var(--clr-primary);
+			line-height: 1;
+			letter-spacing: -.03em;
+		}
+		.score-out { font-size: 13px; font-weight: 600; color: var(--clr-ink-3); margin-top: 4px; }
+
+		.score-bar-label {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 16px;
+			flex-wrap: wrap;
+			margin-bottom: 14px;
+		}
+		.score-level-name {
+			font-size: 22px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.02em;
+		}
+		.score-level-tag {
+			font-size: 11px;
+			font-weight: 800;
+			letter-spacing: .08em;
+			text-transform: uppercase;
+			color: var(--clr-primary);
+			background: var(--clr-primary-lt);
+			border: 1px solid #d7e2f7;
+			border-radius: var(--r);
+			padding: 5px 14px;
+		}
+		.score-bar-track {
+			height: 10px;
+			background: #eef1f8;
+			border-radius: 100px;
+			overflow: hidden;
+			margin-bottom: 16px;
+		}
+		.score-bar-fill {
+			height: 100%;
+			border-radius: 100px;
+			background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+			transition: width .7s var(--ease);
+		}
+		.score-desc { font-size: 15px; color: var(--clr-ink-3); line-height: 1.75; }
+
+		@media (max-width: 768px) {
+			.score-result { grid-template-columns: 1fr; gap: 24px; padding: 28px 22px; }
+		}
+
+		/* ── Score guide table ── */
+		.score-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0;
+			margin-top: 24px;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-sm);
+		}
+		.score-table th {
+			font-size: 11px;
+			font-weight: 800;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			color: var(--clr-ink-3);
+			background: #f7f9ff;
+			padding: 15px 22px;
+			text-align: left;
+			white-space: nowrap;
+		}
+		.score-table td {
+			padding: 17px 22px;
+			font-size: 14.5px;
+			color: var(--clr-ink-3);
+			line-height: 1.65;
+			border-top: 1px solid #eef1f8;
+			vertical-align: top;
+		}
+		.score-table td:nth-child(2) { font-weight: 700; color: var(--clr-ink); white-space: nowrap; }
+		.score-table tr.active-row td { background: var(--clr-primary-lt); }
+		.score-range {
+			display: inline-block;
+			font-size: 13px;
+			font-weight: 800;
+			color: var(--clr-primary);
+			white-space: nowrap;
+		}
+		@media (max-width: 768px) {
+			.score-table { display: block; overflow-x: auto; }
+			.score-table th, .score-table td { padding: 13px 16px; font-size: 13.5px; }
+		}
+
+		.score-cta-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			flex-wrap: wrap;
+			margin-top: 24px;
+			background: var(--clr-white);
+			border: 1px solid #e8edf8;
+			border-radius: 16px;
+			padding: 24px 30px;
+		}
+		.score-cta-wrap p {
+			font-size: 16px;
+			color: var(--clr-ink-3);
+			line-height: 1.65;
+			margin: 0;
+		}
+		.score-cta-wrap strong { color: var(--clr-ink); font-weight: 700; }
+
+		/* ══════════════════════════════════════════════════════════
+		   6. SCORE POPUP
+		══════════════════════════════════════════════════════════ */
+		.score-popup-overlay {
+			position: fixed;
+			inset: 0;
+			z-index: 2000;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			background: rgba(7,12,26,.72);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+		}
+		.score-popup-overlay.open { display: flex; }
+
+		.score-popup {
+			position: relative;
+			width: 100%;
+			max-width: 520px;
+			max-height: 90vh;
+			overflow-y: auto;
+			background: var(--clr-white);
+			border-radius: 20px;
+			padding: 36px 34px;
+			box-shadow: 0 30px 80px rgba(0,0,0,.35);
+			animation: fadeUp .35s var(--ease) both;
+		}
+
+		.score-popup-close {
+			position: absolute;
+			top: 16px; right: 16px;
+			width: 34px; height: 34px;
+			display: flex; align-items: center; justify-content: center;
+			background: #f3f4f6;
+			border: none;
+			border-radius: var(--r);
+			color: var(--clr-ink-3);
+			font-size: 15px;
+			cursor: pointer;
+			transition: background .18s, color .18s;
+		}
+		.score-popup-close:hover { background: var(--clr-border); color: var(--clr-ink); }
+
+		.score-popup-head { margin-bottom: 24px; padding-right: 36px; }
+		.score-popup-head h3 {
+			font-size: 26px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.025em;
+			margin-bottom: 8px;
+		}
+		.score-popup-head p { font-size: 14.5px; color: var(--clr-ink-3); line-height: 1.65; }
+
+		.score-popup-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+		.sp-field { display: flex; flex-direction: column; gap: 7px; }
+		.sp-field label { font-size: 13.5px; font-weight: 600; color: var(--clr-ink-2); }
+		.sp-field input {
+			width: 100%;
+			padding: 12px 16px;
+			font-family: var(--font);
+			font-size: 14px;
+			color: var(--clr-ink);
+			background: #f9fafb;
+			border: 1px solid var(--clr-border);
+			border-radius: var(--r);
+			outline: none;
+			transition: border-color .18s, box-shadow .18s, background .18s;
+		}
+		.sp-field input:focus {
+			border-color: var(--clr-primary);
+			box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+			background: var(--clr-white);
+		}
+		.sp-field input.invalid { border-color: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.1); }
+		.optional-tag { font-weight: 500; color: var(--clr-ink-4); }
+
+		.btn-popup-submit {
+			width: 100%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			margin-top: 22px;
+			padding: 15px;
+			background: linear-gradient(135deg, var(--clr-primary) 0%, #4f46e5 100%);
+			color: var(--clr-white);
+			font-family: var(--font);
+			font-size: 16px;
+			font-weight: 700;
+			border: none;
+			border-radius: var(--r);
+			cursor: pointer;
+			box-shadow: var(--shadow-blue);
+			transition: transform .2s, box-shadow .2s;
+		}
+		.btn-popup-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(37,99,235,.38); }
+
+		.score-popup-note { text-align: center; font-size: 12px; color: var(--clr-ink-4); margin-top: 14px; }
+
+		@media (max-width: 560px) {
+			.score-popup { padding: 28px 22px; }
+			.score-popup-fields { grid-template-columns: 1fr; }
+			.score-popup-head h3 { font-size: 22px; }
+		}
+
+		/* ══════════════════════════════════════════════════════════
+		   7. AUDIT FORM (dark contact section)  success state
+		══════════════════════════════════════════════════════════ */
+		.cta-includes { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-top: 26px; }
+		.cta-includes li {
+			position: relative;
+			padding-left: 30px;
+			font-size: 14.5px;
+			color: rgba(255,255,255,.72);
+			line-height: 1.6;
+		}
+		.cta-includes li::before {
+			content: '';
+			position: absolute;
+			left: 0; top: 6px;
+			width: 18px; height: 18px;
+			border-radius: 50%;
+			background: rgba(24,119,242,.22);
+			border: 1px solid var(--stat-card-border);
+		}
+		.cta-includes li::after {
+			content: '';
+			position: absolute;
+			left: 6px; top: 9px;
+			width: 4px; height: 8px;
+			border: solid var(--stat-grad-from);
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+
+		.form-success {
+			display: none;
+			text-align: center;
+			background: var(--clr-white);
+			border: 1px solid var(--clr-border);
+			border-radius: var(--r);
+			padding: 48px 34px;
+			box-shadow: 0 8px 40px rgba(0,0,0,.08);
+		}
+		.form-success.show { display: block; animation: fadeUp .45s var(--ease) both; }
+		.success-icon {
+			width: 62px; height: 62px;
+			margin: 0 auto 20px;
+			display: flex; align-items: center; justify-content: center;
+			background: var(--clr-green);
+			color: var(--clr-white);
+			border-radius: 50%;
+			font-size: 28px;
+			font-weight: 700;
+		}
+		.form-success h3 {
+			font-size: 26px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.025em;
+			margin-bottom: 12px;
+		}
+		.form-success p {
+			font-size: 15px;
+			color: var(--clr-ink-3);
+			line-height: 1.75;
+			max-width: 440px;
+			margin: 0 auto;
+		}
+
+		.audit-form-title {
+			font-size: 24px;
+			font-weight: 800;
+			color: var(--clr-ink);
+			letter-spacing: -.025em;
+			margin-bottom: 6px;
+		}
+		.audit-form-sub { font-size: 13px; color: var(--clr-ink-3); line-height: 1.6; margin-bottom: 22px; }
+
+		/* ══════════════════════════════════════════════════════════
+		   8. FIXES & POLISH
+		   Scoped to this page only  the shared stylesheet is untouched,
+		   so WbNewPage.html and every other page are unaffected.
+		══════════════════════════════════════════════════════════ */
+
+		/* The hero badge in the shared sheet uses a white-on-white pill that
+		   is invisible on a light page. Give it the same light-blue treatment
+		   as .hero-tag so the two hero elements read as one family. */
+		.hero-badge {
+			background: var(--clr-primary-lt);
+			border: 1px solid #c7d4f8;
+			color: var(--clr-primary);
+		}
+		.hero-badge em { font-style: normal; }
+
+		/* The footer in the shared sheet falls back to Arial while the rest of
+		   the design system is Inter, and leaves four bottom-bar classes and
+		   two label classes unstyled. Bring them back in line. */
+		.wb-footer { font-family: var(--font); }
+		.wb-label {
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			color: #c8d2e6;
+			margin-top: 20px;
+		}
+		.wb-address { font-size: 13.5px; line-height: 1.6; margin-top: 15px; }
+		.wb-bottom { padding: 20px 0; align-items: center; }
+		.wb-copy, .wb-cert { font-size: 13px; line-height: 1.6; }
+		.wb-legal a, .wb-quick a { display: inline-block; margin-bottom: 4px; }
+
+		/* This page's stats strip has four tabs, not five. The override needs
+		   its own breakpoints, because .stats-tabs.tabs-4 outranks the shared
+		   .stats-tabs responsive rules at every width. */
+		.stats-tabs.tabs-4 { grid-template-columns: repeat(4, 1fr); }
+		@media (max-width: 900px) { .stats-tabs.tabs-4 { grid-template-columns: repeat(2, 1fr); } }
+		@media (max-width: 520px) { .stats-tabs.tabs-4 { grid-template-columns: 1fr; } }
+
+		/* Same cascade problem for the .wrap gutter re-declared above. */
+		@media (max-width: 400px) { .wrap { padding: 0 14px; } }
+
+		@media (max-width: 640px) {
+			.matrix-cta-bar,
+			.pipeline-cta,
+			.score-cta-wrap { flex-direction: column; align-items: flex-start; padding: 22px 20px; }
+			.matrix-cta-bar .btn,
+			.pipeline-cta .btn,
+			.score-cta-wrap .btn { width: 100%; justify-content: center; }
+			.check-card { padding: 26px 20px; }
+			.proof-right { padding: 30px 24px; }
+			.pm-val { font-size: 2.1rem; }
+		}
+	</style>
+</head>
+
+<body>
+	<!-- ════════════════════════════════════
+  	NAVBAR
+════════════════════════════════════ -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-wrap">
+
+			<a href="/" class="nav-logo">
+				<img src="https://whitebunnie.com/wp-content/uploads/2026/04/LOGO-Black-scaled-1.webp"
+					alt="White Bunnie Digital Marketing">
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<ul class="nav-menu" id="navMenu">
+
+				<!-- Services – Mega Menu -->
+				<li class="nav-item has-mega">
+					<a href="#services" class="nav-link">
+						Services
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+
+					<div class="mega-menu">
+						<div class="mega-inner">
+
+							<div class="mega-col">
+								<p class="mega-col-header">SEO & Visibility</p>
+								<a href="#" class="mega-item">
+
+									<div class="mega-item-text"><strong>AI SEO</strong><span>AI-powered search
+											visibility</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-gears"></i></div>
+									<div class="mega-item-text"><strong>Technical SEO</strong><span>Site health &amp;
+											crawlability</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+									<div class="mega-item-text"><strong>Local SEO</strong><span>Dominate local
+											searches</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="mega-item-text"><strong>E-commerce SEO</strong><span>Organic growth for
+											online stores</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Paid Advertising</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-google"></i></div>
+									<div class="mega-item-text"><strong>Google Ads / PPC</strong><span>Targeted paid
+											search campaigns</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-meta"></i></div>
+									<div class="mega-item-text"><strong>Meta Ads</strong><span>Facebook &amp; Instagram
+											advertising</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+									<div class="mega-item-text"><strong>Performance Marketing</strong><span>SEM, social
+											ads &amp; email ROI</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-filter"></i></div>
+									<div class="mega-item-text"><strong>Lead Generation</strong><span>Quality leads
+											&amp; conversion</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Brand &amp; Social</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-hashtag"></i></div>
+									<div class="mega-item-text"><strong>Social Media Marketing</strong><span>Build &amp;
+											engage your audience</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-nib"></i></div>
+									<div class="mega-item-text"><strong>Content Marketing</strong><span>Blogs,
+											videos</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-palette"></i></div>
+									<div class="mega-item-text"><strong>Branding &amp; Identity</strong><span>Logo,
+											brand strategy &amp; design</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-envelope"></i></div>
+									<div class="mega-item-text"><strong>Email Marketing</strong><span>Nurture leads
+											&amp; drive conversions</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Tech &amp; Design</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-code"></i></div>
+									<div class="mega-item-text"><strong>Web Development</strong><span>Custom &amp;
+											e-commerce websites</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+									<div class="mega-item-text"><strong>UI/UX Design</strong><span>Wireframes,
+											prototypes</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-laptop"></i></div>
+									<div class="mega-item-text"><strong>Landing Pages</strong><span>High-converting page
+											experiences</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+									<div class="mega-item-text"><strong>CRO</strong><span>Conversion rate
+											optimization</span></div>
+								</a>
+							</div>
+
+						</div>
+
+						<div class="mega-cta-strip">
+							<div class="mega-cta-text">
+								<strong>Let's Talk About Your Goals</strong>
+								<p>Reach out your way. We start by listening so we can build what truly works for you.
+								</p>
+							</div>
+							<a href="#contact" class="mega-cta-btn">Get in Touch</a>
+						</div>
+					</div>
+				</li>
+
+				<!-- Industries dropdown -->
+				<li class="nav-item has-dropdown">
+					<a href="#" class="nav-link">
+						Industries
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+					<ul class="nav-dropdown">
+						<li><a href="#"><i class="fa-solid fa-heart-pulse"></i> Healthcare</a></li>
+						<li><a href="#"><i class="fa-solid fa-building"></i> Real Estate</a></li>
+						<li><a href="#"><i class="fa-solid fa-bag-shopping"></i> E-commerce</a></li>
+						<li><a href="#"><i class="fa-solid fa-microchip"></i> SaaS &amp; Tech</a></li>
+						<li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+						<li><a href="#"><i class="fa-solid fa-coins"></i> Finance</a></li>
+					</ul>
+				</li>
+
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+
+			</ul>
+
+			<div class="nav-actions">
+				<!-- <a href="#contact" class="btn btn-primary btn-sm">
+					<i class="fa-regular fa-file-lines"></i> Get Free Proposal
+				</a> -->
+				<a href="tel:+919876543210" class="btn btn-secondary btn-sm">
+					<i class="fa-solid fa-phone"></i> Call Us
+				</a>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+	<!-- ════════════════════════════════════
+  HERO
+════════════════════════════════════ -->
+	<section class="hero">
+		<div class="wrap">
+			<div class="hero-inner">
+
+				<div class="hero-badge">
+					<em> The AEO Maturity Model for IT &amp; SaaS </em>
+				</div>
+
+				<h1>
+					Your buyers are asking AI who to hire. Are you <em>being named?</em>
+				</h1>
+
+				<p class="hero-sub-sub">
+					Most IT and SaaS companies are invisible to ChatGPT, Perplexity, and Google AI  not because their
+					service is weak, but because their website isn't structured for AI citation. The White Bunnie AEO
+					Maturity Model shows you exactly where you stand across content, technical, authority, and
+					measurement.
+				</p>
+
+				<div class="hero-cta-wrap-parent">
+					<div class="hero-cta-wrap">
+						<a href="#audit-form" class="btn btn-primary">
+							Check My AEO Level  Free
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg>
+						</a>
+						<a href="#maturity-model" class="btn btn-secondary">
+							See the 5 Levels
+							<i class="fa-solid fa-layer-group"></i>
+						</a>
+					</div>
+					<div class="hero-logo-sec">
+						<img src="./newHome/shopify.png" alt="Shopify Partner" class="partner-logos">
+						<img src="./newHome/googleP.png" alt="Google Partner" class="partner-logos">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Hero Service Tags -->
+		<div class="hero-tags-strip">
+			<span class="hero-tag">Free Written Assessment</span>
+			<span class="hero-tag">Delivered in 48 Hours</span>
+			<span class="hero-tag">No Sales Call Required</span>
+			<span class="hero-tag">ChatGPT · Perplexity · Google AI</span>
+			<span class="hero-tag">US · UK · UAE · Canada</span>
+		</div>
+	</section>
+
+	<div class="ticker-wrap" aria-hidden="true">
+		<div class="ticker-tr">
+			<span>58.5% of searches now end without a click</span>
+			<span>Google AI Overviews appear on 31% of all queries</span>
+			<span>AI returns one answer  not ten blue links</span>
+			<span>70% of IT companies are stuck at AEO Level 1–2</span>
+			<span>llms.txt and MCP are the next technical moat</span>
+			<span>Buyers finish research inside AI before they contact sales</span>
+		</div>
+	</div>
+
+
+	<!-- ════════════════════════════════════
+  STATS SECTION
+════════════════════════════════════ -->
+	<section class="stats-section" data-nav-theme="dark">
+		<div class="stats-wrap">
+			<div class="stats-grid">
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">58%</span>
+						<p>of searches now end without a single click, resolved entirely inside the answer itself.</p>
+					</div>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">31%</span>
+						<p>of all queries already trigger a Google AI Overview above the organic results.</p>
+					</div>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">1</span>
+						<p>answer is returned by most AI engines  with one or two companies named, and no one else
+							considered.</p>
+					</div>
+				</article>
+				<article class="stat-card">
+					<div class="stat-head">
+						<span class="stat-number">70%</span>
+						<p>of IT services companies are still stuck at AEO Level 1 or 2, invisible at the research
+							stage.</p>
+					</div>
+				</article>
+			</div>
+
+			<nav class="stats-tabs tabs-4" aria-label="AEO outcomes">
+				<a href="#audit-form" class="tab" data-tab="1">
+					<span class="tab-title">3× More Leads</span>
+					<span class="tab-meta">Cited vs. uncited companies</span>
+				</a>
+				<a href="#audit-form" class="tab active" data-tab="2">
+					<span class="tab-title">191 Cited Pages</span>
+					<span class="tab-meta">One client, from zero</span>
+				</a>
+				<a href="#audit-form" class="tab" data-tab="3">
+					<span class="tab-title">38 AI Mentions</span>
+					<span class="tab-meta">Achieved in under 6 months</span>
+				</a>
+				<a href="#audit-form" class="tab" data-tab="4">
+					<span class="tab-title">48-Hour Turnaround</span>
+					<span class="tab-meta">Your free written AEO audit</span>
+				</a>
+			</nav>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  PROBLEM
+════════════════════════════════════ -->
+	<section class="aeo-section">
+		<div class="wrap">
+			<div class="section-head" style="margin-bottom:0">
+				<h2 class="h-main">SEO got you here.<br>It won't keep you <em>visible.</em></h2>
+				<p class="section-sub">The research phase of every enterprise deal has moved inside AI platforms. If
+					you aren't cited there, you aren't shortlisted here.</p>
+			</div>
+
+			<div class="aeo-problem-grid">
+				<div class="aeo-problem-text reveal">
+					<p>When a VP of Engineering searches for a Salesforce implementation partner, they don't scroll
+						through ten blue links anymore. They open ChatGPT or Perplexity and ask a direct question. The
+						AI returns <strong>one answer</strong>  with one or two companies named. Everyone else is not
+						considered.</p>
+					<p>58.5% of searches now end without a click. Google AI Overviews appear on 31% of all queries. Your
+						buyers are completing entire research cycles inside AI platforms <strong>before your sales team
+							is ever contacted.</strong> If you're not cited, you're not shortlisted.</p>
+				</div>
+
+				<div class="ai-mock reveal d2">
+					<div class="mock-bar">
+						<span class="mock-dot d-red"></span>
+						<span class="mock-dot d-amber"></span>
+						<span class="mock-dot d-green"></span>
+					</div>
+					<div class="mock-query-box">
+						<div class="mock-q-label">Buyer query in ChatGPT</div>
+						<div class="mock-q-text">"Best Agentforce implementation partners for mid-market companies?"
+						</div>
+					</div>
+					<div class="mock-answer-box">
+						<div class="mock-a-label">AI Answer</div>
+						<div class="mock-a-text">
+							Based on documented case studies and published expertise, <strong>SaasWorx</strong> is
+							frequently cited for Agentforce implementations targeting mid-market Salesforce Classic
+							migrations. Their published data shows measurable outcomes across the full implementation
+							lifecycle...
+						</div>
+						<div class="mock-cite"><i class="fa-solid fa-paperclip"></i> Cited: saasworx.ai/agentforce</div>
+					</div>
+					<div class="mock-absent">Your company wasn't mentioned  even though you offer the same service.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  MATURITY MATRIX
+════════════════════════════════════ -->
+	<section class="aeo-matrix-section" id="maturity-model">
+		<div class="wrap">
+
+			<div class="section-head" style="margin-bottom:28px">
+				<h2 class="h-main">Which level is your <em>website</em> at?</h2>
+				<p class="section-sub">Assessed across four pillars. Most IT companies are at Level 1 or 2. White Bunnie
+					moves clients to Level 3, 4, and 5  where AI engines start naming you.</p>
+			</div>
+
+			<div class="level-legend">
+				<div class="leg-item"><span class="leg-dot lg1"></span> L1 · Keywords</div>
+				<div class="leg-item"><span class="leg-dot lg2"></span> L2 · Answers</div>
+				<div class="leg-item"><span class="leg-dot lg3"></span> L3 · Structure</div>
+				<div class="leg-item"><span class="leg-dot lg4"></span> L4 · Pillar</div>
+				<div class="leg-item"><span class="leg-dot lg5"></span> L5 · Authority</div>
+			</div>
+
+			<p class="tbl-hint"><i class="fa-solid fa-arrows-left-right"></i> Swipe the table to compare all five
+				levels</p>
+
+			<div class="tbl-scroll reveal">
+				<table class="mat" role="table" aria-label="AEO Maturity Model  5 levels across 4 pillars">
+					<thead>
+						<tr>
+							<th class="th-gap" scope="col" aria-label="Pillar"></th>
+
+							<th class="th-col ch1" scope="col">
+								<div class="th-in">
+									<span class="th-num">Level 1</span>
+									<span class="th-name">Keywords</span>
+									<span class="th-tag">Where ~70% of IT companies are stuck</span>
+								</div>
+							</th>
+							<th class="th-col ch2" scope="col">
+								<div class="th-in">
+									<span class="th-num">Level 2</span>
+									<span class="th-name">Answers</span>
+									<span class="th-tag">AEO-aware, patchy execution</span>
+								</div>
+							</th>
+							<th class="th-col ch3" scope="col">
+								<div class="th-in">
+									<span class="th-num">Level 3</span>
+									<span class="th-name">Structure</span>
+									<span class="th-tag">AI can read, parse &amp; cite you</span>
+								</div>
+							</th>
+							<th class="th-col ch4" scope="col">
+								<div class="th-in">
+									<span class="th-num">Level 4</span>
+									<span class="th-name">Pillar</span>
+									<span class="th-tag">Recognised topical authority</span>
+								</div>
+							</th>
+							<th class="th-col ch5" scope="col">
+								<div class="th-in">
+									<span class="th-num">Level 5</span>
+									<span class="th-name">Authority</span>
+									<span class="th-tag">AI names you. Unprompted.</span>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<!-- CONTENT -->
+						<tr>
+							<td class="td-label">
+								<div class="row-lbl">
+									<div class="row-ico ico-c">
+										<svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round">
+											<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+											<polyline points="14,2 14,8 20,8" />
+											<line x1="16" y1="13" x2="8" y2="13" />
+											<line x1="16" y1="17" x2="8" y2="17" />
+										</svg>
+									</div>
+									<span class="row-txt">Content</span>
+								</div>
+							</td>
+							<td class="tc1">
+								<div class="cell-title">Keyword-stuffed pages</div>
+								<div class="cell-body">Written for crawlers. No buyer question mapping, no extractable
+									answers.</div>
+							</td>
+							<td class="tc2">
+								<div class="cell-title">Scattered FAQs</div>
+								<div class="cell-body">Reactive Q&amp;A blocks added to service pages. No systematic
+									buyer question coverage.</div>
+							</td>
+							<td class="tc3">
+								<div class="cell-title">Full question cluster coverage</div>
+								<div class="cell-body">Every buyer intent mapped to a structured, directly-citable
+									answer page.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc4">
+								<div class="cell-title">Answer hierarchy by topic</div>
+								<div class="cell-body">Primary, secondary &amp; micro-intent answers interconnected.
+									LLMs see you as definitive.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc5">
+								<div class="cell-title">Programmatic AEO at scale</div>
+								<div class="cell-body">AI-assisted, human-reviewed content personalised to buyer
+									verticals and AI query patterns.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+						</tr>
+
+						<!-- TECHNICAL -->
+						<tr>
+							<td class="td-label">
+								<div class="row-lbl">
+									<div class="row-ico ico-t">
+										<svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round">
+											<polyline points="16,18 22,12 16,6" />
+											<polyline points="8,6 2,12 8,18" />
+										</svg>
+									</div>
+									<span class="row-txt">Technical</span>
+								</div>
+							</td>
+							<td class="tc1">
+								<div class="cell-title">On-page SEO only</div>
+								<div class="cell-body">Title tags &amp; meta. Zero schema, no entity signals for LLMs.
+								</div>
+							</td>
+							<td class="tc2">
+								<div class="cell-title">Basic structure added</div>
+								<div class="cell-body">Some schema applied inconsistently. No site-wide standards.</div>
+							</td>
+							<td class="tc3">
+								<div class="cell-title">Site-wide schema &amp; Core Web Vitals</div>
+								<div class="cell-body">FAQ, HowTo, Service &amp; Org schema deployed across all key
+									pages.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc4">
+								<div class="cell-title">Entity-first architecture</div>
+								<div class="cell-body">Knowledge graph signals, optimised linking, AI-parseable HTML
+									structure.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc5">
+								<div class="cell-title">llms.txt + MCP adopted</div>
+								<div class="cell-body">Early AI-native protocols  a technical moat competitors will
+									spend years chasing.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+						</tr>
+
+						<!-- AUTHORITY -->
+						<tr>
+							<td class="td-label">
+								<div class="row-lbl">
+									<div class="row-ico ico-a">
+										<svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round">
+											<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+										</svg>
+									</div>
+									<span class="row-txt">Authority</span>
+								</div>
+							</td>
+							<td class="tc1">
+								<div class="cell-title">Backlinks only</div>
+								<div class="cell-body">Domain authority Google measures  AI models largely disregard
+									without corroborating signals.</div>
+							</td>
+							<td class="tc2">
+								<div class="cell-title">E-E-A-T basics in place</div>
+								<div class="cell-body">Author bios, credentials, About page  trust signals LLMs scan
+									before citing.</div>
+							</td>
+							<td class="tc3">
+								<div class="cell-title">Active digital PR &amp; thought leadership</div>
+								<div class="cell-body">Niche B2B publications, Reddit presence, expert commentary on
+									forums AI trains on.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc4">
+								<div class="cell-title">Proprietary data &amp; visual storytelling</div>
+								<div class="cell-body">Original research others cite  making you a primary source, not
+									secondary.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc5">
+								<div class="cell-title">Spontaneous AI citations</div>
+								<div class="cell-body">ChatGPT, Perplexity &amp; Gemini recommend your brand without
+									being asked.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+						</tr>
+
+						<!-- MEASUREMENT -->
+						<tr>
+							<td class="td-label">
+								<div class="row-lbl">
+									<div class="row-ico ico-m">
+										<svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round">
+											<line x1="18" y1="20" x2="18" y2="10" />
+											<line x1="12" y1="20" x2="12" y2="4" />
+											<line x1="6" y1="20" x2="6" y2="14" />
+											<line x1="2" y1="20" x2="22" y2="20" />
+										</svg>
+									</div>
+									<span class="row-txt">Measurement</span>
+								</div>
+							</td>
+							<td class="tc1">
+								<div class="cell-title">Keyword rank tracking</div>
+								<div class="cell-body">Misses 40%+ of research queries now going directly to AI
+									platforms.</div>
+							</td>
+							<td class="tc2">
+								<div class="cell-title">Manual AI spot-checks</div>
+								<div class="cell-body">Occasional ChatGPT tests. No benchmarks, no trend data, no
+									competitor comparison.</div>
+							</td>
+							<td class="tc3">
+								<div class="cell-title">Systematic LLM visibility tracking</div>
+								<div class="cell-body">Structured monitoring of AI referral traffic, citation frequency
+									&amp; sentiment.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc4">
+								<div class="cell-title">Share-of-AI-voice reporting</div>
+								<div class="cell-body">Monthly dashboard: how often AI cites you vs. named competitors.
+								</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+							<td class="tc5">
+								<div class="cell-title">Real-time AI visibility analytics</div>
+								<div class="cell-body">Live scores across all major LLMs  catch drops before pipeline
+									dries up.</div>
+								<span class="wb-pill">WB delivers this</span>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="matrix-cta-bar reveal">
+				<p><strong>Not sure where you land?</strong> We'll tell you in writing  within 48 hours.</p>
+				<a href="#audit-form" class="btn btn-secondary">
+					Get Your Free AEO Audit
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+						stroke-linecap="round" stroke-linejoin="round">
+						<line x1="5" y1="12" x2="19" y2="12" />
+						<polyline points="12,5 19,12 12,19" />
+					</svg>
+				</a>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  PIPELINE / WHAT EACH LEVEL MEANS
+════════════════════════════════════ -->
+	<section class="pillars-section">
+		<div class="wrap">
+			<div class="section-head" style="margin-bottom:0">
+				<h2 class="h-main">Your AEO level determines<br>who gets <em>shortlisted</em></h2>
+				<p class="section-sub">Every level up changes what your pipeline looks like. Here is what each one
+					means in practice.</p>
+			</div>
+
+			<div class="pillars-grid">
+
+				<article class="pillar-card reveal">
+					<div class="pipeline-lv-tag">
+						<span class="lv-indicator">
+							<span class="lv-dot active"></span>
+							<span class="lv-dot"></span>
+							<span class="lv-dot"></span>
+							<span class="lv-dot"></span>
+							<span class="lv-dot"></span>
+						</span>
+						Level 1–2
+					</div>
+					<h3>You're invisible at the research stage</h3>
+					<p>AI-assisted research phases of every enterprise deal are happening without you. Competitors at
+						Level 3–5 are entering shortlists before your sales team is ever contacted. The gap widens every
+						week.</p>
+				</article>
+
+				<article class="pillar-card reveal d1">
+					<div class="pipeline-lv-tag">
+						<span class="lv-indicator">
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot"></span>
+							<span class="lv-dot"></span>
+						</span>
+						Level 3
+					</div>
+					<h3>Inbound quality begins to improve</h3>
+					<p>You begin appearing in AI answers for niche, long-tail queries. Prospects who find you through
+						AI citation arrive pre-qualified  because AI has already recommended you. Sales cycles shorten.
+					</p>
+				</article>
+
+				<article class="pillar-card reveal d2">
+					<div class="pipeline-lv-tag">
+						<span class="lv-indicator">
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot"></span>
+						</span>
+						Level 4
+					</div>
+					<h3>Competitor displacement becomes visible</h3>
+					<p>You're consistently cited for primary service categories. You can see in real time when AI stops
+						citing a competitor and starts citing you instead. AI-sourced inbound becomes a measurable
+						pipeline channel.</p>
+				</article>
+
+				<article class="pillar-card reveal d3">
+					<div class="pipeline-lv-tag">
+						<span class="lv-indicator">
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+							<span class="lv-dot active"></span>
+						</span>
+						Level 5
+					</div>
+					<h3>Your brand is embedded in AI knowledge</h3>
+					<p>Buyers who've never visited your website have already formed a positive impression from AI
+						citations before the first sales interaction. Marketing-influenced pipeline from AEO becomes a
+						significant revenue channel.</p>
+				</article>
+
+				<div class="pipeline-cta reveal">
+					<p>Most companies move from <strong>Level 1 <i class="fa-solid fa-arrow-right"></i> Level 3 within
+							90 days</strong> of a structured programme.<br>From <strong>Level 3 <i
+								class="fa-solid fa-arrow-right"></i> Level 5 within six months</strong>. Our SaasWorx
+						case study proves it.</p>
+					<a href="#audit-form" class="btn btn-secondary">
+						See Where You Stand Today
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+							stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12,5 19,12 12,19" />
+						</svg>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  PROOF
+════════════════════════════════════ -->
+	<section class="aeo-section-alt">
+		<div class="wrap">
+			<div class="section-head" style="margin-bottom:0">
+				<h2 class="h-main">From zero AI citations to<br><em>191 cited pages</em> in 6 months</h2>
+				<p class="section-sub">What Level 4 looks like in practice  measured, not claimed.</p>
+			</div>
+
+			<div class="proof-card reveal">
+				<div class="proof-left">
+					<div class="proof-company">
+						<!-- <div class="proof-avatar">Sw</div> -->
+						<div class="proof-company-info">
+							<strong>SaasWorx.ai</strong>
+							<span>Salesforce &amp; Agentforce Implementation · US Market</span>
+						</div>
+					</div>
+
+					<p class="proof-quote">"From zero AI presence to being cited by ChatGPT, Perplexity, and Google AI
+						for Agentforce implementation queries  all within six months of working with White Bunnie."</p>
+
+					<div class="proof-journey">
+						<span class="jbadge jb-from">Started: Level 1</span>
+						<span class="proof-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+						<span class="jbadge jb-to">Now: Level 4</span>
+					</div>
+				</div>
+
+				<div class="proof-right">
+					<div class="proof-metric">
+						<div class="pm-val">2,800<em>%</em></div>
+						<div class="pm-label">increase in organic clicks after AEO restructure</div>
+					</div>
+					<div class="proof-divider"></div>
+					<div class="proof-metric">
+						<div class="pm-val">191</div>
+						<div class="pm-label">pages now cited by AI engines (from zero)</div>
+					</div>
+					<div class="proof-divider"></div>
+					<div class="proof-metric">
+						<div class="pm-val">38</div>
+						<div class="pm-label">brand mentions across AI platforms (from zero)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  SELF-AUDIT CHECKLIST
+════════════════════════════════════ -->
+	<section class="aeo-section" id="self-audit">
+		<div class="wrap">
+			<div class="section-head" style="margin-bottom:0">
+				<h2 class="h-main">Score your website<br>in <em>5 minutes</em></h2>
+				<p class="section-sub">One point per yes. 20 points total. Find out your AEO level right now  before
+					you request the professional audit.</p>
+			</div>
+
+			<div class="check-grid">
+
+				<!-- Content -->
+				<div class="check-card reveal">
+					<div class="check-head">
+						<div class="check-ico pi-content">
+							<svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round">
+								<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+								<polyline points="14,2 14,8 20,8" />
+								<line x1="16" y1="13" x2="8" y2="13" />
+								<line x1="16" y1="17" x2="8" y2="17" />
+							</svg>
+						</div>
+						<div>
+							<h3>Content</h3>
+							<span>5 questions</span>
+						</div>
+					</div>
+					<ul class="check-list" data-pillar="content">
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You have pages whose sole purpose is answering a specific buyer question  not a
+								service page with a FAQ section bolted on</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Your answers are direct and declarative  the answer comes first, the supporting
+								context follows</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You have content addressing comparison queries: "X vs Y," "alternatives to X," "best X
+								for [vertical]"</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You cover the full buyer journey: awareness, evaluation, and decision-stage questions
+								are all addressed</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You publish original frameworks, data, or research that others in your niche would
+								cite</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Technical -->
+				<div class="check-card reveal d1">
+					<div class="check-head">
+						<div class="check-ico pi-tech">
+							<svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="16,18 22,12 16,6" />
+								<polyline points="8,6 2,12 8,18" />
+							</svg>
+						</div>
+						<div>
+							<h3>Technical</h3>
+							<span>5 questions</span>
+						</div>
+					</div>
+					<ul class="check-list" data-pillar="technical">
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>FAQ schema is deployed and validates in Google's Rich Results Test</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Organisation schema is present with complete attributes including sameAs links to
+								LinkedIn, Crunchbase &amp; directories</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Service schema is live on all service pages with accurate type, provider &amp; area
+								attributes</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Your site scores 90+ on Core Web Vitals for both mobile and desktop</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Key pages have no important content trapped in JavaScript rendering or images</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Authority -->
+				<div class="check-card reveal d2">
+					<div class="check-head">
+						<div class="check-ico pi-auth">
+							<svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+							</svg>
+						</div>
+						<div>
+							<h3>Authority</h3>
+							<span>5 questions</span>
+						</div>
+					</div>
+					<ul class="check-list" data-pillar="authority">
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Every piece of content has a named author with verifiable, relevant credentials</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Your brand has been mentioned in at least 3 niche B2B tech publications in the past 12
+								months</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You have a non-promotional presence in Reddit communities where your buyers discuss
+								vendors</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>Your company is accurately described in at least 5 entity sources: LinkedIn,
+								Crunchbase, G2, Clutch, and one industry directory</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>At least one piece of your content has been cited by a third party without you asking
+								for it</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Measurement -->
+				<div class="check-card reveal d3">
+					<div class="check-head">
+						<div class="check-ico pi-meas">
+							<svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round">
+								<line x1="18" y1="20" x2="18" y2="10" />
+								<line x1="12" y1="20" x2="12" y2="4" />
+								<line x1="6" y1="20" x2="6" y2="14" />
+								<line x1="2" y1="20" x2="22" y2="20" />
+							</svg>
+						</div>
+						<div>
+							<h3>Measurement</h3>
+							<span>5 questions</span>
+						</div>
+					</div>
+					<ul class="check-list" data-pillar="measurement">
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You have tested your top 10 buyer queries in ChatGPT, Perplexity &amp; Google AI in
+								the past 30 days</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You track AI-sourced referral traffic in GA4 (from ChatGPT.com, Perplexity.ai,
+								etc.)</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You know which competitors are currently cited more often than you across AI
+								platforms</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You monitor brand citation frequency monthly across a defined set of target
+								queries</span>
+						</li>
+						<li class="check-item" onclick="toggleCheck(this)">
+							<span class="check-box"></span>
+							<span>You have a process for verifying and correcting what AI says about your company</span>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- Score result -->
+			<div class="score-result reveal score-hidden" id="score-display">
+				<div class="score-display">
+					<div class="score-num" id="score-num">0</div>
+					<div class="score-out">out of 20</div>
+				</div>
+				<div class="score-bar-wrap">
+					<div class="score-bar-label">
+						<div class="score-level-name" id="score-level-name">Not started</div>
+						<div class="score-level-tag" id="score-level-tag">Tick boxes above</div>
+					</div>
+					<div class="score-bar-track">
+						<div class="score-bar-fill" id="score-bar" style="width:0%"></div>
+					</div>
+					<div class="score-desc" id="score-desc">Check the boxes above to calculate your AEO score.</div>
+				</div>
+			</div>
+
+			<!-- Score guide table -->
+			<table class="score-table reveal score-hidden" id="score-table">
+				<thead>
+					<tr>
+						<th>Score</th>
+						<th>Your Level</th>
+						<th>What it means for your pipeline</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-min="0" data-max="4">
+						<td><span class="score-range">0 – 4</span></td>
+						<td>Level 1  Keywords</td>
+						<td>No meaningful AEO presence. AI-assisted research phases of your deals are happening without
+							you.</td>
+					</tr>
+					<tr data-min="5" data-max="8">
+						<td><span class="score-range">5 – 8</span></td>
+						<td>Level 2  Answers</td>
+						<td>AEO-aware but reactive. Competitors running structured programmes are pulling ahead fast.
+						</td>
+					</tr>
+					<tr data-min="9" data-max="12">
+						<td><span class="score-range">9 – 12</span></td>
+						<td>Level 3  Structure</td>
+						<td>Foundation in place. You're beginning to appear in AI answers for long-tail queries.</td>
+					</tr>
+					<tr data-min="13" data-max="16">
+						<td><span class="score-range">13 – 16</span></td>
+						<td>Level 4  Pillar</td>
+						<td>Recognised topical authority. AI cites you regularly. Focus shifts to accelerating vs.
+							competitors.</td>
+					</tr>
+					<tr data-min="17" data-max="20">
+						<td><span class="score-range">17 – 20</span></td>
+						<td>Level 5  Authority</td>
+						<td>AEO leader in your niche. AI names you unprompted. Focus on maintaining and measuring
+							revenue impact.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="score-cta-wrap reveal score-hidden" id="score-cta-wrap">
+				<p id="score-cta-text"><strong>Scored below 12?</strong> That's where most IT companies are. Let us show
+					you the exact gaps  free.</p>
+				<a href="#audit-form" class="btn btn-secondary">
+					Get My Free Gap Analysis
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+						stroke-linecap="round" stroke-linejoin="round">
+						<line x1="5" y1="12" x2="19" y2="12" />
+						<polyline points="12,5 19,12 12,19" />
+					</svg>
+				</a>
+			</div>
+
+			<div class="check-score-wrap" id="check-score-wrap">
+				<button class="btn-check-score" id="check-score-btn" disabled onclick="openScorePopup()">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+						stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="20 6 9 17 4 12" />
+					</svg>
+					Check My Score
+				</button>
+				<span class="check-score-hint" id="check-score-hint">Tick at least one box above to unlock your
+					score</span>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  SCORE POPUP
+════════════════════════════════════ -->
+	<div class="score-popup-overlay" id="score-popup-overlay" onclick="overlayClose(event)">
+		<div class="score-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+			<button class="score-popup-close" onclick="closeScorePopup()" aria-label="Close">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			<div class="score-popup-head">
+				<h3 id="popup-title">See your AEO score</h3>
+				<p>One quick step  we'll send your personalised score report straight to your inbox.</p>
+			</div>
+			<div class="score-popup-fields">
+				<div class="sp-field">
+					<label for="sp-name">Full Name</label>
+					<input type="text" id="sp-name" placeholder="Jane Smith" autocomplete="name">
+				</div>
+				<div class="sp-field">
+					<label for="sp-phone">Phone</label>
+					<input type="tel" id="sp-phone" placeholder="+1 555 000 0000" autocomplete="tel">
+				</div>
+				<div class="sp-field">
+					<label for="sp-email">Work Email</label>
+					<input type="email" id="sp-email" placeholder="jane@company.com" autocomplete="email">
+				</div>
+				<div class="sp-field">
+					<label for="sp-website">Website <span class="optional-tag">(optional)</span></label>
+					<input type="url" id="sp-website" placeholder="https://yourcompany.com" autocomplete="url">
+				</div>
+			</div>
+			<button class="btn-popup-submit" onclick="submitScorePopup()">
+				Reveal My Score
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+					stroke-linejoin="round" width="16" height="16">
+					<line x1="5" y1="12" x2="19" y2="12" />
+					<polyline points="12,5 19,12 12,19" />
+				</svg>
+			</button>
+			<p class="score-popup-note">No spam · We only use this to send your report</p>
+		</div>
+	</div>
+
+
+	<!-- ════════════════════════════════════
+  FAQ
+════════════════════════════════════ -->
+	<section class="faq-section">
+		<div class="wrap">
+			<div class="faq-grid">
+
+				<div class="faq-head-col">
+					<h2 class="h-main">Frequently Asked <em>Questions</em></h2>
+					<p class="section-sub">Everything buyers ask us before requesting the audit. Can't find what you're
+						looking for? Talk to our team.</p>
+					<a href="#audit-form" class="btn btn-primary">
+						Ask Us Anything
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+							stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12,5 19,12 12,19" />
+						</svg>
+					</a>
+				</div>
+
+				<div class="faq-list">
+
+					<div class="faq-item">
+						<button class="faq-q">Is there a tool that automatically calculates my AEO score?
+							<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg>
+						</button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>No universal AEO score tool exists the way Domain Authority or PageSpeed Insights do.
+									AEO scoring requires live citation testing across AI platforms, schema validation,
+									and authority signal assessment. We run this process manually for each client and
+									deliver a written report  which is why it takes 48 hours, not 48 seconds.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">How long before we start appearing in AI answers?
+							<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg>
+						</button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>Companies moving from Level 1 to Level 3 typically begin seeing measurable AI
+									citations within 60–120 days of a structured programme. Our SaasWorx case study
+									achieved 38 brand mentions and 191 cited pages within six months from a Level 1
+									start. Timeline depends on your starting level and the competitiveness of your
+									niche.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">We rank well on Google. Why do we need AEO?
+							<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg>
+						</button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>Google rankings and AI citations are increasingly independent. A site ranked #2 for a
+									service term may be completely absent when a buyer asks ChatGPT about the same
+									service  because the content isn't structured for AI extraction. 58.5% of searches
+									end without a click. Strong rankings no longer guarantee that buyers find you.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">What does the free audit actually cover?
+							<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg>
+						</button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>A live citation test across ChatGPT, Perplexity, and Google AI for 10 of your target
+									buyer queries. A schema and technical review. An authority signal assessment. A
+									written maturity level report  Level 1 through 5 across each pillar  with a
+									priority gap list and a 90-day action plan. Delivered in 48 hours. No discovery call
+									required to receive it.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-q">Who is this for?
+							<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9" />
+							</svg>
+						</button>
+						<div class="faq-a">
+							<div class="faq-a-inner">
+								<p>IT services companies, SaaS businesses, and ITES organisations targeting enterprise
+									buyers in the US, UK, UAE, or Canada. You should have a live website and be actively
+									generating revenue. If you're pre-product or pre-revenue, AEO isn't the right
+									investment yet  but contact us and we'll tell you what is.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  FINAL CTA + AUDIT FORM
+════════════════════════════════════ -->
+	<section class="contact-section" id="audit-form" data-nav-theme="dark">
+		<div class="wrap">
+			<div class="contact-grid">
+
+				<div class="contact-left">
+					<h2>Find out your AEO level. <em>Free. In writing. 48 hours.</em></h2>
+					<p>We'll test your site against 10 of your target buyer queries across ChatGPT, Perplexity, and
+						Google AI  and deliver a written maturity level report with your exact gaps and a 90-day
+						priority list.</p>
+
+					<ul class="cta-includes">
+						<li>Live citation test across ChatGPT, Perplexity &amp; Google AI</li>
+						<li>Written maturity level report (Level 1–5 per pillar)</li>
+						<li>Competitor citation benchmarking</li>
+						<li>Priority gap list and 90-day action plan</li>
+						<li>No sales call required to receive it</li>
+					</ul>
+
+					<div class="wb-flex-3col-wrap">
+						<div class="wb-flex-3col-item">
+							<h3 class="wb-flex-3col-title">191</h3>
+							<span class="wb-flex-3col-text">Pages cited by AI engines</span>
+						</div>
+						<div class="wb-flex-3col-item">
+							<h3 class="wb-flex-3col-title">5.0 ★</h3>
+							<span class="wb-flex-3col-text">Clutch rating</span>
+						</div>
+						<div class="wb-flex-3col-item">
+							<h3 class="wb-flex-3col-title">48h</h3>
+							<span class="wb-flex-3col-text">Audit turnaround</span>
+						</div>
+					</div>
+
+					<div class="review-logos">
+						<div class="review-item">
+							<img src="https://whitebunnie.com/wp-content/uploads/2025/10/cluth.png" alt="Clutch">
+							<p>Rated 5/5 Stars</p>
+						</div>
+						<div class="review-item">
+							<img src="https://whitebunnie.com/wp-content/uploads/2025/10/Group-689-2.png" alt="Google">
+							<p>Rated 4.9/5 Stars</p>
+						</div>
+						<div class="review-item">
+							<img src="https://whitebunnie.com/wp-content/uploads/2025/10/upwork.png" alt="Upwork">
+							<p>Top Rated Plus</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-right" id="form-wrap">
+					<div class="audit-form-title">Request your free <em>AEO audit</em></div>
+					<p class="audit-form-sub">Tell us where to look. We'll come back with your maturity level and the
+						exact gaps holding you back.</p>
+
+					<form class="contact-form" id="auditForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="f-name">Your name *</label>
+								<input type="text" id="f-name" name="name" placeholder="Rahul Sharma"
+									autocomplete="name" required>
+							</div>
+							<div class="form-group">
+								<label for="f-email">Work email *</label>
+								<input type="email" id="f-email" name="email" placeholder="rahul@company.com"
+									autocomplete="email" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="f-website">Company website *</label>
+							<input type="text" id="f-website" name="website" placeholder="https://yourcompany.com"
+								autocomplete="url" required>
+						</div>
+
+						<div class="form-group">
+							<label for="f-market">Primary target market *</label>
+							<select id="f-market" name="market" required>
+								<option value="" disabled selected>Select a market</option>
+								<option>United States</option>
+								<option>United Kingdom</option>
+								<option>UAE / Middle East</option>
+								<option>Canada</option>
+								<option>Multiple markets</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="f-challenge">Biggest AEO challenge (optional)</label>
+							<textarea id="f-challenge" name="challenge" rows="3"
+								placeholder="e.g. We don't appear in ChatGPT answers even though we rank on Google..."></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-secondary btn-full">
+							Send Me The Free Audit
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+								stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+								<line x1="5" y1="12" x2="19" y2="12" />
+								<polyline points="12,5 19,12 12,19" />
+							</svg>
+						</button>
+
+						<p class="form-note">Delivered within 48 hours · No obligation · No sales call required</p>
+					</form>
+				</div>
+
+				<div class="form-success" id="form-success">
+					<div class="success-icon">✓</div>
+					<h3>You're on the list.</h3>
+					<p>We'll run your AEO audit and deliver a written report  including your maturity level across all
+						four pillars and competitor citation benchmarking  within 48 hours.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- ════════════════════════════════════
+  PRE-FOOTER SLIM CTA
+════════════════════════════════════ -->
+	<section class="pre-footer-cta">
+		<div class="wrap">
+			<div class="pfc-inner">
+
+				<div class="pfc-left">
+					<h3 class="pfc-heading">Ready to move up <em>two levels</em> in 90 days?</h3>
+					<p class="pfc-sub">Join the IT and SaaS brands that trust White Bunnie to turn AI citations into
+						pipeline across the US, UK, UAE, and Canada.</p>
+
+					<div class="pfc-trust-row">
+						<div class="pfc-trust-item">
+							<span class="pfc-stars">★★★★★</span>
+							<span class="pfc-trust-label">5.0 on Clutch</span>
+						</div>
+						<span class="pfc-sep">·</span>
+						<div class="pfc-trust-item">
+							<strong>100+</strong>
+							<span class="pfc-trust-label">Clients Served</span>
+						</div>
+						<span class="pfc-sep">·</span>
+						<div class="pfc-trust-item">
+							<strong>8+</strong>
+							<span class="pfc-trust-label">Years of Expertise</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="pfc-right">
+					<a href="#audit-form" class="pfc-btn-primary">
+						<i class="fa-regular fa-file-lines"></i>
+						Get Free AEO Audit
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+							stroke-linecap="round" stroke-linejoin="round" width="15" height="15">
+							<line x1="5" y1="12" x2="19" y2="12" />
+							<polyline points="12,5 19,12 12,19" />
+						</svg>
+					</a>
+					<a href="tel:+919876543210" class="pfc-btn-ghost">
+						<i class="fa-solid fa-phone"></i>
+						Call Us
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ════════════════════════════════════
+  FOOTER
+════════════════════════════════════ -->
+	<footer class="wb-footer" data-nav-theme="dark">
+
+		<div class="wb-container">
+
+			<!-- COLUMN 1 -->
+			<div class="wb-col wb-col-1">
+				<div class="wb-logo"><img src="https://whitebunnie.com/wp-content/uploads/2024/10/logo.png"></div>
+
+				<p class="wb-desc">
+					AI Search Marketing Agency for IT Services, SaaS & B2B Tech - India & USA.
+				</p>
+
+				<p class="wb-label">We get you cited on</p>
+
+				<div class="wb-tags">
+					<span>ChatGPT</span>
+					<span>Perplexity</span>
+					<span>Gemini</span>
+					<span>Claude</span>
+					<span>SearchGPT</span>
+					<span>Google SGE</span>
+				</div>
+
+				<p class="wb-address">Sector 63, Noida, 201301, India</p>
+
+				<div class="iconCont">
+					<span>
+						<a target="_blank" href="https://www.facebook.com/Dwhitebunnie"
+							title="White Bunnie on Facebook">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/facebook-1.png" alt="facebook">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://twitter.com/WhiteBunnie6" title="White Bunnie on X (Twitter)">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/twitter.png" alt="twitter">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.instagram.com/dwhitebunnie/"
+							title="White Bunnie on Instagram">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/instagram.png" alt="twitter">
+						</a>
+					</span>
+
+
+					<span>
+						<a target="_blank" href="https://in.linkedin.com/company/whitebunnie/"
+							title="White Bunnie on LinkedIn">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/linkedin.png" alt="linkedin">
+
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.youtube.com/@whitebunniedigital/"
+							title="White Bunnie on YouTube">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/youtube.png" alt="youtube">
+						</a>
+					</span>
+
+				</div>
+			</div>
+
+			<!-- COLUMN 2 -->
+			<div class="wb-col">
+				<h4>AI SEARCH SERVICES</h4>
+				<ul>
+					<li><a href="#">GEO - Generative Engine Optimization</a></li>
+					<li><a href="#">AEO - Answer Engine Optimization </a></li>
+					<li><a href="#">AI Visibility Audit </a></li>
+					<li><a href="#">Schema Markup & Structured Data</a></li>
+					<li><a href="#">AI Citation Building</a></li>
+					<li><a href="#">SEO for B2B & IT</a></li>
+					<li><a href="#">Google Ads / PPC</a></li>
+					<li><a href="#">Website Design & Dev</a></li>
+					<li><a href="#">White-Label SEO & GEO</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 3 -->
+			<div class="wb-col">
+				<h4>INDUSTRIES WE SERVE</h4>
+				<ul>
+					<li><a href="#">IT Services & ITES</a></li>
+					<li><a href="#">SaaS Companies</a></li>
+					<li><a href="#">B2B Tech Brands</a></li>
+					<li><a href="#">Oracle & ERP Consulting</a></li>
+					<li><a href="#">eCommerce</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Finance & Fintech</a></li>
+				</ul>
+
+
+			</div>
+
+			<!-- COLUMN 4 -->
+			<div class="wb-col">
+				<h4>RESOURCES</h4>
+				<ul>
+					<li><a href="#">GEO Guide for B2B SaaS </a></li>
+					<li><a href="#">AEO Playbook for IT Brands</a></li>
+					<li><a href="#">AI Visibility Tracker Tool</a></li>
+					<li><a href="#">Schema Markup Guide</a></li>
+					<li><a href="#">Free SEO Audit</a></li>
+					<li><a href="#">Blog & Insights</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 5 -->
+			<div class="wb-col">
+				<h4>REGION</h4>
+
+				<ul class="region-list">
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/india.png"> IND
+					</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/us.png"> USA</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/uae.png"> UAE</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/canada.png"> CAN
+					</li>
+				</ul>
+
+				<iframe style="margin:10px 0px 0px;max-width:320x;"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1474767051486!2d77.37573897528881!3d28.625341775668737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5229b065c81%3A0xf39234a7e6a0c2cd!2sWhite%20Bunnie%20-%20Digital%20Marketing%20Agency%20in%20Noida%20%7C%20SEO%20Agency%20in%20Noida!5e0!3m2!1sen!2sin!4v1738731978606!5m2!1sen!2sin"
+					width="100%" height="200px" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+		</div>
+
+
+		<!-- SCHEMA STRIP -->
+		<!-- <div class="wb-schema">
+			<span>● About Us</span>
+			<span>● Our Team</span>
+			<span>● Careers</span>
+			<span>● Contact Us</span>
+			<span>● FAQ's</span>
+		</div> -->
+
+		<!-- BOTTOM BAR -->
+		<div class="wb-bottom">
+			<div class="wb-copy">
+				© 2026 White Bunnie Digital Pvt. Ltd.
+			</div>
+
+			<div class="wb-legal">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Sitemap</a>
+			</div>
+
+			<div class="wb-cert">
+				Google Partner · Meta Business Partner · Since 2015
+			</div>
+
+			<div class="wb-quick">
+				<a href="#">GEO</a>
+				<a href="#">AEO</a>
+				<a href="#">AI Visibility Audit</a>
+				<a href="#">White-Label</a>
+
+			</div>
+		</div>
+
+	</footer>
+
+
+
+	<!-- Floating Check Score Button (visible while in #self-audit section) -->
+	<div class="float-score-wrap" id="float-score-wrap">
+		<button class="btn-check-score btn-float-score" id="float-score-btn" disabled onclick="openScorePopup()">
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+				stroke-linecap="round" stroke-linejoin="round">
+				<polyline points="20 6 9 17 4 12" />
+			</svg>
+			Check My Score
+		</button>
+		<span class="float-score-hint" id="float-score-hint">Tick at least one box above</span>
+	</div>
+
+
+	<!-- ════════════════════════════════════
+  SCRIPTS
+════════════════════════════════════ -->
+	<script>
+		/* ── Navbar scroll shadow ── */
+		const navbar = document.getElementById('navbar');
+		window.addEventListener('scroll', () => {
+			navbar.classList.toggle('scrolled', window.scrollY > 20);
+		}, { passive: true });
+
+		/* ── Mobile menu toggle ── */
+		const navToggle = document.getElementById('navToggle');
+		const navMenu = document.getElementById('navMenu');
+
+		function closeMenu() {
+			navMenu.classList.remove('open');
+			navToggle.classList.remove('open');
+			navToggle.setAttribute('aria-expanded', false);
+			navbar.classList.remove('menu-open');
+		}
+
+		if (navToggle && navMenu) {
+			navToggle.addEventListener('click', (e) => {
+				e.stopPropagation();
+				const open = navMenu.classList.toggle('open');
+				navToggle.classList.toggle('open', open);
+				navToggle.setAttribute('aria-expanded', open);
+				navbar.classList.toggle('menu-open', open);
+			});
+			document.addEventListener('click', (e) => {
+				if (!navbar.contains(e.target)) closeMenu();
+			});
+		}
+
+		/* ── Mobile sub-menu toggles (Services mega menu + Industries dropdown) ── */
+		document.querySelectorAll('.has-mega > .nav-link, .has-dropdown > .nav-link').forEach(link => {
+			link.addEventListener('click', (e) => {
+				if (window.innerWidth > 980) return;
+				e.preventDefault();
+				const item = link.closest('.nav-item');
+				const isOpen = item.classList.contains('open');
+				document.querySelectorAll('.has-mega, .has-dropdown').forEach(i => i.classList.remove('open'));
+				if (!isOpen) item.classList.add('open');
+			});
+		});
+
+		/* ── Close the mobile menu when an in-page link is tapped ── */
+		document.querySelectorAll('.nav-menu a[href^="#"]').forEach(a => {
+			a.addEventListener('click', () => { if (window.innerWidth <= 980) closeMenu(); });
+		});
+
+		/* ── Stats tabs highlight on click ── */
+		document.querySelectorAll('.stats-tabs .tab').forEach(tab => {
+			tab.addEventListener('click', () => {
+				document.querySelectorAll('.stats-tabs .tab').forEach(t => t.classList.remove('active'));
+				tab.classList.add('active');
+			});
+		});
+
+		/* ── FAQ accordion ── */
+		document.querySelectorAll('.faq-q').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const item = btn.closest('.faq-item');
+				const isOpen = item.classList.contains('open');
+				document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+				if (!isOpen) item.classList.add('open');
+			});
+		});
+
+		/* ── Reveal on scroll ── */
+		const revealEls = document.querySelectorAll('.reveal');
+		if (revealEls.length && 'IntersectionObserver' in window) {
+			const obs = new IntersectionObserver(entries => {
+				entries.forEach(e => {
+					if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+				});
+			}, { threshold: 0.12 });
+			revealEls.forEach(el => obs.observe(el));
+		}
+	</script>
+
+	<script>
+		/* ══════════════════════════════════════════════
+		   INTERACTIVE CHECKLIST + AEO SCORE
+		══════════════════════════════════════════════ */
+		const scoreData = [
+			{ min: 0,  max: 4,  level: 'Level 1  Keywords',  tag: 'No AEO presence',     pct: 5,   desc: 'AI-assisted research phases of your deals are happening entirely without you. Competitors at Level 3–5 are entering shortlists before your sales team is contacted.' },
+			{ min: 5,  max: 8,  level: 'Level 2  Answers',   tag: 'AEO-aware',           pct: 30,  desc: 'You are aware of the problem but executing reactively. Without a structured programme, the gap between you and Level 3–5 competitors widens every month.' },
+			{ min: 9,  max: 12, level: 'Level 3  Structure', tag: 'Foundation in place', pct: 55,  desc: 'Your AEO foundation is built. You are beginning to appear in AI answers for niche queries. The next push is accelerating citation frequency and authority.' },
+			{ min: 13, max: 16, level: 'Level 4  Pillar',    tag: 'Topical authority',   pct: 78,  desc: 'You are a recognised topical authority. AI cites you regularly. The focus now is competitor displacement and proving revenue impact to leadership.' },
+			{ min: 17, max: 20, level: 'Level 5  Authority', tag: 'AEO leader',          pct: 100, desc: 'You have achieved AEO leadership in your niche. AI names you unprompted across platforms. The focus is maintaining leadership as the landscape evolves.' }
+		];
+
+		let scoreRevealed = false;
+
+		function getTotal() {
+			return document.querySelectorAll('.check-item.checked').length;
+		}
+
+		function updateScore() {
+			const total = getTotal();
+			const pct = (total / 20) * 100;
+			const tier = scoreData.find(t => total >= t.min && total <= t.max) || scoreData[0];
+
+			document.getElementById('score-num').textContent = total;
+			document.getElementById('score-bar').style.width = pct + '%';
+			document.getElementById('score-level-name').textContent = tier.level;
+			document.getElementById('score-level-tag').textContent = tier.tag;
+			document.getElementById('score-desc').textContent = tier.desc;
+
+			document.querySelectorAll('#score-table tbody tr').forEach(row => {
+				const min = +row.dataset.min, max = +row.dataset.max;
+				row.classList.toggle('active-row', total >= min && total <= max);
+			});
+
+			const ctaTxt = document.getElementById('score-cta-text');
+			if (total >= 17) {
+				ctaTxt.innerHTML = '<strong>Level 5  impressive.</strong> Let us make sure your measurement infrastructure is proving the revenue impact.';
+			} else if (total >= 13) {
+				ctaTxt.innerHTML = '<strong>Level 4  strong foundation.</strong> Let us identify the specific gaps holding you back from Level 5.';
+			} else if (total >= 9) {
+				ctaTxt.innerHTML = '<strong>Level 3  good start.</strong> Let us show you exactly what is needed to reach Level 4–5 and start displacing competitors.';
+			} else {
+				ctaTxt.innerHTML = '<strong>Scored below 9?</strong> That is where most IT companies are. Let us show you the exact gaps  free.';
+			}
+		}
+
+		function toggleCheck(item) {
+			item.classList.toggle('checked');
+
+			const total = getTotal();
+			const btn = document.getElementById('check-score-btn');
+			const hint = document.getElementById('check-score-hint');
+			const floatBtn = document.getElementById('float-score-btn');
+			const floatHint = document.getElementById('float-score-hint');
+
+			if (total > 0) {
+				if (btn) btn.disabled = false;
+				if (hint) hint.textContent = total + ' of 20 checked  click to see your AEO level';
+				if (floatBtn) floatBtn.disabled = false;
+				if (floatHint) floatHint.textContent = total + ' of 20 checked';
+			} else {
+				if (btn) btn.disabled = true;
+				if (hint) hint.textContent = 'Tick at least one box above to unlock your score';
+				if (floatBtn) floatBtn.disabled = true;
+				if (floatHint) floatHint.textContent = 'Tick at least one box above';
+			}
+
+			/* Once revealed, keep the score live as boxes change */
+			if (scoreRevealed) updateScore();
+		}
+
+		/* ── Score popup ── */
+		function openScorePopup() {
+			document.getElementById('score-popup-overlay').classList.add('open');
+			document.body.style.overflow = 'hidden';
+			setTimeout(() => document.getElementById('sp-name').focus(), 80);
+		}
+
+		function closeScorePopup() {
+			document.getElementById('score-popup-overlay').classList.remove('open');
+			document.body.style.overflow = '';
+		}
+
+		function overlayClose(e) {
+			if (e.target === document.getElementById('score-popup-overlay')) closeScorePopup();
+		}
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') closeScorePopup();
+		});
+
+		function submitScorePopup() {
+			const name = document.getElementById('sp-name');
+			const phone = document.getElementById('sp-phone');
+			const email = document.getElementById('sp-email');
+			let valid = true;
+
+			[name, phone, email].forEach(f => {
+				f.classList.remove('invalid');
+				if (!f.value.trim()) { f.classList.add('invalid'); valid = false; }
+			});
+			if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+				email.classList.add('invalid');
+				valid = false;
+			}
+			if (!valid) return;
+
+			closeScorePopup();
+			revealScore();
+		}
+
+		function revealScore() {
+			scoreRevealed = true;
+			updateScore();
+
+			['score-display', 'score-table', 'score-cta-wrap'].forEach((id, i) => {
+				const el = document.getElementById(id);
+				if (!el) return;
+				el.classList.remove('score-hidden');
+				setTimeout(() => el.classList.add('in'), 60 + i * 120);
+			});
+
+			const wrap = document.getElementById('check-score-wrap');
+			if (wrap) wrap.style.display = 'none';
+
+			const fw = document.getElementById('float-score-wrap');
+			if (fw) { fw.classList.remove('visible'); fw.style.display = 'none'; }
+
+			setTimeout(() => {
+				document.getElementById('score-display').scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}, 200);
+		}
+
+		/* ── Floating score button ──
+		   Visible while the audit section is on screen, but suppressed once the
+		   inline "Check My Score" button scrolls into view, so the page never
+		   shows the same call to action twice. */
+		document.addEventListener('DOMContentLoaded', function () {
+			const floatWrap = document.getElementById('float-score-wrap');
+			const auditSec = document.getElementById('self-audit');
+			const inlineWrap = document.getElementById('check-score-wrap');
+			if (!floatWrap || !auditSec || !('IntersectionObserver' in window)) return;
+
+			let inSection = false;
+			let inlineVisible = false;
+
+			function sync() {
+				floatWrap.classList.toggle('visible', inSection && !inlineVisible && !scoreRevealed);
+			}
+
+			new IntersectionObserver(function (entries) {
+				inSection = entries[0].isIntersecting;
+				sync();
+			}, { threshold: 0.04 }).observe(auditSec);
+
+			if (inlineWrap) {
+				new IntersectionObserver(function (entries) {
+					inlineVisible = entries[0].isIntersecting;
+					sync();
+				}, { threshold: 0.2 }).observe(inlineWrap);
+			}
+		});
+
+		/* ── Audit form submission ── */
+		const auditForm = document.getElementById('auditForm');
+		if (auditForm) {
+			auditForm.addEventListener('submit', (e) => {
+				e.preventDefault();
+				if (!auditForm.reportValidity()) return;
+				document.getElementById('form-wrap').style.display = 'none';
+				document.getElementById('form-success').classList.add('show');
+			});
+		}
+	</script>
+
+	<script>
+		/* ── Navbar dark-section detection ── */
+		(function () {
+			var navbar = document.getElementById('navbar');
+			var darkSections = document.querySelectorAll('[data-nav-theme="dark"]');
+			if (!navbar || !darkSections.length) return;
+
+			function updateNavTheme() {
+				var navH = navbar.offsetHeight + 10;
+				var isDark = false;
+				darkSections.forEach(function (sec) {
+					var r = sec.getBoundingClientRect();
+					if (r.top <= navH && r.bottom >= 0) isDark = true;
+				});
+				navbar.classList.toggle('nav-on-dark', isDark);
+			}
+
+			window.addEventListener('scroll', updateNavTheme, { passive: true });
+			window.addEventListener('resize', updateNavTheme);
+			updateNavTheme();
+		})();
+	</script>
+
+	<script>
+		/* ── Ticker / Marquee ── */
+		(function () {
+			const wrap = document.querySelector('.ticker-wrap');
+			if (!wrap) return;
+
+			const origSpans = Array.from(wrap.querySelectorAll('span'));
+			if (!origSpans.length) return;
+
+			const track = document.createElement('div');
+			track.className = 'ticker-tr';
+			origSpans.forEach(s => track.appendChild(s.cloneNode(true)));
+			origSpans.forEach(s => track.appendChild(s.cloneNode(true)));
+
+			wrap.innerHTML = '';
+			wrap.appendChild(track);
+
+			/* Auto-speed: ~80 px/s based on actual content width */
+			requestAnimationFrame(() => {
+				const singleW = track.scrollWidth / 2;
+				track.style.animationDuration = Math.max(18, singleW / 80) + 's';
+			});
+		})();
+	</script>
+
+</body>
+
+</html>

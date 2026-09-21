@@ -2296,3 +2296,438 @@ section#tms-client {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base Layout & Sci-Fi Environment Setup with Background Image */
+.advanced-cyber-cta {
+  background:
+    /* linear-gradient(180deg, rgba(7, 12, 26, 0.9) 0%, rgba(7, 12, 26, 0.4) 50%, rgba(7, 12, 26, 0.9) 100%), */
+    url('https://www.weareyuma.com/sites/default/files/styles/22_8_xl/public/imgs/stills_53297_luke-stackpoole-d772c704.webp?h=573fb875&itok=zBEmf1h5') no-repeat center center;
+  /* background-size: cover;
+  background-attachment: fixed; */
+  /* Parallax style scrolling depth */
+  position: relative;
+  padding: 120px 24px;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Moving Tech Matrix Grid Background Overlay */
+/* .cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(233, 176, 45, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(233, 176, 45, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+  pointer-events: none;
+  z-index: 1;
+} */
+
+/* Tech HUD Boundary Container Wrapper with Glassmorphism Over Image */
+.cyber-container {
+  max-width: var(--wrap-max);
+  width: 100%;
+  position: relative;
+  /* Dark backdrop filter blend to ensure high text readability over the background image */
+  background:
+    linear-gradient(135deg, rgba(11, 20, 40, 0.85) 0%, rgba(7, 12, 26, 0.95) 100%),
+    url('https://www.weareyuma.com/sites/default/files/styles/22_8_xl/public/imgs/stills_53297_luke-stackpoole-d772c704.webp?h=573fb875&itok=zBEmf1h5') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  border: 1px solid rgba(212, 181, 106, 0.25);
+  border-radius: var(--r-lg);
+  padding: 80px 40px;
+  z-index: 2;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(233, 176, 45, 0.1);
+  /* Subtle gold outer glow */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Decorative Framing Crosshairs Styling */
+.hud-frame-element {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--clr-primary);
+  pointer-events: none;
+}
+
+.hud-frame-element.top-left {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-frame-element.top-right {
+  top: -1px;
+  right: -1px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.hud-frame-element.bottom-left {
+  bottom: -1px;
+  left: -1px;
+  border-right: none;
+  border-top: none;
+}
+
+.hud-frame-element.bottom-right {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Structural Content Formatting Layouts */
+.cyber-content-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.cyber-header-block {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: rgba(7, 12, 26, 0.8);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(233, 176, 45, 0.4);
+  margin-bottom: 24px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--clr-primary);
+  border-radius: 50%;
+  animation: pulse-ring 1.5s infinite ease-in-out;
+}
+
+.cyber-title {
+  color: var(--clr-white);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin: 0 auto;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Angular Cybernetic Data Deck Block */
+.cyber-data-deck {
+  position: relative;
+  background: rgba(7, 12, 26, 0.75);
+  border: 1px solid rgba(212, 181, 106, 0.2);
+  padding: 32px 40px;
+  max-width: 850px;
+  border-radius: var(--r-md);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+  /* Premium architectural cut corner effect */
+  clip-path: polygon(0 0, 96% 0, 100% 20%, 100% 100%, 4% 100%, 0 80%);
+  border-left: 4px solid var(--clr-primary);
+}
+
+.cyber-body-text {
+  color: var(--clr-white);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+  text-align: center;
+}
+
+/* Hologram Node Core Control Deck Terminal Zone */
+.hologram-terminal-zone {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.blueprint-hint {
+  text-align: center;
+  max-width: 600px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  z-index: 5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Cyber Rings Background Rotations Loops */
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(233, 176, 45, 0.2);
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring-outer {
+  width: 340px;
+  height: 340px;
+  animation: rotate-clock 25s infinite linear;
+  border-style: dotted;
+}
+
+.ring-mid {
+  width: 260px;
+  height: 260px;
+  animation: rotate-counter 15s infinite linear;
+  border-color: rgba(233, 176, 45, 0.35);
+}
+
+.ring-inner {
+  width: 180px;
+  height: 180px;
+  border-style: solid;
+  border-color: rgba(233, 176, 45, 0.1);
+}
+
+/* Glowing Interactive Command Center Button Node */
+.cyber-core-node-btn {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: transform var(--transition);
+}
+
+.node-inner-circle {
+  background: linear-gradient(135deg, var(--stat-grad-from) 0%, var(--stat-grad-to) 100%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  box-shadow: 0 0 30px var(--ai-showcase-glow);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.node-text-primary {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+}
+
+.node-text-secondary {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.node-glow-effect {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  opacity: 0.35;
+  filter: blur(12px);
+  animation: core-pulse 2s infinite ease-in-out;
+}
+
+/* Hover Operations Effects Trigger states */
+.cyber-core-node-btn:hover {
+  transform: scale(1.08);
+}
+
+.cyber-core-node-btn:hover .node-inner-circle {
+  box-shadow: 0 0 50px rgba(233, 176, 45, 0.8);
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dk) 100%);
+}
+
+/* System Animation Blueprints Loops */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(233, 176, 45, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(233, 176, 45, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(233, 176, 45, 0);
+  }
+}
+
+@keyframes core-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotate-clock {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-counter {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* Fluid Responsive Breakdowns Layouts Adjustments */
+@media (max-width: 768px) {
+  .advanced-cyber-cta {
+    padding: 80px 16px;
+  }
+
+  .cyber-container {
+    padding: 48px 20px;
+    background-attachment: scroll;
+  }
+
+  .cyber-title {
+    font-size: 2rem;
+  }
+
+  .cyber-data-deck {
+    padding: 24px;
+    clip-path: none;
+    border-radius: var(--r-md);
+    border: 1px solid rgba(233, 176, 45, 0.3);
+    border-left: 4px solid var(--clr-primary);
+  }
+
+  .blueprint-hint {
+    font-size: 1.05rem;
+  }
+
+  .ring-outer,
+  .ring-mid {
+    display: none;
+  }
+
+  /* Drops heavy spinning vectors on mobile for smooth canvas rendering */
+}

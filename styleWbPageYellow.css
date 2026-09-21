@@ -894,7 +894,7 @@ h2.h-main em {
 
 .wbn-hero-zone {
   position: relative;
-  padding: 130px 0 60px;
+  padding: 130px 0 100px;
   overflow: hidden;
 }
 
@@ -909,6 +909,8 @@ h2.h-main em {
     background-size: 52px 52px;
     pointer-events: none;
 } */
+
+
 
 
 .wbn-hero-zone-two::before {
@@ -934,6 +936,7 @@ h2.h-main em {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 
 .wbn-hero-chip {
@@ -1023,8 +1026,8 @@ h2.h-main em {
   align-items: center;
   padding: 7px 16px;
   border-radius: var(--r);
-  border: 1px solid var(--clr-primary);
-  color: var(--clr-primary);
+  border: 1px solid var(--clr-ink);
+  color: var(--clr-ink);
   font-size: .82rem;
   font-weight: 600;
   letter-spacing: .01em;
@@ -1033,10 +1036,10 @@ h2.h-main em {
     border-color .18s ease;
 }
 
-.wbn-service-pill:hover {
-  background: #dde7ff;
-  border-color: #93aef5;
-}
+/* .wbn-service-pill:hover {
+  background: #fffcdd;
+  border-color: #aa9c1e;
+} */
 
 /* Responsive */
 
