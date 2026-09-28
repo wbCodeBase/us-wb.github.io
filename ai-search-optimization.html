@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI Search Optimization Guide – Everything You Need To Know | White Bunnie</title>
+	<meta name="description"
+		content="How AI search works, how it affects SEO and how to optimize for ChatGPT, Gemini, Perplexity and Google AI Overviews. The complete generative engine optimization (GEO) guide from White Bunnie.">
+
+	<link rel="stylesheet" href="./styleWbPage.css">
+	<link rel="stylesheet" href="./aiSearchStyle.css">
+	<link
+		href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+		rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+	<!-- ════════════════════════════════════
+  	NAVBAR
+════════════════════════════════════ -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-wrap">
+
+			<a href="/" class="nav-logo">
+				<img src="https://whitebunnie.com/wp-content/uploads/2026/04/LOGO-Black-scaled-1.webp"
+					alt="White Bunnie Digital Marketing">
+			</a>
+
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+				<span></span><span></span><span></span>
+			</button>
+
+			<ul class="nav-menu" id="navMenu">
+
+				<!-- Services – Mega Menu -->
+				<li class="nav-item has-mega">
+					<a href="#services" class="nav-link">
+						Services
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+
+					<div class="mega-menu">
+						<div class="mega-inner">
+
+							<div class="mega-col">
+								<p class="mega-col-header">SEO & Visibility</p>
+								<a href="#" class="mega-item">
+
+									<div class="mega-item-text"><strong>AI SEO</strong><span>AI-powered search
+											visibility</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-gears"></i></div>
+									<div class="mega-item-text"><strong>Technical SEO</strong><span>Site health &amp;
+											crawlability</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+									<div class="mega-item-text"><strong>Local SEO</strong><span>Dominate local
+											searches</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+									<div class="mega-item-text"><strong>E-commerce SEO</strong><span>Organic growth for
+											online stores</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Paid Advertising</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-google"></i></div>
+									<div class="mega-item-text"><strong>Google Ads / PPC</strong><span>Targeted paid
+											search campaigns</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-brands fa-meta"></i></div>
+									<div class="mega-item-text"><strong>Meta Ads</strong><span>Facebook &amp; Instagram
+											advertising</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-chart-line"></i></div>
+									<div class="mega-item-text"><strong>Performance Marketing</strong><span>SEM, social
+											ads &amp; email ROI</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-filter"></i></div>
+									<div class="mega-item-text"><strong>Lead Generation</strong><span>Quality leads
+											&amp; conversion</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Brand &amp; Social</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-hashtag"></i></div>
+									<div class="mega-item-text"><strong>Social Media Marketing</strong><span>Build &amp;
+											engage your audience</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-nib"></i></div>
+									<div class="mega-item-text"><strong>Content Marketing</strong><span>Blogs,
+											videos</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-palette"></i></div>
+									<div class="mega-item-text"><strong>Branding &amp; Identity</strong><span>Logo,
+											brand strategy &amp; design</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-envelope"></i></div>
+									<div class="mega-item-text"><strong>Email Marketing</strong><span>Nurture leads
+											&amp; drive conversions</span></div>
+								</a>
+							</div>
+
+							<div class="mega-col">
+								<p class="mega-col-header">Tech &amp; Design</p>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-code"></i></div>
+									<div class="mega-item-text"><strong>Web Development</strong><span>Custom &amp;
+											e-commerce websites</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+									<div class="mega-item-text"><strong>UI/UX Design</strong><span>Wireframes,
+											prototypes</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-laptop"></i></div>
+									<div class="mega-item-text"><strong>Landing Pages</strong><span>High-converting page
+											experiences</span></div>
+								</a>
+								<a href="#" class="mega-item">
+									<div class="mega-item-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+									<div class="mega-item-text"><strong>CRO</strong><span>Conversion rate
+											optimization</span></div>
+								</a>
+							</div>
+
+						</div>
+
+						<div class="mega-cta-strip">
+							<div class="mega-cta-text">
+								<strong>Let's Talk About Your Goals</strong>
+								<p>Reach out your way. We start by listening so we can build what truly works for you.
+								</p>
+							</div>
+							<a href="#contact" class="mega-cta-btn">Get in Touch</a>
+						</div>
+					</div>
+				</li>
+
+				<!-- Industries dropdown -->
+				<li class="nav-item has-dropdown">
+					<a href="#" class="nav-link">
+						Industries
+						<svg class="nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9" />
+						</svg>
+					</a>
+					<ul class="nav-dropdown">
+						<li><a href="#"><i class="fa-solid fa-heart-pulse"></i> Healthcare</a></li>
+						<li><a href="#"><i class="fa-solid fa-building"></i> Real Estate</a></li>
+						<li><a href="#"><i class="fa-solid fa-bag-shopping"></i> E-commerce</a></li>
+						<li><a href="#"><i class="fa-solid fa-microchip"></i> SaaS &amp; Tech</a></li>
+						<li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+						<li><a href="#"><i class="fa-solid fa-coins"></i> Finance</a></li>
+					</ul>
+				</li>
+
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+
+			</ul>
+
+			<div class="nav-actions">
+				<!-- <a href="#contact" class="btn btn-primary btn-sm">
+					<i class="fa-regular fa-file-lines"></i> Get Free Proposal
+				</a> -->
+				<a href="tel:+919876543210" class="btn btn-secondary btn-sm">
+					<i class="fa-solid fa-phone"></i> Call Us
+				</a>
+			</div>
+
+		</div>
+	</nav>
+
+	<div class="read-progress" id="readProgress"></div>
+
+	<!-- ════════════════════════════════════
+	  HERO
+	════════════════════════════════════ -->
+	<section class="hero guide-hero">
+		<div class="wrap">
+			<div class="hero-inner">
+				<div class="hero-badge"><em>The Complete Guide · Updated September 2026</em></div>
+
+				<h1>Everything you need to know about <em>AI search</em></h1>
+
+				<p class="hero-sub-sub">
+					ChatGPT, Gemini, Perplexity and Google AI Overviews now answer your buyers' questions before they
+					ever reach your website. This guide explains how AI search works, what it means for SEO, and the
+					exact playbook we use to get brands cited.
+				</p>
+
+				<div class="gh-meta">
+					<span class="gh-author"><span class="gh-av">WB</span>By the White Bunnie AEO team</span>
+					<span><i class="fa-regular fa-clock"></i> 18 min read</span>
+					<span><i class="fa-regular fa-calendar"></i> Updated Sep 2026</span>
+				</div>
+
+				<div class="hero-cta-wrap-parent">
+					<div class="hero-cta-wrap">
+						<a href="#section1" class="btn btn-primary">
+							Start Reading
+							<i class="fa-solid fa-arrow-down"></i>
+						</a>
+						<button class="btn btn-secondary" data-open-proposal>
+							Get a Free AI Visibility Audit
+							<i class="fa-solid fa-arrow-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="hero-tags-strip gh-series" aria-label="In this series">
+			<span class="gh-series-label">In this series</span>
+			<a href="ai-search-optimization.html" class="hero-tag active" aria-current="page">AI Search Optimization Guide</a>
+			<a href="google-ai-overviews.html" class="hero-tag" data-soon>Google AI Overviews</a>
+			<a href="google-ai-mode.html" class="hero-tag" data-soon>Google AI Mode</a>
+			<a href="gemini-search.html" class="hero-tag" data-soon>Gemini Search</a>
+			<a href="chatgpt-search.html" class="hero-tag" data-soon>ChatGPT Search</a>
+			<a href="other-llms.html" class="hero-tag" data-soon>Other LLMs</a>
+			<a href="white-bunnie-and-ai.html" class="hero-tag" data-soon>White Bunnie &amp; AI</a>
+		</nav>
+	</section>
+
+	<div class="ticker-wrap" aria-hidden="true">
+		<div class="ticker-tr">
+			<span>Nearly 60% of searches end without a click</span>
+			<span>1 in 5 Google searches now shows an AI summary</span>
+			<span>AI search visitors are worth 4.4× more than organic</span>
+			<span>ChatGPT prompts average 23 words</span>
+			<span>Only 18.6% of users click AI Overview sources</span>
+			<span>AI returns one answer, not ten blue links</span>
+		</div>
+	</div>
+
+		<!-- ════════════════════════════════════
+	  GUIDE: TOC + ARTICLE
+	════════════════════════════════════ -->
+	<div class="gd" id="guide">
+
+		<aside class="gd-side" id="toc" aria-label="On this page">
+			<div class="toc-card">
+				<div class="toc-head">
+					<span>On this page</span>
+					<button class="toc-close" id="tocClose" aria-label="Close contents"><i class="fa-solid fa-xmark"></i></button>
+				</div>
+				<ol class="toc-list">
+					<li><a href="#section1"><b>01</b>What is AI search?</a></li>
+					<li><a href="#section2"><b>02</b>How AI search affects SEO</a></li>
+					<li><a href="#section3"><b>03</b>Is zero click killing SEO?</a></li>
+					<li><a href="#section4"><b>04</b>Traditional SEO vs. AI SEO</a></li>
+					<li><a href="#section5"><b>05</b>What is GEO?</a></li>
+					<li><a href="#section6"><b>06</b>How to optimize for AI search</a></li>
+					<li><a href="#section7"><b>07</b>How to measure AI visibility</a></li>
+					<li><a href="#section8"><b>08</b>The future of SEO</a></li>
+					<li><a href="#faqs"><b>09</b>FAQs</a></li>
+				</ol>
+			</div>
+
+			<div class="side-cta">
+				<span class="side-cta-tag"><i class="fa-solid fa-bolt"></i> Free · 48 hours</span>
+				<h4>Is AI citing your brand, or your competitors?</h4>
+				<p>Get a written AI visibility audit across ChatGPT, Gemini &amp; Perplexity.</p>
+				<button class="btn btn-secondary btn-sm" data-open-proposal>Get My Free Audit <i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+
+			<div class="side-share">
+				<span>Share</span>
+				<a href="https://www.linkedin.com/sharing/share-offsite/?url=" data-share="li" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="https://twitter.com/intent/tweet?url=" data-share="x" target="_blank" rel="noopener" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=" data-share="fb" target="_blank" rel="noopener" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+				<button class="copy-link" id="copyLink" aria-label="Copy link"><i class="fa-solid fa-link"></i></button>
+			</div>
+		</aside>
+
+		<article class="gd-body">
+
+			<!-- Key takeaways -->
+			<div class="takeaways reveal">
+				<div class="tk-head"><span class="tk-ic"><i class="fa-solid fa-list-check"></i></span><h2>Key takeaways</h2></div>
+				<ul>
+					<li><strong>AI search answers the question itself.</strong> Buyers get a synthesized answer, often without clicking any result.</li>
+					<li><strong>SEO isn't dead, its goal has changed.</strong> The new win is being the source AI cites, not just ranking #1.</li>
+					<li><strong>Trust signals decide who gets cited:</strong> topical depth, brand reputation, technical health and authoritative links.</li>
+					<li><strong>You can measure it.</strong> Track AI citations, share of voice and LLM referral traffic alongside classic SEO metrics.</li>
+				</ul>
+			</div>
+
+			<p class="lead">Large language models (LLMs) and AI-powered assistants such as <a href="#">ChatGPT</a>, <a href="#">Gemini</a> and <a href="#">Google AI Overviews</a> are rewriting the rules of search engine optimization faster than most marketing teams can react.</p>
+			<p>These platforms now <strong>assemble answers directly on the results page</strong>. Your buyers get what they need <em>before</em> they ever reach your website. The result: sessions are falling, inbound leads are thinning out and pipeline is getting harder to fill.</p>
+			<p>A <a href="https://www.semrush.com/blog/ai-overviews-study/" target="_blank" rel="noopener">Semrush study</a> of 10,000 informational keywords found that <strong>AI-generated summaries push down both organic and paid click-through rates</strong>. If your brand isn't part of the AI answer, you aren't just losing clicks. You're losing the buyers behind them.</p>
+
+			<!-- ════════ 01 ════════ -->
+			<section class="gs" id="section1">
+				<div class="gs-kicker"><b>01</b> The basics</div>
+				<h2 class="gs-title">What is AI search and <em>how does it work?</em></h2>
+
+				<p>AI search combines natural language processing (NLP), machine learning (ML) and large language models to <strong>return faster, more personalized and more relevant answers</strong>. Rather than matching exact keywords, it reads the context, intent and meaning behind a query.</p>
+				<p>Take the query "<em>best barbecue restaurants in Texas</em>." A traditional search engine behaves like a librarian, <strong>sorting pages by keyword matches and link popularity</strong>:</p>
+
+				<figure class="shot-fig wide reveal">
+					<!-- REPLACE with: images/ai-search/google-serp-bbq.png (1320x680 screenshot) -->
+					<img src="https://placehold.co/1320x680/f1f5ff/1877f2/png?font=roboto&text=Google+search+results+screenshot%5Cn"best+barbecue+restaurants+in+texas"%5Cn1320+x+680" width="1320" height="680" loading="lazy" alt="Traditional Google results for best barbecue restaurants in Texas: a Places list with ratings and a map">
+					<figcaption>Traditional search: a list of places and links, ranked by keywords and popularity.</figcaption>
+				</figure>
+
+				<p>But AI search can go a step further.</p>
+
+				<figure class="shot-fig wide reveal">
+					<!-- REPLACE with: images/ai-search/google-ai-mode-bbq.png (1320x760 screenshot) -->
+					<img src="https://placehold.co/1320x760/f1f5ff/1877f2/png?font=roboto&text=Google+AI+Mode+answer+screenshot%5Cn"best+barbecue+restaurants+in+texas"%5Cn1320+x+760" width="1320" height="760" loading="lazy" alt="Google AI Mode answering best barbecue restaurants in Texas with a written summary and cited sources">
+					<figcaption>AI search: one synthesized answer, with sources cited alongside it.</figcaption>
+				</figure>
+
+				<p>AI search behaves more like a well-connected local. It <strong>works out what you actually mean</strong>, pulls from many sources at once and gives you a single, synthesized answer, often with follow-up suggestions and citations.</p>
+
+				<h3 class="gs-sub">The major AI search platforms</h3>
+				<div class="tbl wide reveal">
+					<table>
+						<thead>
+							<tr><th>Platform</th><th>Provider</th><th>Key strengths</th><th>Where it searches</th></tr>
+						</thead>
+						<tbody>
+							<tr><td><span class="tool"><span class="lg" style="background:#10a37f">C</span>ChatGPT</span></td><td class="muted">OpenAI</td><td>Multimodal, conversational and customizable</td><td>Built-in web search with cited sources</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:linear-gradient(135deg,#4285f4,#9b72cb)">G</span>Gemini</span></td><td class="muted">Google</td><td>Multimodal, deep Workspace integration</td><td>Powers the Google Search AI experience</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:#4285f4">G</span>AI Overviews</span></td><td class="muted">Google</td><td>Summarizes many sources above organic results</td><td>Core feature of Google Search</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:#1a73e8">M</span>AI Mode</span></td><td class="muted">Google</td><td>Conversational follow-ups, personalized answers</td><td>Dedicated tab inside Google Search</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:#20808d">P</span>Perplexity</span></td><td class="muted">Perplexity AI</td><td>Real-time retrieval, citation-heavy answers</td><td>Standalone AI answer engine</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:#d97757">C</span>Claude</span></td><td class="muted">Anthropic</td><td>Strong reasoning, long context windows</td><td>Web search inside the Claude apps</td></tr>
+							<tr><td><span class="tool"><span class="lg" style="background:#0078d4">C</span>Copilot</span></td><td class="muted">Microsoft</td><td>Works across the Microsoft ecosystem</td><td>Grounded in Bing Search</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h3 class="gs-sub">How AI search works, step by step</h3>
+				<p>AI search runs on several layers at once. Every answer passes through the same seven-stage pipeline:</p>
+
+				<div class="pipeline wide reveal">
+					<a href="#step-1" class="pl-node"><span class="pl-n">1</span><i class="fa-solid fa-database"></i><b>Data collection</b></a>
+					<a href="#step-2" class="pl-node"><span class="pl-n">2</span><i class="fa-solid fa-language"></i><b>NLP</b></a>
+					<a href="#step-3" class="pl-node"><span class="pl-n">3</span><i class="fa-solid fa-gears"></i><b>Machine learning</b></a>
+					<a href="#step-4" class="pl-node hl"><span class="pl-n">4</span><i class="fa-solid fa-brain"></i><b>LLMs</b></a>
+					<a href="#step-5" class="pl-node"><span class="pl-n">5</span><i class="fa-solid fa-chart-line"></i><b>Predictive analytics</b></a>
+					<a href="#step-6" class="pl-node hl"><span class="pl-n">6</span><i class="fa-solid fa-magnifying-glass-arrow-right"></i><b>RAG</b></a>
+					<a href="#step-7" class="pl-node"><span class="pl-n">7</span><i class="fa-solid fa-rotate"></i><b>Feedback loops</b></a>
+				</div>
+
+				<ol class="steps">
+					<li class="step" id="step-1">
+						<h4>Data collection</h4>
+						<p>AI models pull information from a wide range of sources: web crawling, structured databases, documents, user interactions, real-time news feeds and multimedia. That breadth lets AI search <strong>maintain an up-to-date knowledge base</strong>. Here's Gemini drawing on several sources for one answer:</p>
+						<figure class="shot-fig reveal">
+					<!-- REPLACE with: images/ai-search/gemini-japan.png (1200x700 screenshot) -->
+					<img src="https://placehold.co/1200x700/f1f5ff/1877f2/png?font=roboto&text=Gemini+answer+screenshot%5Cn"best+time+of+year+to+visit+Japan"%5Cn1200+x+700" width="1200" height="700" loading="lazy" alt="Gemini answering the best time to visit Japan, citing several sources">
+					<figcaption>Gemini combines several sources into one answer.</figcaption>
+				</figure>
+					</li>
+					<li class="step" id="step-2">
+						<h4>Natural language processing (NLP)</h4>
+						<p>NLP turns unstructured text into structured data the AI can analyze, so models <strong>grasp context, intent and meaning</strong> and handle conversational, multi-part questions. It involves:</p>
+						<ul class="check two-col">
+							<li><strong>Tokenization</strong>: splitting text into words or phrases</li>
+							<li><strong>Lemmatization</strong>: reducing words to their base form</li>
+							<li><strong>Part-of-speech tagging</strong>: labeling nouns, verbs and adjectives</li>
+							<li><strong>Entity recognition</strong>: spotting people, places and organizations</li>
+						</ul>
+						<p>Ask Google AI Mode, "<em>Will I need an umbrella in Seattle this weekend?</em>"</p>
+						<figure class="shot-fig reveal">
+					<!-- REPLACE with: images/ai-search/ai-mode-umbrella.png (1200x560 screenshot) -->
+					<img src="https://placehold.co/1200x560/f1f5ff/1877f2/png?font=roboto&text=Google+AI+Mode+screenshot%5Cn"Will+I+need+an+umbrella+in+Seattle+this+weekend?"%5Cn1200+x+560" width="1200" height="560" loading="lazy" alt="Google AI Mode answering whether an umbrella is needed in Seattle this weekend">
+					<figcaption>AI Mode understands the intent (weather) without the word "weather."</figcaption>
+				</figure>
+						<p>You never typed "weather" or "rain," yet it knows this is a weather question. It <strong>reads intent, not exact words</strong>.</p>
+					</li>
+					<li class="step" id="step-3">
+						<h4>Machine learning (ML)</h4>
+						<p>Machine learning lets AI search <strong>sharpen relevance</strong> and make decisions without human intervention, using three approaches:</p>
+						<ul class="check">
+							<li><strong>Supervised learning</strong>: trained on labeled examples.</li>
+							<li><strong>Unsupervised learning</strong>: finds patterns and clusters in unlabeled data.</li>
+							<li><strong>Reinforcement learning</strong>: improves through feedback on what users click and ask next.</li>
+						</ul>
+					</li>
+					<li class="step" id="step-4">
+						<h4>Large language models (LLMs)</h4>
+						<p>LLMs such as GPT and Gemini bring <strong>contextual understanding and semantic analysis</strong>. They interpret the deeper meaning of a query, handle nuance and follow-up context, and respond in <strong>human-like conversation</strong>. Ask Gemini, "<em>What's the safest car for a family of five?</em>"</p>
+						<figure class="shot-fig reveal">
+					<!-- REPLACE with: images/ai-search/gemini-safest-car.png (1200x760 screenshot) -->
+					<img src="https://placehold.co/1200x760/f1f5ff/1877f2/png?font=roboto&text=Gemini+answer+screenshot%5Cn"safest+car+for+a+family+of+five"%5Cn1200+x+760" width="1200" height="760" loading="lazy" alt="Gemini answering which car is safest for a family of five">
+					<figcaption>Gemini weighs safety ratings, reviews and space in a single answer.</figcaption>
+				</figure>
+					</li>
+					<li class="step" id="step-5">
+						<h4>Predictive analytics</h4>
+						<p>Predictive analytics <strong>studies patterns in past searches and behavior</strong> to power autocomplete, predictive query expansion and content that matches historical intent. Someone who often searches vegan recipes will see suggestions like "<em>quick vegan snacks</em>."</p>
+					</li>
+					<li class="step" id="step-6">
+						<h4>Retrieval-augmented generation (RAG)</h4>
+						<p>RAG pairs the model with real-time retrieval. It runs <strong>vector searches across indexed sources</strong>, then writes an answer grounded in what it found. That reduces hallucinations, and it's why ChatGPT, Gemini and Perplexity show citations. <strong>This is where your brand earns visibility</strong>, even without a #1 ranking:</p>
+						<figure class="shot-fig reveal">
+					<!-- REPLACE with: images/ai-search/chatgpt-hiking-trails.png (1200x700 screenshot) -->
+					<img src="https://placehold.co/1200x700/f1f5ff/1877f2/png?font=roboto&text=ChatGPT+answer+screenshot+with+citations%5Cn"best+hiking+trails+in+the+U.S."%5Cn1200+x+700" width="1200" height="700" loading="lazy" alt="ChatGPT answering best hiking trails in the U.S. with cited source links">
+					<figcaption>ChatGPT cites the sources it retrieved. This is where brands earn visibility.</figcaption>
+				</figure>
+					</li>
+					<li class="step" id="step-7">
+						<h4>Continuous learning &amp; feedback loops</h4>
+						<p>Every query and interaction feeds back into the system: ranking logic, training data, autocomplete and source weighting are constantly re-tuned. What gets cited today can change next month.</p>
+					</li>
+				</ol>
+			</section>
+
+			<!-- ════════ 02 ════════ -->
+			<section class="gs" id="section2">
+				<div class="gs-kicker"><b>02</b> The impact</div>
+				<h2 class="gs-title">How AI search affects SEO <em>(and what you can do)</em></h2>
+
+				<p><strong>Zero click searches</strong> are now the default. You've likely searched Google recently and found the answer at the top of the page without clicking anything, whether it was a "People Also Ask" box, a map pack or an AI summary.</p>
+				<p>It's convenient for users but disruptive for businesses. A <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" target="_blank" rel="noopener">Pew Research Center report</a> found that <strong>users are more likely to end their session after seeing an AI summary</strong> than after a result without one.</p>
+
+				<div class="stat-tiles wide reveal">
+					<div class="st"><b>1 in 5</b><span>Google searches produce an AI summary</span><small>Pew Research Center</small></div>
+					<div class="st"><b>4.4×</b><span>higher value from AI search visitors vs. organic</span><small>Semrush</small></div>
+					<div class="st"><b>3 in 4</b><span>people have seen misleading content in an AI Overview</span><small>Exploding Topics</small></div>
+					<div class="st"><b>50%+</b><span>of Americans use voice assistants to find information</span><small>Edison Research</small></div>
+					<div class="st"><b>18.6%</b><span>of users always click through to AI Overview sources</span><small>Exploding Topics</small></div>
+					<div class="st"><b>8.5%</b><span>of people "always trust" AI Overviews</span><small>Exploding Topics</small></div>
+				</div>
+
+				<p>Generative AI is reshaping search in real time. Knowing how to earn visibility inside AI answers is no longer optional.</p>
+			</section>
+
+			<!-- ════════ 03 ════════ -->
+			<section class="gs" id="section3">
+				<div class="gs-kicker"><b>03</b> Zero click</div>
+				<h2 class="gs-title">Are zero click searches <em>killing SEO?</em></h2>
+
+				<p>Short answer: <strong>no</strong>. AI answers are <strong>not the end of search engine optimization</strong>. They're creating new openings for brands that adapt. But nobody is immune:</p>
+
+				<div class="case wide reveal">
+					<div class="case-l">
+						<span class="case-tag"><i class="fa-solid fa-triangle-exclamation"></i> Case study</span>
+						<h3>HubSpot's traffic collapse</h3>
+						<p>In 2024, HubSpot reported losing <strong>roughly a third of its organic traffic</strong> after Google rolled out AI Overviews. For years it was the benchmark for content-led SEO. If it can happen to HubSpot, it can happen to anyone.</p>
+						<a href="https://searchengineland.com/hubspot-seo-organic-traffic-drop-451096" target="_blank" rel="noopener" class="case-src">Source: Search Engine Land <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+					</div>
+					<div class="case-r">
+						<div class="case-kpi"><b>~33%</b><span>organic traffic lost</span></div>
+						<div class="case-kpi"><b>Millions</b><span>of monthly visits affected</span></div>
+					</div>
+				</div>
+
+				<p>Over the next few years, LLMs are expected to deliver as much business value as traditional search, and then overtake it.</p>
+
+				<figure class="chart-card wide reveal">
+					<figcaption>
+						<h3>Estimated LLM vs. organic search value</h3>
+						<div class="chart-legend">
+							<span><i style="background:#1877F2"></i>LLM search</span>
+							<span><i class="dash"></i>Organic search</span>
+						</div>
+					</figcaption>
+					<div class="chart-box" id="valueChart" role="img" aria-label="Line chart: LLM search value rises from 8 in 2024 to 130 in 2029 and overtakes organic search value, which falls from 100 to 74, around 2028."></div>
+					<details class="chart-table">
+						<summary>View data as table</summary>
+						<div class="tbl"><table id="valueTable"><thead><tr><th>Year</th><th>LLM value (index)</th><th>Organic value (index)</th></tr></thead><tbody></tbody></table></div>
+					</details>
+					<p class="src">Indexed projection (organic 2024 = 100), adapted from the <a href="https://www.semrush.com/blog/ai-visibility/" target="_blank" rel="noopener">Semrush</a> AI visibility study.</p>
+				</figure>
+
+				<p>So the goal of SEO is shifting. Instead of chasing rankings and traffic alone, brands now need <strong>AI trust and visibility</strong>. Here's why that's an opportunity:</p>
+
+				<div class="acc" data-acc>
+					<div class="acc-item open">
+						<button class="acc-btn" aria-expanded="true"><span class="acc-ic"><i class="fa-solid fa-shield-halved"></i></span>AI and the future of SEO is about trust<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+						<div class="acc-panel"><div class="acc-inner"><div>
+							<p>Think of it as a digital credit score. AI systems don't surface content just because of keywords or backlinks. They weigh the overall trustworthiness of your presence: brand authority, topical expertise, technical health and consistency across the web.</p>
+						</div></div></div>
+					</div>
+					<div class="acc-item">
+						<button class="acc-btn" aria-expanded="false"><span class="acc-ic"><i class="fa-solid fa-file-lines"></i></span>Your content still powers AI results<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+						<div class="acc-panel"><div class="acc-inner"><div>
+							<p>Zero click answers still depend on third-party sources. If your site publishes high-quality, relevant information, it shapes the AI's answer even when nobody clicks.</p>
+						</div></div></div>
+					</div>
+					<div class="acc-item">
+						<button class="acc-btn" aria-expanded="false"><span class="acc-ic"><i class="fa-solid fa-bullhorn"></i></span>Brand mentions drive indirect conversions<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+						<div class="acc-panel"><div class="acc-inner"><div>
+							<p>Showing up in AI citations again and again builds familiarity and trust, which pays off in branded search and direct traffic over time.</p>
+						</div></div></div>
+					</div>
+					<div class="acc-item">
+						<button class="acc-btn" aria-expanded="false"><span class="acc-ic"><i class="fa-solid fa-arrow-pointer"></i></span>Clicks still happen, just differently<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+						<div class="acc-panel"><div class="acc-inner"><div>
+							<p>High-intent users still click, especially on comparisons, product reviews and long-tail queries. Well-structured content still earns that traffic.</p>
+						</div></div></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ════════ 04 ════════ -->
+			<section class="gs" id="section4">
+				<div class="gs-kicker"><b>04</b> Comparison</div>
+				<h2 class="gs-title">Traditional SEO vs. <em>AI search optimization</em></h2>
+				<p>Traditional SEO shaped digital marketing for two decades. AI search changes many of its assumptions:</p>
+
+				<div class="tbl vs wide reveal">
+					<table>
+						<thead>
+							<tr><th></th><th>Traditional SEO</th><th class="hl"><i class="fa-solid fa-wand-magic-sparkles"></i> AI search SEO</th></tr>
+						</thead>
+						<tbody>
+							<tr><td class="rh">Primary goal</td><td>Rank high in SERPs for target keywords</td><td class="hl">Get cited in AI Overviews and AI answers</td></tr>
+							<tr><td class="rh">Search method</td><td>Keyword-based queries</td><td class="hl">Conversational, intent-based, semantic</td></tr>
+							<tr><td class="rh">Content focus</td><td>Keyword-optimized pages</td><td class="hl">Authoritative coverage of whole topics</td></tr>
+							<tr><td class="rh">Keyword strategy</td><td>Exact match, keyword density</td><td class="hl">Natural language, topic clusters</td></tr>
+							<tr><td class="rh">User journey</td><td>Drive clicks to the website</td><td class="hl">Be cited as the source, even with zero clicks</td></tr>
+							<tr><td class="rh">Success metrics</td><td>Rankings, organic traffic, CTR, conversions</td><td class="hl">AI citations, share of voice, brand mentions</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<blockquote class="pull">It's the end of SEO as we knew it, and the start of <em>generative engine optimization</em>.</blockquote>
+			</section>
+
+			<!-- ════════ 05 ════════ -->
+			<section class="gs" id="section5">
+				<div class="gs-kicker"><b>05</b> GEO</div>
+				<h2 class="gs-title">What is <em>generative engine optimization?</em></h2>
+
+				<p><a href="#">Generative engine optimization</a> (GEO), also called AI SEO, is <strong>optimizing your digital presence so AI platforms see, trust and cite you</strong>. Traditional SEO ranks pages in SERPs; GEO helps LLMs understand and use your content when they answer questions.</p>
+
+				<div class="changed wide reveal">
+					<div class="ch-col">
+						<h3><span class="ch-ic up"><i class="fa-solid fa-arrows-rotate"></i></span>What's changed</h3>
+						<ul>
+							<li><strong>Keywords became prompts.</strong> People now write the way they talk. ChatGPT prompts average around 23 words.</li>
+							<li><strong>Intent beats keywords.</strong> Winning content covers whole topic clusters and anticipates follow-up questions.</li>
+							<li><strong>Entities over pages.</strong> AI thinks in people, places, things and concepts, not URLs.</li>
+							<li><strong>Citations over rankings.</strong> The goal is to be the source AI references.</li>
+						</ul>
+					</div>
+					<div class="ch-col same">
+						<h3><span class="ch-ic"><i class="fa-solid fa-anchor"></i></span>What hasn't changed</h3>
+						<ul>
+							<li><strong>Human nature.</strong> Curiosity, problem-solving and decision-making still drive every search.</li>
+							<li><strong>Expertise and authority.</strong> E-E-A-T matters even more; AI leans on credibility signals.</li>
+							<li><strong>User experience.</strong> Speed, mobile-friendliness and clear navigation still shape success.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Mid-article CTA -->
+			<div class="mid-cta wide reveal">
+				<div>
+					<h3>Want to know if ChatGPT recommends you?</h3>
+					<p>We'll test your brand across ChatGPT, Gemini, Perplexity and Google AI, and send you a written visibility report within 48 hours.</p>
+				</div>
+				<button class="btn mid-btn" data-open-proposal>Get My Free Audit <i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+
+			<!-- ════════ 06 ════════ -->
+			<section class="gs" id="section6">
+				<div class="gs-kicker"><b>06</b> The playbook</div>
+				<h2 class="gs-title">How to optimize <em>for AI search</em></h2>
+
+				<p>Rather than fighting AI answers, use them to grow your brand's presence. We've been testing AI search strategies since answer engines first appeared. Here's what that work has delivered:</p>
+
+				<!-- REPLACE these figures with your own verified results -->
+				<div class="results wide reveal" data-nav-theme="dark">
+					<div class="res-main"><b>+2,400%</b><span>Total AI referral traffic</span></div>
+					<div class="res-grid">
+						<div><b>+860%</b><span>ChatGPT</span></div>
+						<div><b>+310%</b><span>Gemini</span></div>
+						<div><b>+120%</b><span>Perplexity</span></div>
+						<div><b>+1,500%</b><span>Claude</span></div>
+					</div>
+				</div>
+
+				<h3 class="gs-sub">The 5-step playbook</h3>
+				<div class="playbook wide reveal">
+					<a href="#opt-1" class="pb"><span class="pb-n">01</span><i class="fa-solid fa-book-open"></i><b>Build deep topical authority</b></a>
+					<a href="#opt-2" class="pb"><span class="pb-n">02</span><i class="fa-solid fa-star"></i><b>Cultivate brand reputation</b></a>
+					<a href="#opt-3" class="pb"><span class="pb-n">03</span><i class="fa-solid fa-code"></i><b>Make your site technically flawless</b></a>
+					<a href="#opt-4" class="pb"><span class="pb-n">04</span><i class="fa-solid fa-link"></i><b>Build authoritative backlinks</b></a>
+					<a href="#opt-5" class="pb"><span class="pb-n">05</span><i class="fa-solid fa-photo-film"></i><b>Maximize multimedia presence</b></a>
+				</div>
+
+				<ol class="steps">
+					<li class="step" id="opt-1">
+						<h4>Build deep topical authority</h4>
+						<p>AI models favor sources that show <strong>consistent, in-depth knowledge</strong> over surface-level coverage.</p>
+						<ul class="check">
+							<li>Share analysis, case studies and first-hand experience.</li>
+							<li>Publish long-form content that answers follow-up questions.</li>
+							<li>Add FAQs, definitions and summaries AI can easily extract.</li>
+							<li>Refresh content regularly with new data.</li>
+						</ul>
+					</li>
+					<li class="step" id="opt-2">
+						<h4>Cultivate a strong brand reputation</h4>
+						<p>AI weighs <strong>brand signals from across the web</strong>, including reviews and third-party mentions.</p>
+						<ul class="check">
+							<li>Manage your Google Business Profile and directory listings.</li>
+							<li>Keep name, address and phone (NAP) consistent everywhere.</li>
+							<li>Ask for, and respond to, reviews on Google and industry sites.</li>
+						</ul>
+					</li>
+					<li class="step" id="opt-3">
+						<h4>Ensure your website is technically flawless</h4>
+						<p>AI crawlers must be able to access, parse and cite your pages. <a href="#">Technical SEO</a> is still a core AI strategy.</p>
+						<ul class="check">
+							<li>Implement schema markup and structured data.</li>
+							<li>Fix crawl errors; improve speed and Core Web Vitals.</li>
+							<li>Make every page mobile-responsive.</li>
+						</ul>
+					</li>
+					<li class="step" id="opt-4">
+						<h4>Build authoritative backlinks</h4>
+						<p>Links and mentions from reputable sites tell AI your content is trustworthy. <a href="#">Digital PR</a> earns them where AI models learn.</p>
+						<ul class="check">
+							<li>Publish original research others will cite.</li>
+							<li>Contribute to high-authority publications in your niche.</li>
+							<li>Use Ahrefs or Semrush to close backlink gaps with competitors.</li>
+						</ul>
+					</li>
+					<li class="step" id="opt-5">
+						<h4>Maximize your multimedia presence</h4>
+						<p>AI search is multimodal: it reads video, images and audio as well as text.</p>
+						<ul class="check">
+							<li>Publish YouTube tutorials, demos and interviews.</li>
+							<li>Embed video summaries in blog posts.</li>
+							<li>Keep branding consistent across every platform.</li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+
+			<!-- ════════ 07 ════════ -->
+			<section class="gs" id="section7">
+				<div class="gs-kicker"><b>07</b> Measurement</div>
+				<h2 class="gs-title">How to measure <em>AI search visibility</em></h2>
+
+				<p>The old formula was simple: <strong>rank higher → get more traffic → earn more revenue</strong>. In AI search, you need a new way to measure visibility, authority and performance, built on three pillars.</p>
+
+				<ol class="steps">
+					<li class="step">
+						<h4>Manual query testing</h4>
+						<p>Test your target topics across AI platforms every week, and record where you're mentioned, how you're positioned and who's cited instead.</p>
+						<div class="tbl">
+							<table>
+								<thead><tr><th>Query type</th><th>Example</th></tr></thead>
+								<tbody>
+									<tr><td class="rh">Core business</td><td>"How much does residential solar installation cost?"</td></tr>
+									<tr><td class="rh">Problem-solving</td><td>"How can I lower my electricity bill with solar?"</td></tr>
+									<tr><td class="rh">Comparison</td><td>"Best solar installation company in Phoenix"</td></tr>
+									<tr><td class="rh">Informational</td><td>"How do solar panels work?"</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li class="step">
+						<h4>AI search monitoring tools</h4>
+						<p>Without tracking, you're flying blind. These tools monitor AI visibility at scale:</p>
+						<div class="tools-grid">
+							<div class="tool-card"><span class="lg" style="background:#4285f4"><i class="fa-brands fa-google"></i></span><b>Google Search Console</b><span>AI Overviews &amp; AI Mode impressions, clicks and queries</span></div>
+							<div class="tool-card"><span class="lg" style="background:#ff642d">S</span><b>Semrush</b><span>Share of voice and sentiment across ChatGPT, Gemini, Perplexity</span></div>
+							<div class="tool-card"><span class="lg" style="background:#054ada">A</span><b>Ahrefs</b><span>AI citation tracking, competitive share, content analysis</span></div>
+						</div>
+					</li>
+					<li class="step">
+						<h4>Performance impact analysis</h4>
+						<p>Set baselines before you start, then track the full influence of AI search:</p>
+						<ul class="check two-col">
+							<li>Referral traffic from LLMs</li>
+							<li>Long-tail traffic changes</li>
+							<li>Branded search growth</li>
+							<li>Multi-touch attribution</li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+
+			<!-- ════════ 08 ════════ -->
+			<section class="gs" id="section8">
+				<div class="gs-kicker"><b>08</b> What's next</div>
+				<h2 class="gs-title">The future <em>evolution of SEO</em></h2>
+				<p>AI SEO is still in its early days, and the technology changes monthly. Stay adaptable by monitoring platform updates, joining industry discussions and experimenting with new tools.</p>
+				<p>Brands that adopt generative engine optimization early <strong>build long-term assets that grow more valuable as AI adoption rises</strong>, and become the go-to source LLMs cite for their niche.</p>
+			</section>
+
+		</article>
+	</div>
+
+	<!-- ════════════════════════════════════
+	  FAQ
+	════════════════════════════════════ -->
+	<section class="faq-sec" id="faqs">
+		<div class="faq-wrap">
+			<div class="faq-intro">
+				<span class="gs-kicker"><b>09</b> FAQs</span>
+				<h2>Questions about <em>AI search</em></h2>
+				<p>Can't find what you're looking for? Our team answers AI visibility questions every day.</p>
+				<button class="btn btn-primary" data-open-proposal>Ask Our Team <i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+			<div class="acc" data-acc>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">What is zero click search?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>A zero click search happens when users get the answer directly on the results page without visiting any website. It can reduce traffic, so your strategy needs to focus on staying visible inside AI answers.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">Which platforms are leading in AI search?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>ChatGPT (OpenAI), Gemini, Google AI Overviews and AI Mode (Google), Perplexity, Claude (Anthropic) and Microsoft Copilot. Each works differently and deserves a tailored approach.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">What is generative engine optimization (GEO)?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>GEO is optimizing content so it appears in AI-generated answers and summaries. As LLMs give direct answers instead of lists of links, it's essential for staying visible.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">What influences how often AI cites my brand?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>Topical relevance and authority, content structure, semantic alignment with user queries, originality and clarity, and engagement and credibility signals.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">How can I optimize my content for AI search?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>Use question-and-answer formats, short paragraphs and descriptive subheadings; add schema markup; write in the natural language buyers use; and keep pages fast and mobile-friendly.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">Why does brand reputation matter for AI search?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>AI models look at reviews, mentions and your overall footprint to decide which sources are trustworthy. A strong reputation helps them treat your brand as credible.</p></div></div></div>
+				</div>
+				<div class="acc-item">
+					<button class="acc-btn" aria-expanded="false">How do I measure AI SEO performance?<i class="fa-solid fa-chevron-down acc-chev"></i></button>
+					<div class="acc-panel"><div class="acc-inner"><div><p>Track brand mentions and citations in AI answers across platforms, LLM referral traffic and branded search growth, using monitoring tools alongside weekly manual testing.</p></div></div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ════════════════════════════════════
+	  CONTINUE THE SERIES
+	════════════════════════════════════ -->
+	<section class="series-sec">
+		<div class="series-wrap">
+			<div class="series-head">
+				<h2>Continue <em>the series</em></h2>
+				<p>Platform-by-platform guides to getting cited.</p>
+			</div>
+			<div class="series-grid">
+				<a href="google-ai-overviews.html" class="sc featured" data-soon>
+					<span class="sc-tag">Up next</span>
+					<span class="sc-ic"><i class="fa-brands fa-google"></i></span>
+					<h3>Google AI Overviews</h3>
+					<p>How AI Overviews choose sources, and how to become one.</p>
+					<span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span>
+				</a>
+				<a href="google-ai-mode.html" class="sc" data-soon><span class="sc-ic"><i class="fa-solid fa-comments"></i></span><h3>Google AI Mode</h3><p>Optimizing for conversational, follow-up search.</p><span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span></a>
+				<a href="gemini-search.html" class="sc" data-soon><span class="sc-ic"><i class="fa-solid fa-star"></i></span><h3>Gemini Search</h3><p>What Google's model trusts and cites.</p><span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span></a>
+				<a href="chatgpt-search.html" class="sc" data-soon><span class="sc-ic"><i class="fa-solid fa-robot"></i></span><h3>ChatGPT Search</h3><p>Getting recommended by the world's biggest AI.</p><span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span></a>
+				<a href="other-llms.html" class="sc" data-soon><span class="sc-ic"><i class="fa-solid fa-layer-group"></i></span><h3>Other LLMs</h3><p>Perplexity, Claude, Copilot and more.</p><span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span></a>
+				<a href="white-bunnie-and-ai.html" class="sc" data-soon><span class="sc-ic"><i class="fa-solid fa-bolt"></i></span><h3>White Bunnie &amp; AI</h3><p>How we use AI to deliver results for clients.</p><span class="sc-meta">10 min read <i class="fa-solid fa-arrow-right"></i></span></a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ════════════════════════════════════
+	  FINAL CTA
+	════════════════════════════════════ -->
+	<section class="final-cta" data-nav-theme="dark">
+		<div class="fc-inner">
+			<span class="fc-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Free AI Visibility Audit</span>
+			<h2>Your buyers are asking AI.<br><em>Make sure it names you.</em></h2>
+			<p>Get a written report showing where ChatGPT, Gemini, Perplexity and Google AI cite you, where they cite competitors, and the fastest path to closing the gap.</p>
+			<div class="fc-btns">
+				<button class="btn btn-secondary" data-open-proposal>Get My Free Audit <i class="fa-solid fa-arrow-right"></i></button>
+				<a href="tel:+919876543210" class="btn fc-ghost"><i class="fa-solid fa-phone"></i> Talk to a Strategist</a>
+			</div>
+			<div class="fc-ticks">
+				<span><i class="fa-solid fa-check"></i> Delivered in 48 hours</span>
+				<span><i class="fa-solid fa-check"></i> No sales call required</span>
+				<span><i class="fa-solid fa-check"></i> US · UK · UAE · Canada</span>
+			</div>
+		</div>
+	</section>
+
+		<footer class="wb-footer" data-nav-theme="dark">
+
+		<div class="wb-container">
+
+			<!-- COLUMN 1 -->
+			<div class="wb-col wb-col-1">
+				<div class="wb-logo"><img src="https://whitebunnie.com/wp-content/uploads/2024/10/logo.png"></div>
+
+				<p class="wb-desc">
+					AI Search Marketing Agency for IT Services, SaaS & B2B Tech - India & USA.
+				</p>
+
+				<p class="wb-label">We get you cited on</p>
+
+				<div class="wb-tags">
+					<span>ChatGPT</span>
+					<span>Perplexity</span>
+					<span>Gemini</span>
+					<span>Claude</span>
+					<span>SearchGPT</span>
+					<span>Google SGE</span>
+				</div>
+
+				<p class="wb-address">Sector 63, Noida, 201301, India</p>
+
+				<div class="iconCont">
+					<span>
+						<a target="_blank" href="https://www.facebook.com/Dwhitebunnie"
+							title="White Bunnie on Facebook">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/facebook-1.png" alt="facebook">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://twitter.com/WhiteBunnie6" title="White Bunnie on X (Twitter)">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/twitter.png" alt="twitter">
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.instagram.com/dwhitebunnie/"
+							title="White Bunnie on Instagram">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/instagram.png" alt="twitter">
+						</a>
+					</span>
+
+
+					<span>
+						<a target="_blank" href="https://in.linkedin.com/company/whitebunnie/"
+							title="White Bunnie on LinkedIn">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/linkedin.png" alt="linkedin">
+
+						</a>
+					</span>
+
+					<span>
+						<a target="_blank" href="https://www.youtube.com/@whitebunniedigital/"
+							title="White Bunnie on YouTube">
+							<img src="https://whitebunnie.com/wp-content/uploads/2024/12/youtube.png" alt="youtube">
+						</a>
+					</span>
+
+				</div>
+			</div>
+
+			<!-- COLUMN 2 -->
+			<div class="wb-col">
+				<h4>AI SEARCH SERVICES</h4>
+				<ul>
+					<li><a href="#">GEO - Generative Engine Optimization</a></li>
+					<li><a href="#">AEO - Answer Engine Optimization </a></li>
+					<li><a href="#">AI Visibility Audit </a></li>
+					<li><a href="#">Schema Markup & Structured Data</a></li>
+					<li><a href="#">AI Citation Building</a></li>
+					<li><a href="#">SEO for B2B & IT</a></li>
+					<li><a href="#">Google Ads / PPC</a></li>
+					<li><a href="#">Website Design & Dev</a></li>
+					<li><a href="#">White-Label SEO & GEO</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 3 -->
+			<div class="wb-col">
+				<h4>INDUSTRIES WE SERVE</h4>
+				<ul>
+					<li><a href="#">IT Services & ITES</a></li>
+					<li><a href="#">SaaS Companies</a></li>
+					<li><a href="#">B2B Tech Brands</a></li>
+					<li><a href="#">Oracle & ERP Consulting</a></li>
+					<li><a href="#">eCommerce</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Finance & Fintech</a></li>
+				</ul>
+
+
+			</div>
+
+			<!-- COLUMN 4 -->
+			<div class="wb-col">
+				<h4>RESOURCES</h4>
+				<ul>
+					<li><a href="#">GEO Guide for B2B SaaS </a></li>
+					<li><a href="#">AEO Playbook for IT Brands</a></li>
+					<li><a href="#">AI Visibility Tracker Tool</a></li>
+					<li><a href="#">Schema Markup Guide</a></li>
+					<li><a href="#">Free SEO Audit</a></li>
+					<li><a href="#">Blog & Insights</a></li>
+					<li><a href="#">Sitemap</a></li>
+				</ul>
+			</div>
+
+			<!-- COLUMN 5 -->
+			<div class="wb-col">
+				<h4>REGION</h4>
+
+				<ul class="region-list">
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/india.png"> IND
+					</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/us.png"> USA</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/uae.png"> UAE</li>
+					<li><a href="#"></a><img src="https://whitebunnie.com/wp-content/uploads/2026/04/canada.png"> CAN
+					</li>
+				</ul>
+
+				<iframe style="margin:10px 0px 0px;max-width:320x;"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1474767051486!2d77.37573897528881!3d28.625341775668737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5229b065c81%3A0xf39234a7e6a0c2cd!2sWhite%20Bunnie%20-%20Digital%20Marketing%20Agency%20in%20Noida%20%7C%20SEO%20Agency%20in%20Noida!5e0!3m2!1sen!2sin!4v1738731978606!5m2!1sen!2sin"
+					width="100%" height="200px" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+		</div>
+
+
+		<!-- SCHEMA STRIP -->
+		<!-- <div class="wb-schema">
+			<span>● About Us</span>
+			<span>● Our Team</span>
+			<span>● Careers</span>
+			<span>● Contact Us</span>
+			<span>● FAQ's</span>
+		</div> -->
+
+		<!-- BOTTOM BAR -->
+		<div class="wb-bottom">
+			<div class="wb-copy">
+				© 2026 White Bunnie Digital Pvt. Ltd.
+			</div>
+
+			<div class="wb-legal">
+				<a href="#">Privacy Policy</a>
+				<a href="#">Terms of Service</a>
+				<a href="#">Sitemap</a>
+			</div>
+
+			<div class="wb-cert">
+				Google Partner · Meta Business Partner · Since 2015
+			</div>
+
+			<div class="wb-quick">
+				<a href="#">GEO</a>
+				<a href="#">AEO</a>
+				<a href="#">AI Visibility Audit</a>
+				<a href="#">White-Label</a>
+
+			</div>
+		</div>
+
+	</footer>
+
+	<div class="soon-toast" id="soonToast" role="status" aria-live="polite"></div>
+
+	<!-- Floating actions -->
+	<button class="toc-fab" id="tocFab"><i class="fa-solid fa-list-ul"></i> Contents</button>
+	<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+	<!-- ════════════════════════════════════
+	  PROPOSAL MODAL
+	════════════════════════════════════ -->
+	<div class="pm-overlay" id="pmOverlay" aria-hidden="true">
+		<div class="pm" id="pm" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+			<button class="pm-close" id="pmClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+			<div class="pm-side">
+				<h3 id="pmTitle">Get cited. Get chosen. <span>Scale with White Bunnie.</span></h3>
+				<p>Tell us about your goals and we'll send a free, no-obligation AI search proposal.</p>
+				<ul>
+					<li><i class="fa-solid fa-circle-check"></i>AI visibility audit across ChatGPT, Gemini &amp; Perplexity</li>
+					<li><i class="fa-solid fa-circle-check"></i>Competitor citation gap analysis</li>
+					<li><i class="fa-solid fa-circle-check"></i>Prioritized 90-day GEO roadmap</li>
+				</ul>
+				<p class="pm-call">In a hurry? Call us at <a href="tel:+919876543210">+91 98765 43210</a></p>
+			</div>
+			<div class="pm-form">
+				<form id="pmForm" novalidate>
+					<h4>Send My Free Proposal</h4>
+					<div class="pm-grid">
+						<div><label for="pmFirst">First name*</label><input id="pmFirst" name="first" required></div>
+						<div><label for="pmLast">Last name*</label><input id="pmLast" name="last" required></div>
+						<div><label for="pmEmail">Work email*</label><input id="pmEmail" name="email" type="email" required></div>
+						<div><label for="pmPhone">Phone*</label><input id="pmPhone" name="phone" type="tel" required></div>
+						<div class="full"><label for="pmSite">Website</label><input id="pmSite" name="website" type="url" placeholder="https://"></div>
+						<div>
+							<label for="pmService">Service</label>
+							<select id="pmService" name="service">
+								<option>AI Search Optimization (GEO)</option>
+								<option>SEO</option>
+								<option>PPC</option>
+								<option>Content Marketing</option>
+								<option>Web Design</option>
+							</select>
+						</div>
+						<div>
+							<label for="pmBudget">Monthly budget</label>
+							<select id="pmBudget" name="budget">
+								<option>Under $2,000</option>
+								<option>$2,000 – $5,000</option>
+								<option>$5,000 – $10,000</option>
+								<option>$10,000+</option>
+							</select>
+						</div>
+						<div class="full"><label for="pmMsg">Message</label><textarea id="pmMsg" name="message"></textarea></div>
+					</div>
+					<button type="submit" class="btn-pill">Send My Free Proposal <i class="fa-solid fa-arrow-right"></i></button>
+					<p class="pm-note">We reply within one business day. No spam, ever.</p>
+				</form>
+				<div class="pm-success">
+					<i class="fa-solid fa-circle-check"></i>
+					<h4>Thanks, we've got it!</h4>
+					<p>A strategist will be in touch within one business day.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="./aiSearch.js"></script>
+</body>
+
+</html>
